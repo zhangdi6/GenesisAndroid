@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="padding_top">0dp</dimen>
+    <!--左边距-->
+    <dimen name="left_margin">10dp</dimen>
+    <!--右边距-->
+    <!--分割线高度-->
+    <!--"我的"模块,item的高度-->
+    <!--登录注册模块,按钮和填充框的高度-->
+    <!--tab按钮高度-->
+    <dimen name="tab_button">50dp</dimen>
+
+
+</resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_200"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/_f1f1f1" >
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="12sp"
+            android:textColor="@color/_2b771f" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/sms_verification"
+            android:textSize="14sp"
+            android:textColor="@color/_333333" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/set3"
+            android:textColor="@color/_2b771f"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:layout_marginTop="6dp"
+        android:background="#cccccc" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_phone_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="22dp"
+            android:layout_alignParentRight="true"
+            android:text="@string/send_out2"
+            android:layout_marginRight="10dp"
+            android:layout_centerInParent="true"
+            android:textSize="12sp"
+            android:textColor="@color/_666666" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/spacing10dp"
+        android:layout_marginRight="@dimen/spacing10dp"
+        android:background="@drawable/psw_white_one_shape"
+        android:layout_marginTop="20dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inputCode"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:textSize="@dimen/size14sp"
+            android:textColor="@color/_333333"
+            android:textColorHint="@color/_999999"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="95dp"
+            android:inputType="number"/>
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="11sp"
+            android:textColor="@color/_26c68a"
+            android:text="@string/getValidationCode"
+            android:button="@drawable/checkbox_background_pass"
+            android:checked="false"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <EditText
+        android:id="@+id/et_comment"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/power_gray_shape"
+        android:gravity="top|left"
+        android:visibility="gone"
+        android:hint="请输入评论内容(最多为50字)"
+        android:maxLength="50"
+        android:minLines="3"
+        android:textColor="#000000"
+        android:textColorHint="#696969"
+        android:textSize="13sp"
+        />
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="5dp"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TextView-->
+            <!--android:id="@+id/tv_send"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:gravity="right"-->
+            <!--android:textSize="14sp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="发送"-->
+            <!--android:textColor="@color/_333333" />-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_125" android:background="@drawable/bg_item_pulse" android:layout_marginTop="@dimen/dp_6">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2" android:ellipsize="end"
+        android:id="@+id/text_self_desc" android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20" android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_20" android:hint="未添加个人简介"/>
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_head"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_58"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:src="@drawable/head_home"
+        android:layout_above="@id/text_self_desc"/>
+
+
+    <RelativeLayout
+        android:layout_alignTop="@id/image_head"
+        android:id="@+id/relayout_content"
+        android:layout_toRightOf="@id/image_head"
+        android:layout_alignBottom="@id/image_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="#ff333333"
+            android:id="@+id/text_name"
+            android:text="name"
+            />
+
+        <TextView
+            android:layout_below="@id/text_name"
+            android:id="@+id/text_commpany_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="北京舒适科技"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            android:layout_toLeftOf="@+id/text_complete"
+            android:layout_marginRight="@dimen/dp_6"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/text_zhiwei_name"
+            android:layout_alignTop="@id/text_commpany_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text=""
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:gravity="left|center_vertical"
+            android:layout_toRightOf="@id/text_commpany_name"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

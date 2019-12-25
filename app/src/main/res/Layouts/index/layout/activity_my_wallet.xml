@@ -1,0 +1,2076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_lay" />
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout_mywallet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="#00000000"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="#00000000">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.iruiyou.pet.utils.GoTopScrollView
+                android:id="@+id/wallet_GoTopScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="22dp">
+
+                            <ImageView
+                                android:id="@+id/im_help"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="22dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/help"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center_vertical"
+                                android:background="@android:color/transparent"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="@string/my_assets_valuation"
+                                android:textColor="@color/_999999"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="¥"
+                                android:textColor="@color/_999999"
+                                android:textSize="27sp" />
+
+                            <TextView
+                                android:id="@+id/tv_assets_valuation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="0"
+                                android:textColor="@color/_333333"
+                                android:textSize="43sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginRight="22dp"
+                            android:layout_marginTop="22dp"
+                            android:gravity="center"
+                            android:orientation="horizontal" android:visibility="gone">
+                            <!--我的PBS-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="11dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_violet_gradual_change_corner"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="11dp"
+                                    android:text="我的脉点"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_wallet_pbs_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+                                <!--冻结-->
+                                <TextView
+                                    android:id="@+id/frozenTv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                                <!--pbs定存-->
+                                <TextView
+                                    android:id="@+id/tv_fixed_deposit_pbs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                                <!--PBS提现锁定数量-->
+                                <TextView
+                                    android:id="@+id/tv_discount_locked_quantity_pbs"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_pbs_to_rmb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="9dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                            <!--我的水晶-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_blue_gradual_change_corner"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="11dp"
+                                    android:text="@string/my_crystal"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_wallet_crystal_num"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+                                <!--水晶收益-->
+                                <TextView
+                                    android:id="@+id/tv_frozen_crystal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                                <!--水晶定存-->
+                                <TextView
+                                    android:id="@+id/tv_fixed_deposit_crystal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:visibility="gone"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                                <!--水晶提现锁定数量-->
+                                <TextView
+                                    android:id="@+id/tv_discount_locked_quantity_crystal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:visibility="gone"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_crystal_to_rmb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="9dp"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_20"
+                            android:layout_marginBottom="@dimen/dp_15"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_50"
+                                    android:layout_height="@dimen/dp_50"
+                                    android:src="@drawable/gemstone" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="脉点" />
+
+                                <TextView
+                                    android:id="@+id/text_xunibi_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="---"
+                                    android:textColor="@color/color_33"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_50"
+                                    android:layout_height="@dimen/dp_50"
+                                    android:src="@drawable/icon_crash" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="现金" />
+
+                                <TextView
+                                    android:id="@+id/text_crash_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="---"
+                                    android:textColor="@color/color_33"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                        <!--了解详情-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="60dp"
+                            android:layout_marginTop="15dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/exchange3"
+                                android:textColor="@color/_f88702"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tv_understand"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="22dp"
+                                android:maxLines="1"
+                                android:text="@string/understand"
+                                android:textColor="@color/_1669d9"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="22dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="11dp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_crystal_recharge_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginRight="11dp"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="22dp"
+                                android:layout_marginTop="11dp"
+                                android:background="@color/_f1f1f1" />
+                            <!--公式-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true">
+
+                                <ImageView
+                                    android:id="@+id/im_close"
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/close" />
+
+                                <TextView
+                                    android:id="@+id/tv_exchange_introduction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@android:color/transparent"
+                                    android:singleLine="true"
+                                    android:text="@string/exchange5"
+                                    android:textColor="@color/_999999"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+                            <!--兑换-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginTop="16dp">
+
+                                <Button
+                                    android:id="@+id/bt_wallet_exchange"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="22dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/bg_blue_corner"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/close"
+                                    android:text="@string/exchange"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/spacing10dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_text_exchange1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="@string/use"
+                                        android:textColor="@color/_999999"
+                                        android:textSize="10sp" />
+
+                                    <EditText
+                                        android:id="@+id/etSearch_wallet"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@drawable/power_gray_shape"
+                                        android:digits="1234567890"
+                                        android:hint="0"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:textColor="@color/_666666"
+                                        android:textColorHint="@color/_999999"
+                                        android:textCursorDrawable="@drawable/editcursor"
+                                        android:textSize="@dimen/size12sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="@string/crystal"
+                                        android:textColor="@color/_999999"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_text_exchange2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="11dp"
+                                        android:singleLine="true"
+                                        android:text="@string/exchange"
+                                        android:textColor="@color/_666666"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_wallet_exchange_crystal_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="11dp"
+                                        android:singleLine="true"
+                                        android:textColor="@color/_666666"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginLeft="5dp"
+                                        android:singleLine="true"
+                                        android:text="@string/pbs"
+                                        android:textColor="@color/_999999"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/line5" android:visibility="gone" />
+                    <!--PBS当前价格-->
+                    <LinearLayout
+                        android:id="@+id/ll_pbs_current_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" android:visibility="gone">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a"></View>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="11dp"
+                                android:gravity="center"
+                                android:text="@string/pbs_current_price"
+                                android:textColor="@color/_666666"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/exchange_price"
+                                android:textColor="@color/_999999"
+                                android:textSize="9sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/company_right_arrow"
+                                android:textColor="@color/_999999"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--PBS当前价格-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal" android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/pbs3" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:text="@string/pbs"
+                                android:textColor="@color/_666666"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_pbs_tip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:textColor="@color/_999999"
+                                android:textSize="9sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="2"
+                            android:gravity="center|right"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_pbs_usdt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|right"
+                                android:text="111"
+                                android:textColor="@color/_333333"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_pbs_rmb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|right"
+                                android:text="--"
+                                android:textColor="@color/_666666"
+                                android:textSize="10sp" />
+
+                            <Button
+                                android:id="@+id/bt_wallet_ratio"
+                                android:layout_width="wrap_content"
+                                android:layout_height="23dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@null"
+                                android:text="--"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--<include layout="@layout/line5"></include>-->
+                    <!--PBS定存宝-->
+                    <LinearLayout
+                        android:id="@+id/ll_pbs_incubation"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/pbs_hatch"
+                            android:textColor="@color/_666666"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/company_right_arrow"
+                                android:textColor="@color/_999999"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--<include layout="@layout/line5"></include>-->
+
+                    <!--<include layout="@layout/line5"></include>-->
+
+                    <!--预期日化率-->
+                    <LinearLayout
+                        android:id="@+id/ll_pbs_incubation2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="11dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="11dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <!--预期日化率30-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/power_gray_shape"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/expected_daily_rate"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_wallet_expected_daily_rate_30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="0.2%"
+                                    android:textColor="@color/_26c68a"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_incubation_time_30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:text="@string/incubation_time"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                            <!--预期日化率90-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/power_gray_shape"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/expected_daily_rate"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_wallet_expected_daily_rate_90"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="0.8%"
+                                    android:textColor="@color/_26c68a"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_incubation_time_90"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:text="@string/incubation_time"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                            <!--预期日化率180-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/power_gray_shape"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/expected_daily_rate"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_wallet_expected_daily_rate_180"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="11dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="0.9%"
+                                    android:textColor="@color/_26c68a"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_incubation_time_180"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:text="@string/incubation_time"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--高级定存宝-->
+                    <LinearLayout
+                        android:id="@+id/ll_hight_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/pbs_hight_save"
+                            android:textColor="@color/_666666"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/company_right_arrow"
+                                android:textColor="@color/_999999"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--高级定存宝三个模块-->
+                    <LinearLayout
+                        android:id="@+id/ll_hight_save2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="11dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="11dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <!--预期收益-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/power_gray_shape"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/expected_return"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/profit_times"
+                                    android:textColor="@color/_26c68a"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:text="@string/release_month"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                            <!--每月返还本金-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/power_gray_shape"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/return_of_monthly_principal"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="5%-10%"
+                                    android:textColor="@color/_26c68a"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:text="@string/return_all_principal"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                            <!--推广奖励-->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/power_gray_shape"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/promotion_award"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="10%"
+                                    android:textColor="@color/_26c68a"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="9dp"
+                                    android:text="@string/achieving_promotion_benefits"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--三种收益-->
+                    <LinearLayout
+                        android:id="@+id/ll_all_profit"
+                        android:layout_width="match_parent"
+                        android:layout_height="74dp"
+                        android:layout_marginTop="11dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:visibility="gone">
+                        <!--定存收益-->
+                        <LinearLayout
+                            android:id="@+id/ll_fixed_income_wallet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:src="@drawable/total_assets" />
+
+                                <TextView
+                                    style="@style/Default_text_white_l"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:text="@string/total_pbs" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_total_pbs"
+                                style="@style/Default_text_white_ll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="--" />
+
+                        </LinearLayout>
+
+                        <View style="@style/Default_view_gray_l" />
+                        <!--人脉收益-->
+                        <LinearLayout
+                            android:id="@+id/ll_network_income_wallet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:src="@drawable/assets2" />
+
+                                <TextView
+                                    style="@style/Default_text_white_l"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:text="@string/regional_assets" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_promotional_assets"
+                                style="@style/Default_text_white_ll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="--" />
+
+                        </LinearLayout>
+
+                        <View style="@style/Default_view_gray_l" />
+                        <!--团队收益-->
+                        <LinearLayout
+                            android:id="@+id/ll_team_profit_wallet"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:src="@drawable/incubator" />
+
+                                <TextView
+                                    style="@style/Default_text_white_l"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:text="@string/incubation_assets" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_incubation_assets"
+                                style="@style/Default_text_white_ll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="5dp"
+                                android:text="--" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--钱包管理-->
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:visibility="visible"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <LinearLayout
+                        android:id="@+id/ll_network_expand"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="@dimen/dp_22"
+                            android:background="@color/_26c68a" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:text="钱包管理"
+                            android:textColor="@color/_666666"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/find_in"
+                                android:textColor="@color/_999999"
+                                android:textSize="10dp"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--兑换-充值-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_90" android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/ll_crystal_recharge">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_recharge" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="@string/recharge1"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/linear_zhifubao">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_zhifbao_round" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="支付宝提现"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/linear_bank_card">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_bank_round" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="银行卡提现"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:id="@+id/ll_pbs_exchange_crystal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_cunru" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="@string/assets_deposited"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_90" android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/ll_pbs_exchange_crash"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_pbs_exchange_crash" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="@string/assets_pbs"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/ll_money_record">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_money_recorder" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="收支记录"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="gone"
+                                android:id="@+id/linear_promotional_benefits">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_data_tuiguang" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="推广数据"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:visibility="invisible"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:id="@+id/linear_bqex_in">
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_bqex_in" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="币全转入"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:visibility="invisible">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_45"
+                                    android:layout_height="@dimen/dp_45"
+                                    android:src="@drawable/icon_money_recorder" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_5"
+                                    android:text="收支记录"
+                                    android:textColor="@color/color_99"
+                                    android:textSize="@dimen/sp_12" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <!--开通高级会员-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/white"
+                        android:orientation="vertical" android:visibility="gone"
+                        android:paddingBottom="@dimen/dp_15" android:id="@+id/ll_senior_members">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="14dp"
+                                android:layout_marginLeft="@dimen/dp_22"
+                                android:background="@color/_26c68a" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="11dp"
+                                android:layout_weight="1"
+                                android:text="脉场会员"
+                                android:textColor="@color/_666666"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/find_in"
+                                    android:textColor="@color/_999999"
+                                    android:textSize="10dp"
+                                    android:visibility="invisible" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_41"
+                                android:layout_height="@dimen/dp_41"
+                                android:layout_marginLeft="@dimen/dp_22"
+                                android:src="@drawable/icon_vip" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:text="成为脉场会员"
+                                    android:textColor="@color/_333333"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:text="享受更多专业商务服务"
+                                    android:textColor="@color/_666666"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/find_in"
+                                    android:textColor="@color/_999999"
+                                    android:textSize="10dp"
+                                    android:visibility="visible" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!--我的定存宝-->
+                    <LinearLayout
+                        android:id="@+id/ll_deposit_funds"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/my_save"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/my_treasure"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+                    </LinearLayout>
+                    <!--PBS转账-->
+                    <LinearLayout
+                        android:id="@+id/ll_transfer_accounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/transfer_accounts"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/transfer_accounts"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+                    </LinearLayout>
+
+                    <!--&lt;!&ndash;开通高级会员&ndash;&gt;-->
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_senior_members"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:background="@color/white"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:paddingLeft="15dp"-->
+                        <!--android:paddingRight="15dp"-->
+                        <!--android:visibility="visible">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:drawableLeft="@drawable/member"-->
+                            <!--android:drawablePadding="10dp"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:text="@string/member_purchase"-->
+                            <!--android:textColor="@color/_666666"-->
+                            <!--android:textSize="@dimen/size13sp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:drawablePadding="10dp"-->
+                            <!--android:drawableRight="@drawable/go"-->
+                            <!--android:textColor="@color/_999999"-->
+                            <!--android:textSize="@dimen/size10sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<include layout="@layout/line6"></include>-->
+                    <!--存入资产-->
+                    <LinearLayout
+                        android:id="@+id/ll_deposit_funds2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/deposit_funds"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/assets_deposited"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+                    </LinearLayout>
+                    <!--<include layout="@layout/line6"></include>-->
+                    <!--提取资产-->
+                    <LinearLayout
+                        android:id="@+id/ll_index_extraction"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/index_extraction"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/withdrawal_of_assets"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+
+                    </LinearLayout>
+                    <!--<include layout="@layout/line5"></include>-->
+                    <!--内盘交易-->
+                    <LinearLayout
+                        android:id="@+id/ll_internal_revenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/insider_trading"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/internal_revenue"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+                    </LinearLayout>
+                    <!--<include layout="@layout/line5"></include>-->
+                    <!--高级定存宝-->
+                    <LinearLayout
+                        android:id="@+id/ll_high_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/fixed_deposit"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/fixed_deposit"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+                    </LinearLayout>
+
+                    <!--<include layout="@layout/line5"></include>-->
+                    <!--推广收益-->
+                    <LinearLayout
+                        android:id="@+id/ll_promotional_benefits"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:visibility="gone"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/promotional_benefits"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/promotional_benefits"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+
+                    </LinearLayout>
+
+                    <!--<include layout="@layout/line6"></include>-->
+                    <!--邀请好友-->
+                    <LinearLayout
+                        android:id="@+id/ll_invite_friends_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/invite_friends2"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/invitingFriends"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/size13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:drawableRight="@drawable/go"
+                            android:textColor="@color/_999999"
+                            android:textSize="@dimen/size10sp" />
+
+                    </LinearLayout>
+                    <!--<include layout="@layout/line5"></include>-->
+                    <!--年化分成率-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a"></View>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/annual_division_rate"
+                            android:textColor="@color/_666666"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_help_wallet"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/help"
+                                android:textColor="@color/_999999"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginRight="19dp"
+                            android:layout_marginTop="38dp"
+                            android:src="@drawable/static_graph" />
+                    </LinearLayout>
+
+                    <!--<include layout="@layout/line5"></include>-->
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="103dp"
+                        android:background="@drawable/mywallet_bg"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="13dp"
+                            android:text="@string/myPBS"
+                            android:textColor="@color/white"
+                            android:textSize="11dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/walletTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="15dp"
+                            android:text="--"
+                            android:textColor="@color/white"
+                            android:textSize="33dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@drawable/frozen"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="21dp"
+                        android:paddingRight="17dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/FrozenPBS"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/frozenTv"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="&#45;&#45;"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="12dp" />-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/tixian"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/fromOurAccount"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:text="@string/temporarilyNotOpen"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <!--收支记录-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="43dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/recordOfRevenueAndExpenditure"
+                            android:textColor="@color/_666666"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/bt_pbs_wallet"
+                                android:layout_width="39dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/bg_blue_rectangle"
+                                android:gravity="center"
+                                android:text="@string/pbs"
+                                android:textColor="@color/white"
+                                android:textSize="9sp" />
+
+                            <Button
+                                android:id="@+id/bt_crystal_wallet"
+                                android:layout_width="39dp"
+                                android:layout_height="20dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/bg_blue_rectangle_white"
+                                android:gravity="center"
+                                android:text="@string/crystal"
+                                android:textColor="@color/_72c6ae"
+                                android:textSize="9sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--<include layout="@layout/line2"></include>-->
+                    <!--pbs收支列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+                    <!--水晶收支列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_crystal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <!--暂无数据-->
+                    <LinearLayout
+                        android:id="@+id/llWalletNodata"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wallet_nodata" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:text="@string/no_record"
+                            android:textColor="@color/_999999"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </com.iruiyou.pet.utils.GoTopScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_top_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="58dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/im_top"
+        android:visibility="gone" />
+</RelativeLayout>

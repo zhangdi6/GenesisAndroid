@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/add"
+        android:layout_marginTop="80dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/up"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="点击上传宠物照片"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginRight="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="种类"/>
+        <Spinner
+            android:background="@drawable/shape_add_bg"
+            android:layout_width="143dp"
+            android:layout_height="21dp"
+            android:id="@+id/spinner0"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginRight="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="品种"/>
+        <Spinner
+            android:background="@drawable/shape_add_bg"
+            android:layout_width="143dp"
+            android:layout_height="21dp"
+            android:id="@+id/spinner1"
+            />
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:button="@null"
+            android:background="@drawable/man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_weight="1"></View>
+        <RadioButton
+            android:button="@null"
+            android:background="@drawable/woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textColor="@color/white"
+            android:layout_marginRight="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"/>
+        <EditText
+            android:background="@drawable/shape_add_bg"
+            android:layout_width="143dp"
+            android:layout_height="21dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sure"
+        android:layout_marginTop="48dp"
+        android:layout_width="71dp"
+        android:text="确认上传"
+        android:textSize="11dp"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_add_bg"
+        android:layout_height="32dp" />
+</LinearLayout>

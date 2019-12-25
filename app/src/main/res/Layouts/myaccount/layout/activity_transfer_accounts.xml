@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/ll_balance_assets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blue_rectangle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_balance_assets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/balance_assets"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fixed_assets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blue_rectangle_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_fixed_assets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/fixed_assets"
+                        android:textColor="@color/_72c6ae"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--PBS转账-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/_26c68a" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_weight="1"
+                    android:text="@string/balance_assets"
+                    android:textColor="@color/_666666"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/company_right_arrow"
+                        android:textColor="@color/_999999"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_transfer_accounts_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pbs"
+                            android:textColor="@color/_333333"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_transfer_accounts_blue_one"
+                            android:layout_width="35dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_blue_corner" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_fixed_assets_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fixed_assets"
+                            android:textColor="@color/_999999"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fixed_assets_blue_two"
+                            android:layout_width="55dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_blue_corner"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pbs"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:textColor="@color/_333333"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="22dp"
+                android:text="@string/transfer_to_accounts"
+                android:textColor="@color/_666666"
+                android:textSize="12sp" />
+
+            <!--转账账号/手机号-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/power_gray_shape"
+                app:layout_constraintTop_toBottomOf="@+id/llPhone">
+
+                <com.iruiyou.pet.utils.ClearEditText
+                    android:id="@+id/et_transfer_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@null"
+                    android:hint="@string/quantity_account_number"
+                    android:inputType="text"
+                    android:textColor="@color/_333333"
+                    android:textColorHint="@color/_999999"
+                    android:textSize="@dimen/size14sp" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/transfer_accounts_tips"
+                android:textColor="@color/_999999"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="22dp"
+                android:text="@string/number"
+                android:textColor="@color/_666666"
+                android:textSize="12sp" />
+
+            <!--数量输入框-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/power_gray_shape"
+                app:layout_constraintTop_toBottomOf="@+id/llPhone">
+
+                <EditText
+                    android:id="@+id/et_transfer_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@null"
+                    android:digits="0123456789."
+                    android:hint="@string/quantity_transfer_count"
+                    android:textColor="@color/_333333"
+                    android:textColorHint="@color/_999999"
+                    android:textSize="@dimen/size14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/pbs"
+                        android:textColor="@color/_999999"
+                        android:textSize="@dimen/size14sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="10dp"
+                        android:background="@color/_f1f1f1" />
+
+                    <TextView
+                        android:id="@+id/tv_transfer_accounts_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/all"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size14sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_transfer_accounts_available"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/available"
+                android:textColor="@color/_999999"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/bt_transfer_accounts_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/bt_psw_details_shape"
+                android:text="@string/set3"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

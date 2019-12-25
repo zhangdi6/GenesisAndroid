@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical"-->
+            <!--android:id="@+id/linear_goods">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/icon_product" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="@dimen/dp_8"-->
+                <!--android:text="@string/product" />-->
+            <!--<View-->
+                <!--android:id="@+id/view_bottom_goods"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/dp_3"-->
+                <!--android:background="@color/_50c7a8"-->
+                <!--android:layout_gravity="bottom"-->
+                <!--android:layout_marginTop="@dimen/dp_8"-->
+                <!--android:visibility="visible"/>-->
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_project">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_project" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/project" />
+            <View
+                android:id="@+id/view_bottom_project"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="visible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_join"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_join_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/join" />
+            <View
+                android:id="@+id/view_bottom_join"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_financial">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_financial_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/financial" />
+            <View
+                android:id="@+id/view_bottom_financial"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="invisible"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

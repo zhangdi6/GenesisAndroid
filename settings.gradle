@@ -1,0 +1,3 @@
+include ':app', ':common', 'ryhttp',':IMKit', ':IMLib',':videoplayer-ui'
+
+project(':videoplayer-ui').projectDir = new File('/Users/lc/Desktop/GenesisAndroid/VideoplayerUI2.0Demo/videoplayer-ui')

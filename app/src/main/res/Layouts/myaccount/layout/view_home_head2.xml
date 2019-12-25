@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_130"
+        android:background="@drawable/power_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dp" android:orientation="vertical"
+            android:layout_centerInParent="true" android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/starLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomCl"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/gemstone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gemstone" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/lastHarvestAmount"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:text="@string/mining"-->
+<!--                android:textColor="#333"-->
+<!--                android:textSize="9dp"-->
+<!--                android:visibility="gone"/>-->
+        </LinearLayout>
+            <!--提示-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/starLl"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/white_bg_view"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_10dip"
+                android:paddingRight="@dimen/_10dip"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_15">
+
+                <TextView
+                    android:id="@+id/lastHarvestAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="看广告得脉点,每六小时看一次"
+                    android:textColor="@color/_666666"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/linear_shangcheng"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_38"
+                    android:src="@drawable/home_shangchen"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脉场商城"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    />
+                <!--   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="即将上线"
+                       android:textColor="#ffbebebe"
+                       android:textSize="9sp"
+                       />-->
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_daxue"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_38"
+                    android:src="@drawable/home_daxue"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脉场大学"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    />
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="即将上线"
+                    android:textColor="#ffbebebe"
+                    android:textSize="9sp"
+                    />-->
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_jiuye"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_38"
+                    android:src="@drawable/home_jiuye"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脉场就业"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    />
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="即将上线"
+                    android:textColor="#ffbebebe"
+                    android:textSize="9sp"
+                    />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_jiamen"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_38"
+                    android:src="@drawable/home_jiamen"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加盟脉场"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp"
+                    />
+                <!-- <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="即将上线"
+                     android:textColor="#ffbebebe"
+                     android:textSize="9sp"
+                     />-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <!--脉场资源库，城市合伙人-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/linear_network"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/shape_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_violet_gradual_change_corner_red"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="脉场估值"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        />
+
+
+                    <TextView
+                        android:text="万元"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/text_right"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        />
+
+                    <com.iruiyou.pet.utils.RaiseNumberAnimTextView
+                        android:id="@+id/tv_vein_asset_valuation"
+                        android:text="2313213"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/text_right"
+                        android:textColor="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_5"
+                        />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent" android:alpha="0.5"
+                    android:layout_height="1px" android:background="@color/white" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80" android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent" android:gravity="bottom"
+                        android:layout_height="match_parent" android:layout_weight="1"
+                        android:orientation="vertical" android:paddingLeft="@dimen/dp_11"
+                        android:paddingRight="@dimen/dp_11" android:paddingTop="@dimen/dp_15"
+                        android:paddingBottom="@dimen/dp_15">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="@dimen/sp_16"
+                            android:text="人脉资源库" android:textColor="@color/white"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content" android:layout_marginTop="@dimen/dp_7"
+                            android:layout_height="wrap_content" android:orientation="horizontal">
+                            <com.iruiyou.pet.utils.RaiseNumberAnimTextView
+                                android:id="@+id/tv_vein_resource_library_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textSize="@dimen/sp_16"
+                                android:text="--" android:textColor="@color/white"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:textSize="@dimen/sp_16"
+                                android:text="万" android:textColor="@color/white"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="@dimen/px_1" android:layout_marginTop="@dimen/dp_30"
+                        android:layout_height="match_parent" android:background="@color/white"
+                        android:layout_marginBottom="@dimen/dp_20" android:alpha="0.5"/>
+                    <LinearLayout
+                        android:layout_width="match_parent" android:gravity="bottom"
+                        android:layout_height="match_parent" android:layout_weight="1"
+                        android:orientation="vertical" android:paddingLeft="@dimen/dp_11"
+                        android:paddingRight="@dimen/dp_11" android:paddingTop="@dimen/dp_15"
+                        android:paddingBottom="@dimen/dp_15">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="@dimen/sp_16"
+                            android:text="注册用户" android:textColor="@color/white"/>
+                        <com.iruiyou.pet.utils.RaiseNumberAnimTextView
+                            android:id="@+id/text_total_user"
+                            android:layout_width="wrap_content" android:layout_marginTop="@dimen/dp_7"
+                            android:layout_height="wrap_content" android:textSize="@dimen/sp_16"
+                            android:text="--" android:textColor="@color/white"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="@dimen/px_1" android:layout_marginTop="@dimen/dp_30"
+                        android:layout_height="match_parent" android:background="@color/white"
+                        android:layout_marginBottom="@dimen/dp_20" android:alpha="0.5"/>
+                    <LinearLayout
+                        android:layout_width="match_parent" android:gravity="bottom"
+                        android:layout_height="match_parent" android:layout_weight="1"
+                        android:orientation="vertical" android:paddingLeft="@dimen/dp_11"
+                        android:paddingRight="@dimen/dp_11" android:paddingTop="@dimen/dp_15"
+                        android:paddingBottom="@dimen/dp_15">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textSize="@dimen/sp_16"
+                            android:text="付费用户" android:textColor="@color/white"/>
+                        <com.iruiyou.pet.utils.RaiseNumberAnimTextView
+                            android:id="@+id/text_total_vip"
+                            android:layout_width="wrap_content" android:layout_marginTop="@dimen/dp_7"
+                            android:layout_height="wrap_content" android:textSize="@dimen/sp_16"
+                            android:text="--" android:textColor="@color/white"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--脉场资源库-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="100dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:id="@+id/im_vein"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:src="@drawable/resources" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="16dp"-->
+                        <!--android:layout_toRightOf="@+id/im_vein"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginRight="10dp"-->
+                            <!--android:orientation="horizontal">-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:gravity="center|left"-->
+                                <!--android:text="人脉资源库"-->
+                                <!--android:textColor="@color/white"-->
+                                <!--android:textSize="14sp" />-->
+
+                            <!--<TextView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:gravity="center|right"-->
+                                <!--android:text="@string/resource_library_tips"-->
+                                <!--android:textColor="@color/white"-->
+                                <!--android:textSize="10sp"-->
+                                <!--android:visibility="gone" />-->
+                        <!--</LinearLayout>-->
+
+                        <!--<com.iruiyou.pet.utils.RaiseNumberAnimTextView-->
+                            <!--android:id="@+id/tv_vein_resource_library_number"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center|left"-->
+                            <!--android:text="&#45;&#45;"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="30sp" />-->
+                    <!--</LinearLayout>-->
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/pulse_valuation"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="12sp" />-->
+
+                        <!--<com.iruiyou.pet.utils.RaiseNumberAnimTextView-->
+                            <!--android:id="@+id/tv_vein_asset_valuation"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="11dp"-->
+                            <!--android:layout_marginBottom="12dp"-->
+                            <!--android:text="&#45;&#45;"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="12sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="11dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:layout_marginBottom="12dp"-->
+                        <!--android:gravity="right"-->
+                        <!--android:text="@string/resource_library_tips2"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="10sp"-->
+                        <!--android:visibility="gone" />-->
+                <!--</RelativeLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--资讯-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_bg"
+        android:orientation="vertical"/>
+
+
+    <!--人脉拓展-->
+    <LinearLayout
+        android:id="@+id/linear_network_expand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/shape_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_network_expand"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="14dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/_26c68a" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_weight="1"
+                    android:text="@string/network_dynamic"
+                    android:textColor="@color/_666666"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center" android:visibility="invisible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/find_in"
+                        android:textColor="@color/_999999"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.iruiyou.pet.utils.PageNumberMaxRecyclerView
+                android:id="@+id/positionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="11dp"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_home_heads"/>
+</LinearLayout>

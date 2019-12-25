@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginLeft="15dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/im_find_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/head_home" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_find_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_find_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#999999"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_find_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="9dp"
+        android:textColor="@color/_666666"
+        android:textSize="14sp" />
+    <!--一张图片的时候-->
+    <!--<ImageView-->
+    <!--android:id="@+id/im_pic"-->
+    <!--android:layout_width="311dp"-->
+    <!--android:visibility="visible"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:src="@drawable/ic_launcher"-->
+    <!--android:layout_height="170dp" />-->
+    <!--多张图片的时候-->
+    <!--<com.iruiyou.pet.utils.MultiImageViewSgf-->
+    <!--android:id="@+id/gridView_find_pics"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:padding="10dp"/>-->
+    <com.iruiyou.pet.utils.MultiImageView
+        android:id="@+id/gridView_find_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="4dp" />
+
+    <!--pbs 评论-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_find_pbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/find_pbs"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="888"
+            android:textColor="@color/_333333"
+            android:textSize="@dimen/size12sp" />
+
+        <TextView
+            android:id="@+id/tv_find_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/find_message"
+            android:drawablePadding="10dp"
+            android:text="68"
+            android:textColor="@color/_999999"
+            android:textSize="@dimen/size14sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing11dp"
+        android:background="@color/_f1f1f1" />
+
+</LinearLayout>

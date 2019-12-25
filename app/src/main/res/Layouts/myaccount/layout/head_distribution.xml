@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible" android:paddingRight="@dimen/dp_27" android:paddingLeft="@dimen/dp_27">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_food">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_food" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/food" />
+            <View
+                android:id="@+id/view_bottom_food"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="visible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_nursing">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_nursing" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/nursing" />
+            <View
+                android:id="@+id/view_bottom_nursing"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="invisible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_all_goods">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_all_goods" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/allGoods" />
+            <View
+                android:id="@+id/view_bottom_all_goods"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="invisible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_digital"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_digital" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/digital" />
+            <View
+                android:id="@+id/view_bottom_digital"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/linear_perinatal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_perinatal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="@string/perinatal" />
+            <View
+                android:id="@+id/view_bottom_perinatal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_3"
+                android:background="@color/_50c7a8"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_8"
+                android:visibility="invisible"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

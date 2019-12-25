@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--主题色-->
+    <color name="theme_color">#594d61</color>
+    <!--背景色-->
+    <!--分割线颜色-->
+    <!--透明-->
+    <!--tab按钮背景色-->
+    <color name="bg_tab">#f9f9f9</color>
+    <!--tab选中色-->
+    <!--tab 未选中色-->
+    <color name="tab_unselect">#999999</color>
+    <!--黑色-->
+    <!---->
+    <!--灰色-->
+    <!--白色-->
+    <color name="white">#fff</color>
+    <color name="white2">#fafafa</color>
+    <color name="fuceng">#33000000</color>
+    <color name="_929292">#929292</color>
+    <color name="_ff8006">#ff8006</color>
+    <color name="_999999">#999999</color>
+    <color name="_d8d8d8">#bec4c9</color>
+    <color name="_262a30">#262a30</color>
+
+    <color name="press">#e8e8e8</color>
+    <color name="seal_bg">#f0f0f6</color>
+
+    <color name="de_title_bg">#0195ff</color>
+    <color name="_72c6ae">#72c6ae</color>
+    <color name="_aa1b1b">#aa1b1b</color>
+    <color name="_ad5d5d">#ad5d5d</color>
+    <color name="b74a4a">#b74a4a</color>
+    <color name="_2b771f">#2b771f</color>
+    <color name="_ffa483">#ffa483</color>
+    <color name="_f033da">#f033da</color>
+    <color name="_ff6161">#ff6161</color>
+    <color name="_ff72be">#ff72be</color>
+
+</resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

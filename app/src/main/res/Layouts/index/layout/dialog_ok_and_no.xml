@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_corner">
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_corner"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_dialgo_title"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/_333333"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:visibility="gone"
+                android:background="@color/_f1f1f1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ctv_dialog_msg"
+            android:layout_width="220dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:visibility="gone"
+                android:background="@color/_666666">
+
+            </View>
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/warnAgain"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<CheckBox-->
+                    <!--style="@style/Default_text_black_l"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:button="@drawable/checkbox_background_login"-->
+                    <!--android:gravity="center"-->
+                    <!--android:paddingLeft="5dp"-->
+                    <!--android:text="不再提示"-->
+                    <!--android:textColor="@color/gray_three" />-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1px"-->
+                    <!--android:background="@color/gray_three"/>-->
+            <!--</LinearLayout>-->
+            <!--<Button-->
+                <!--android:id="@+id/btDialgoYes"-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="36dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:visibility="gone"-->
+                <!--android:text="@string/btn_coin_apply_success"-->
+                <!--android:background="@drawable/bg_jianbianse_contacts"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:textSize="18sp" />-->
+
+            <LinearLayout
+                android:id="@+id/buttonsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/lineHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/_f1f1f1"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/llayout_dialgo_no"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_corner_1"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_no"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/cancel"
+                        android:textColor="@color/_72c6ae"
+                        android:textSize="17sp" />
+                </LinearLayout>
+                    <View
+                        android:id="@+id/lineVertical"
+                        android:layout_width="0.5dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/_f1f1f1"/>
+                <LinearLayout
+                    android:id="@+id/llayout_dialgo_yes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_white_corner_2"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_yes"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/sure"
+                        android:textColor="@color/_72c6ae"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

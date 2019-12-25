@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="style_text" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+
+        <item name="android:textSize">@dimen/sp_26</item>
+
+        <item name="android:textColor">#333333</item>
+
+        </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="elevation">0dp</item><!--去掉toolbar阴影-->
+        <item name="android:textColor">#333333</item>
+    </style>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_mail_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:background="@drawable/power_gray_shape">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="7dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="7dp"
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="KING"
+                android:textColor="@color/_555555"
+                android:textSize="12sp"
+                android:maxLines="1"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:layout_below="@+id/tv_rmb_price"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/im_pulse_field_phone"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/phone"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:ellipsize="none"
+                    android:layout_marginLeft="3dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/_666666"
+                    android:textSize="9sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/invitation1"
+                android:layout_marginTop="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/details"
+                android:ellipsize="none"
+                android:visibility="gone"
+                android:singleLine="true"
+                android:layout_marginBottom="7dp"
+                android:text="@string/AlreadyInvited"
+                android:textColor="@color/_a0d8c8"
+                android:textSize="9sp" />
+            <TextView
+                android:id="@+id/invitation0"
+                android:layout_marginTop="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/details"
+                android:ellipsize="none"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:layout_marginBottom="7dp"
+                android:text="@string/not_invited"
+                android:textColor="@color/_666666"
+                android:textSize="9sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/ll"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:layout_marginTop="8dp"
+                android:singleLine="true"
+                android:layout_marginBottom="7dp"
+                android:text="@string/not_invited"
+                android:textColor="@color/_666666"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/im_invited"
+        android:layout_width="15dp"
+        android:src="@drawable/check_mark"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:visibility="gone" />
+</RelativeLayout>

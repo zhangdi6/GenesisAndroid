@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <!--带有红色消息提示的标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/find"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <!--红色消息提示-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:id="@+id/im_add_find"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/find_add" />
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_im_red"-->
+            <!--android:layout_width="15dp"-->
+            <!--android:layout_height="15dp"-->
+            <!--android:layout_marginLeft="38dp"-->
+            <!--android:background="@drawable/bg_red_dot_corner">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_im_red"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="8sp" />-->
+
+            <!--</RelativeLayout>-->
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/find"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <include layout="@layout/line2"></include>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout_find"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlAccentColor="#00000000"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="#00000000">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:id="@+id/scrollView_home"
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/resumeLFind"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/_26c68a"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_weight="1"
+                    android:text="@string/elite_recommends"
+                    android:textColor="@color/_333333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/find_in"
+                        android:textColor="@color/_999999"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/findRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:overScrollMode="never" />
+
+            <!--分割线-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="11dp">
+
+                <!--<com.androidkun.xtablayout.XTabLayout-->
+                    <!--android:id="@+id/tab_order"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/white"-->
+                    <!--app:xTabDisplayNum="2"-->
+                    <!--app:xTabDividerWidthWidthText="false"-->
+                    <!--app:xTabIndicatorColor="@color/white"-->
+                    <!--app:xTabIndicatorHeight="3dp"-->
+                    <!--app:xTabMode="fixed"-->
+                    <!--app:xTabSelectedTextColor="@color/black"-->
+                    <!--app:xTabSelectedTextSize="13sp"-->
+                    <!--app:xTabTextColor="@color/_666666"-->
+                    <!--app:xTabTextSize="12sp" />-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/_f1f1f1" />
+            </RelativeLayout>
+
+            <com.iruiyou.pet.utils.WrapContentHeightViewPager
+                android:id="@+id/vp_find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+        </ScrollView>
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

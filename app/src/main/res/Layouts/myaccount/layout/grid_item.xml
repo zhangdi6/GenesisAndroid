@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.iruiyou.pet.utils.SquareRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/pic_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:background="@drawable/find_add2"
+        android:scaleType="fitXY" />
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/main_gridView_item_cb"-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:focusable="false"-->
+        <!--android:layout_margin="2dp"-->
+        <!--android:background="@drawable/find_delete"-->
+        <!--android:button="@null" />-->
+
+</com.iruiyou.pet.utils.SquareRelativeLayout>
+<!--<ImageView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/pic_iv"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_marginLeft="34dp"-->
+    <!--android:layout_marginRight="34dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:background="@drawable/bg_add_photo"-->
+    <!--android:scaleType="centerCrop">-->
+
+<!--</ImageView>-->

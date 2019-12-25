@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="42dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_course_content"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true">
+            <!--中间标题-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:ellipsize="end"
+                        android:maxWidth="240dp"
+                        android:singleLine="true"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/bianji"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!--左侧返回-->
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/back_balck" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+        <com.iruiyou.pet.utils.HeadZoomScrollView
+            android:id="@+id/headzom_ScrollView"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:fillViewport="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--标题-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="206dp"
+                    android:layout_alignParentBottom="true">
+
+                    <ImageView
+                        android:id="@+id/im_course_bg"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/background2"
+                        android:scaleType="fitXY"
+                        android:layout_height="match_parent" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_course_save"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="13sp"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:text="保存" />-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_course_title"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="15sp"-->
+                        <!--android:layout_marginTop="9dp"-->
+                        <!--android:text="KING" />-->
+                    <!--左侧返回-->
+                    <LinearLayout
+                        android:id="@+id/ll_title_course_back"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/course_back" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--课程资料-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <TextView
+                        android:id="@+id/tv_course_titles"
+                        android:layout_width="match_parent"
+                        android:textColor="@color/_333333"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginBottom="11dp"
+                        android:textSize="14sp"
+                        android:text="KING"
+                        android:layout_height="wrap_content" />
+                    <!--课程资料-->
+                    <LinearLayout
+                        android:id="@+id/ll_my_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+
+                        android:layout_marginBottom="11dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginRight="22dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/im_course_head"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/head_home" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="11dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_course_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:text="KING"
+                                android:textColor="@color/_333333"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/tv_course_information"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:maxLines="1"
+                                android:text="KING"
+                                android:textColor="@color/_999999"
+                                android:textSize="9sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <include layout="@layout/line5"></include>
+
+                <!--课程说明-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="22dp"
+                        android:background="@color/_26c68a"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:layout_weight="1"
+                        android:layout_marginRight="22dp"
+                        android:text="@string/course_description"
+                        android:textColor="@color/_666666"
+                        android:textSize="11sp" />
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:gravity="center">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginRight="5dp"-->
+                            <!--android:background="@drawable/find_in"-->
+                            <!--android:textColor="@color/_999999"-->
+                            <!--android:textSize="10dp" />-->
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:orientation="vertical"
+                   android:background="@color/white"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:id="@+id/tv_course_explain"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="14dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="22dp"
+                       android:layout_marginRight="22dp"
+                       android:text="KING"
+                       android:visibility="gone"
+                       android:textColor="@color/_666666"
+                       android:textSize="12sp" />
+
+                   <com.iruiyou.pet.utils.MaxRecyclerView
+                       android:id="@+id/course_RecyclerView"
+                       android:layout_width="match_parent"
+                       android:layout_marginBottom="14dp"
+                       android:layout_height="wrap_content"
+                       android:background="@color/white" />
+                   <!--<ImageView-->
+                       <!--android:id="@+id/im_course_screenshot"-->
+                       <!--android:layout_width="match_parent"-->
+                       <!--android:layout_marginRight="22dp"-->
+                       <!--android:layout_marginLeft="22dp"-->
+                       <!--android:src="@drawable/background2"-->
+                       <!--android:layout_height="134dp" />-->
+
+                   <TextView
+                       android:id="@+id/tv_course_introduce"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="21dp"
+                       android:layout_marginBottom="10dp"
+                       android:layout_marginLeft="22dp"
+                       android:layout_marginRight="22dp"
+                       android:visibility="gone"
+                       android:text="KING"
+                       android:textColor="@color/_666666"
+                       android:textSize="12sp" />
+                   <include layout="@layout/line1"></include>
+
+                   <LinearLayout
+                       android:id="@+id/ll_course_tips"
+                       android:layout_width="match_parent"
+                       android:orientation="horizontal"
+                       android:gravity="center"
+                       android:layout_height="wrap_content">
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:src="@drawable/warning"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginBottom="10dp"
+                           android:layout_height="wrap_content" />
+                       <TextView
+                           android:id="@+id/tv_course_Tips"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="10dp"
+                           android:layout_marginBottom="10dp"
+                           android:layout_marginLeft="6dp"
+                           android:textColor="@color/_333333"
+                           android:textSize="12sp" />
+                   </LinearLayout>
+                   <include layout="@layout/line5"></include>
+               </LinearLayout>
+            </LinearLayout>
+        </com.iruiyou.pet.utils.HeadZoomScrollView>
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    </LinearLayout>
+    <include
+        layout="@layout/include_foot_course"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:id="@+id/im_top_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/im_top"
+        android:layout_marginBottom="58dp"
+        android:layout_marginRight="25dp"/>
+</RelativeLayout>

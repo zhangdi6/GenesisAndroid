@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<include layout="@layout/title_lay"></include>-->
+    <include layout="@layout/line2"></include>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_marginTop="5dp"
+       android:layout_marginBottom="5dp"
+       android:layout_marginRight="25dp"
+       android:layout_marginLeft="25dp"
+       android:layout_height="wrap_content">
+
+       <!--评论-->
+       <LinearLayout
+           android:id="@+id/ll_comment"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:layout_marginRight="20dp"
+           android:layout_height="40dp">
+
+               <ImageView
+                   android:layout_width="18dp"
+                   android:src="@drawable/comment"
+                   android:layout_height="18dp" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:text="@string/comment"
+                   android:layout_marginLeft="8dp"
+                   android:textSize="14sp"
+                   android:textColor="@color/_72c6ae"
+                   android:layout_height="wrap_content" />
+
+       </LinearLayout>
+       <View
+           android:layout_width="1dp"
+           android:layout_gravity="center"
+           android:background="@color/_f1f1f1"
+           android:layout_height="25dp"/>
+       <!--点赞-->
+       <LinearLayout
+           android:id="@+id/ll_fabulous"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:layout_height="40dp">
+           <ImageView
+               android:layout_width="18dp"
+               android:src="@drawable/fabulous"
+               android:layout_height="18dp" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:text="@string/fabulous"
+               android:textSize="14sp"
+               android:layout_marginLeft="8dp"
+               android:textColor="@color/_72c6ae"
+               android:background="@null"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+   </LinearLayout>
+</LinearLayout>

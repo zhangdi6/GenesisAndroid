@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/home_kecheng_img"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_150"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/dp_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ad_img_1" />
+
+    <TextView
+        android:id="@+id/home_kecheng_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="TextView"
+        android:textSize="@dimen/sp_14"
+       android:textColor="@color/color_03"
+        app:layout_constraintStart_toEndOf="@+id/home_kecheng_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_kecheng_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toEndOf="@+id/home_kecheng_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_kecheng_title" />
+
+    <TextView
+        android:id="@+id/home_kechen_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:text="TextView"
+        android:visibility="gone"
+        android:textSize="@dimen/sp_18"
+        android:textColor="@color/_56D8B3"
+        app:layout_constraintStart_toEndOf="@+id/home_kecheng_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_kecheng_name" />
+</android.support.constraint.ConstraintLayout>

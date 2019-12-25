@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/crystal_blue_shape">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_rmb_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:maxLength="7"
+            android:singleLine="true"
+            android:text="KING"
+            android:textColor="@color/_666666"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_crystal_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rmb_price"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:maxLength="7"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            android:text="KING"
+            android:textColor="@color/_666666"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</RelativeLayout>

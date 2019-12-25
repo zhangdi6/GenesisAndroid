@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/resumebg0"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <LinearLayout
+                        android:id="@+id/basicInfoLl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing18dp"
+                        android:layout_marginRight="@dimen/spacing18dp"
+                        android:layout_marginTop="154.4dp"
+                        android:background="@drawable/shape_white"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="@dimen/spacing11dp"
+                        android:paddingRight="@dimen/spacing11dp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:id="@+id/llModify"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/modify" />
+                        </LinearLayout>
+                        <!--姓名-->
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="62.5dp"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/_333333"
+                            android:textSize="20sp" />
+                        <!--职位头衔-->
+                        <TextView
+                            android:id="@+id/text_position_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_16"
+                            android:textColor="@color/_333333"/>
+                        <!--学历-->
+                        <TextView
+                            android:id="@+id/educationTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/_333333"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+                        <!--公司-->
+                        <TextView
+                            android:id="@+id/companyTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/_333333" />
+                        <!--公司注册地-->
+                        <TextView
+                            android:id="@+id/companyAddr"
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:textColor="#656565" />
+                        <!--公司性质-->
+                        <TextView
+                            android:id="@+id/companyStyle"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#656565" />
+
+                    </LinearLayout>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/headIv"
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_marginTop="92dp"
+                        android:src="@drawable/head_home"
+                        app:riv_border_color="@color/white2"
+                        app:riv_border_width="3.5dp"
+                        app:riv_corner_radius="10dp"
+                        app:riv_mutate_background="true"
+                        app:riv_oval="true"
+                        app:riv_tile_mode="repeat"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:id="@+id/back"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/back_balck" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/myResume"
+                            android:textColor="@color/_333333"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/back"-->
+                    <!--android:layout_width="45dp"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:layout_height="45dp"-->
+                    <!--android:gravity="center">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@drawable/back_balck" />-->
+                    <!--</LinearLayout>-->
+                    <!--&lt;!&ndash;android:background="@android:color/transparent"&ndash;&gt;-->
+                    <!--<TextView-->
+                    <!--android:gravity="center"-->
+                    <!--android:background="@color/white"-->
+                    <!--android:ellipsize="end"-->
+                    <!--android:maxWidth="240dp"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:layout_marginLeft="45dp"-->
+                    <!--android:text="@string/myResume"-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="17dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="45dp" />-->
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/bg_rectangle_shadow"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/identityLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="47dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/point_y"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="@string/blockChainEnthusiasts"
+                            android:textColor="#329cd7"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/blockLl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:gravity="center"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:id="@+id/blockIv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/modify" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#f1f1f1"></View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/timeLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="33dp"
+                            android:layout_weight="1"
+                            android:text="@string/blockChainAttentionTime" />
+
+                        <TextView
+                            android:id="@+id/blockTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint="--"
+                            android:textColor="#8dc0c4"
+                            android:textSize="11dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/locatinoLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="33dp"
+                            android:layout_weight="1"
+                            android:text="@string/blockChainIntentionalProfession" />
+
+                        <TextView
+                            android:id="@+id/blockPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:hint="--"
+                            android:textColor="#8dc0c4"
+                            android:textSize="11dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/addWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_marginLeft="@dimen/spacing18dp"
+                    android:layout_marginRight="@dimen/spacing18dp"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@drawable/shape_white">
+
+                    <TextView
+                        android:id="@+id/workExperience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/add"
+                        android:drawablePadding="3dp"
+                        android:text="@string/addWorkExperience"
+                        android:textColor="@color/_333333"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/moreEx"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/moreEx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/moreWorkExperienceCanEnhanceYourCareerRanking"
+                        android:textColor="@color/_999999"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/workExperience" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/workRecyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing18dp"
+                    android:layout_marginRight="@dimen/spacing18dp"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@drawable/shape_white"
+                    android:paddingBottom="@dimen/spacing11dp"
+                    android:paddingTop="@dimen/spacing11dp"
+                    android:visibility="visible" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/addEdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_marginLeft="@dimen/spacing18dp"
+                    android:layout_marginRight="@dimen/spacing18dp"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@drawable/shape_white">
+
+                    <TextView
+                        android:id="@+id/eduExperience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/add"
+                        android:drawablePadding="3dp"
+                        android:text="@string/addEducationalExperience"
+                        android:textColor="@color/_333333"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/moreEdu"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/moreEdu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/HRIsMuchMoreInterestedInJobSeekersWithEducationalBackground"
+                        android:textColor="@color/_999999"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/eduExperience" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/eduRecyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing11dp"
+                    android:layout_marginLeft="@dimen/spacing18dp"
+                    android:layout_marginRight="@dimen/spacing18dp"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@drawable/shape_white"
+                    android:paddingBottom="@dimen/spacing11dp"
+                    android:paddingTop="@dimen/spacing11dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/include_foot_data"
+        layout="@layout/include_foot_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

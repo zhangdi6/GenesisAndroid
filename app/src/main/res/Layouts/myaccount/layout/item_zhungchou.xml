@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_10"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <ImageView
+        android:id="@+id/zhongchou_iv"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ad_img_2" />
+
+    <TextView
+        android:id="@+id/zhongchou_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/zhongchou_img"
+        android:layout_width="@dimen/dp_51"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/zhongchou_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="当前进度："
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_iv"
+        app:layout_constraintTop_toBottomOf="@+id/zhongchou_name" />
+
+    <TextView
+        android:id="@+id/zhongchou_small_tou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_iv"
+        app:layout_constraintTop_toBottomOf="@+id/zhongchou_now" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/zhongchou_small_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_iv"
+        app:layout_constraintTop_toBottomOf="@+id/zhongchou_small_tou" />
+
+    <ProgressBar
+        android:id="@+id/zhongchou_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="9dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:max="100"
+        android:progressDrawable="@drawable/shapefirst"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_iv"
+        app:layout_constraintTop_toBottomOf="@+id/zhongchou_small_join" />
+
+    <TextView
+        android:id="@+id/zhongchou_big_tou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_small_tou"
+        app:layout_constraintTop_toBottomOf="@+id/zhongchou_now" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/zhongchou_big_join"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/zhongchou_small_join"
+        app:layout_constraintTop_toBottomOf="@+id/zhongchou_big_tou" />
+</android.support.constraint.ConstraintLayout>

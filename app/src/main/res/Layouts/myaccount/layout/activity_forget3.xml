@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/titlelay"
+        layout="@layout/title_lay"></include>
+
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/CountryRegion"
+        android:textColor="@color/_333333"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlelay" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/countryLl"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/topbg"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/country">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/countryTv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/china"-->
+            <!--android:textColor="@color/_999999"-->
+            <!--android:textSize="14dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/countryCode"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="8dp"-->
+            <!--android:layout_marginRight="24dp"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--android:drawableRight="@drawable/go"-->
+            <!--android:text="+86"-->
+            <!--android:textColor="@color/_999999"-->
+            <!--android:textSize="14dp" />-->
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tvChangePassword"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="22dp"-->
+        <!--android:layout_marginTop="66dp"-->
+        <!--android:text="@string/set6"-->
+        <!--android:textColor="@color/_333333"-->
+        <!--android:textSize="16sp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/country" />-->
+    <LinearLayout
+        android:id="@+id/llCodeContent"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:text="@string/code_content"
+            android:textColor="@color/_333333"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tvCodePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22dp"
+            android:text="+86"
+            android:textColor="@color/_679dfb"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!--&lt;!&ndash;手机号码&ndash;&gt;-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/llPhone"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/spacing40dp"-->
+        <!--android:layout_marginLeft="@dimen/spacing28dp"-->
+        <!--android:layout_marginRight="@dimen/spacing28dp"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:background="@drawable/psw_white_one_shape"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/llCodeContent">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/countryTv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/china"-->
+            <!--android:visibility="gone"-->
+            <!--android:textColor="@color/_999999"-->
+            <!--android:textSize="14dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/countryCode"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:background="@null"-->
+            <!--android:button="@null"-->
+            <!--android:textColor="@color/_333333"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:drawableRight="@drawable/down_arrow"-->
+            <!--android:gravity="center|start"-->
+            <!--android:text="+86"-->
+            <!--android:textSize="@dimen/size14sp" />-->
+
+        <!--<View-->
+            <!--android:layout_width="1sp"-->
+            <!--android:layout_height="15sp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginLeft="@dimen/spacing10dp"-->
+            <!--android:layout_marginRight="@dimen/spacing10dp"-->
+            <!--android:background="@color/_999999" />-->
+
+        <!--<android.support.design.widget.TextInputEditText-->
+            <!--android:id="@+id/phoneNum"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:background="@null"-->
+            <!--android:digits="0123456789."-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:hint="@string/phoneNum"-->
+            <!--android:imeOptions="actionSearch"-->
+            <!--android:inputType="phone"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="@color/_333333"-->
+            <!--android:textColorHint="@color/_999999"-->
+            <!--android:textSize="@dimen/size14sp" />-->
+    <!--</LinearLayout>-->
+  <!--  <android.support.design.widget.TextInputEditText
+
+    android:id="@+id/phoneNum"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_marginLeft="23dp"
+    android:textSize="14dp"
+    android:layout_marginRight="23dp"
+    android:inputType="phone"
+    android:layout_marginTop="69dp"
+    android:hint="@string/PleaseEnterCellPhoneNumber"
+    app:layout_constraintTop_toBottomOf="@+id/titlelay" />
+
+-->
+    <RelativeLayout
+        android:id="@+id/rlCode"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/spacing28dp"
+        android:background="@drawable/psw_white_one_shape"
+        android:layout_marginRight="@dimen/spacing28dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llCodeContent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/inputCode"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:textSize="@dimen/size14sp"
+            android:textColor="@color/_333333"
+            android:textColorHint="@color/_999999"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="95dp"
+            android:inputType="number"/>
+        <TextView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:textSize="11sp"
+            android:textColor="@color/_26c68a"
+            android:text="@string/getValidationCode"
+            android:button="@drawable/checkbox_background_pass"
+            android:checked="false"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:id="@+id/codeCl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/llPhone">-->
+
+        <!--<android.support.design.widget.TextInputEditText-->
+            <!--android:id="@+id/code"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:inputType="number"-->
+            <!--android:layout_marginLeft="23dp"-->
+            <!--android:textSize="14dp"-->
+            <!--android:layout_marginRight="23dp"-->
+            <!--android:hint="@string/inputCode" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/send"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_marginBottom="5dp"-->
+            <!--android:layout_marginRight="25dp"-->
+            <!--android:background="@drawable/shape_line_329cd7"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/getValidationCode"-->
+            <!--android:textColor="@color/_329cd7"-->
+            <!--android:textSize="11dp"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+
+    <RelativeLayout
+        android:id="@+id/rlPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/spacing28dp"
+        android:background="@drawable/psw_white_one_shape"
+        android:layout_marginRight="@dimen/spacing28dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/rlCode">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:background="@null"
+            android:hint="@string/InputPassword"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="95dp"
+            android:inputType="textPassword"
+            android:textSize="@dimen/size14sp"
+            android:textColor="@color/_333333"
+            android:textColorHint="@color/_999999"/>
+        <CheckBox
+            android:id="@+id/cbPwdHideDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:button="@drawable/checkbox_background_pass"
+            android:checked="false"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+    <!--<android.support.design.widget.TextInputEditText-->
+        <!--android:id="@+id/pwd"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_marginLeft="23dp"-->
+        <!--android:layout_marginRight="23dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:textSize="14dp"-->
+        <!--android:hint="@string/InputPassword"-->
+        <!--android:inputType="textPassword"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/rlCode" />-->
+
+    <TextView
+        android:id="@+id/complete"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/spacing28dp"
+        android:layout_marginRight="@dimen/spacing28dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bt_psw_details_shape"
+        android:gravity="center"
+        android:text="@string/complete"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/rlPassword" />
+
+
+</android.support.constraint.ConstraintLayout>

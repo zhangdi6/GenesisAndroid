@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    api 'com.android.support:appcompat-v7:27.1.1'
+    api 'com.android.support:design:27.1.1'
+    api 'com.android.support:recyclerview-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+//    compile 'jp.wasabeef:glide-transformations:2.0.2'
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
+    api project(':ryhttp')
+    //友盟统计
+    //    compile 'com.umeng.analytics:analytics:latest.integration'
+    api files('libs/umeng-analytics-v6.1.0.jar')
+    api files('libs/utdid4all-1.0.4.jar')
+//    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    api 'com.zhy:autolayout:1.4.5'
+    api 'com.google.code.gson:gson:2.8.0'
+//    compile 'com.library.tangxiaolv:telegramgallery:1.0.5'
+    api 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    api('com.jph.takephoto:takephoto_library:4.0.3') {
+        exclude group: 'com.github.bumptech.glide'
+    }
+    api('com.jph.takephoto:takephoto_library:4.0.3') {
+        exclude group: 'com.github.LuckSiege.PictureSelector'
+    }
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+//    compile 'com.contrarywind:Android-PickerView:4.1.6'
+//    implementation ('com.github.LuckSiege.PictureSelector:picture_library:v2.1.1')
+    api 'com.github.bumptech.glide:glide:4.3.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.3.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+}
+repositories {
+    mavenCentral()
+}

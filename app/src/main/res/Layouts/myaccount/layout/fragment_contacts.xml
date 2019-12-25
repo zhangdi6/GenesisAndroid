@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+    <!--带有红色消息提示的标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <!--中间标题-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/friends"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <!--右侧红色消息提示-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/find_add" />
+        </RelativeLayout>
+        <!--左侧返回按钮-->
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginLeft="15dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_balck" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <include layout="@layout/line2"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--搜索-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/rlCode">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/psw_white_eight_shape"
+                    android:hint="@string/search"
+                    android:paddingLeft="11dp"
+                    android:textColor="@color/_333333"
+                    android:textColorHint="@color/_999999"
+                    android:textCursorDrawable="@drawable/editcursor"
+                    android:textSize="@dimen/size13sp" />
+                <!--<CheckBox-->
+                <!--android:id="@+id/cbPwdHideDisplay"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:button="@drawable/checkbox_background_pass"-->
+                <!--android:checked="false"-->
+                <!--android:gravity="center"/>-->
+
+            </RelativeLayout>
+
+            <include layout="@layout/line2"></include>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/positionRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@color/white"
+                    android:overScrollMode="never" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing11dp" />
+
+            <!--切换搜索结果的主布局-->
+            <LinearLayout
+                android:id="@+id/ll_switch_search"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--好友申请-->
+                <LinearLayout
+                    android:id="@+id/llFriendApplication"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <!--红色消息提示-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="42dp"
+                            android:layout_height="42dp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/friendapplication" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlRed"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:visibility="gone"
+                            android:layout_marginLeft="30dp"
+                            android:background="@drawable/bg_red_dot_corner">
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/tvContactsRed"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerInParent="true"-->
+                            <!--android:text="9"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="8sp" />-->
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/friend_application"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/go"
+                        android:textColor="@color/_999999"
+                        android:textSize="@dimen/size10sp" />
+                </LinearLayout>
+
+                <include layout="@layout/line2"></include>
+                <!--我的关注-->
+                <LinearLayout
+                    android:id="@+id/llMyattention"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/myfans"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_attention"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/go"
+                        android:textColor="@color/_999999"
+                        android:textSize="@dimen/size10sp" />
+                </LinearLayout>
+
+                <include layout="@layout/line2"></include>
+                <!--我的粉丝-->
+                <LinearLayout
+                    android:id="@+id/llMyfans"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/myfollow"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_fans"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/go"
+                        android:textColor="@color/_999999"
+                        android:textSize="@dimen/size10sp" />
+                </LinearLayout>
+                <!--我的好友-->
+                <LinearLayout
+                    android:id="@+id/llMyFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tvMyFriends"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_friend"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMyFriendsRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/down_arrow2" />
+                </LinearLayout>
+
+                <com.iruiyou.pet.utils.MaxRecyclerView
+                    android:id="@+id/friendRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"/>
+
+                <!--我的群聊-->
+                <LinearLayout
+                    android:id="@+id/llMyGroupChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tvMyGroupChat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/my_friend"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMyGroupChatRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/down_arrow2" />
+                </LinearLayout>
+
+                <com.iruiyou.pet.utils.MaxRecyclerView
+                    android:id="@+id/groupChatRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"/>
+
+                <!--通讯录-->
+                <LinearLayout
+                    android:id="@+id/llMailList"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/spacing11dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tvMailList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/Contacts"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMailListRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@drawable/down_arrow2" />
+                </LinearLayout>
+
+                <com.iruiyou.pet.utils.MaxRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+            </LinearLayout>
+            <!--搜索结果列表-->
+            <com.iruiyou.pet.utils.ListViewForScrollView
+                android:id="@+id/recyclerView_search"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:divider="@color/_f1f1f1"
+                android:dividerHeight="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recyclerView_search"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:visibility="visible"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/white" />-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="@string/not_add"-->
+                    <!--android:layout_height="match_parent" />-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

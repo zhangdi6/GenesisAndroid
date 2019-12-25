@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_bg"
+    android:orientation="vertical">
+
+    <!--带有红色消息提示的标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp" android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/mining2"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <!--红色消息提示-->
+        <RelativeLayout
+            android:id="@+id/rlPowerNews"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:id="@+id/imNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/news" />
+
+            <RelativeLayout
+                android:id="@+id/rl_im_red"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="38dp"
+                android:background="@drawable/bg_red_dot_corner">
+
+                <TextView
+                    android:id="@+id/tv_im_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="8sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--<ImageView-->
+        <!--android:id="@+id/imNews"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:src="@drawable/news"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    </RelativeLayout>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="45dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:gravity="center"-->
+    <!--android:visibility="gone"-->
+    <!--android:text="@string/power"-->
+    <!--android:textColor="@color/black"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <include layout="@layout/line2" />
+    <!--<include layout="@layout/title_lay"></include>-->
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout_power"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlAccentColor="#00000000"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="#00000000">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.iruiyou.pet.utils.MaxRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@drawable/power_gray_shape_down"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

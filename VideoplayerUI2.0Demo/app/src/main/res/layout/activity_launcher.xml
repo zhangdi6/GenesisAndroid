@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".LauncherActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_env"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rg_env_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEST" />
+
+        <RadioButton
+            android:id="@+id/rg_env_beta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BETA" />
+
+        <RadioButton
+            android:id="@+id/rg_env_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="PROD" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/video_launcher_btn"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点播"
+        />
+
+    <Button
+        android:id="@+id/playback_launcher_btn"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="回放"
+        />
+
+</LinearLayout>

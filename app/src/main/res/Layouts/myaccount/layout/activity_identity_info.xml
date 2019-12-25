@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/cancel"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_balck" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="title"
+            android:textColor="@color/_333333"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:id="@+id/sure"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dui"
+                android:visibility="gone" />
+
+            <TextView
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:background="@drawable/bg_blue_corner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="@string/complete"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:gravity="right|center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:textColor="@color/_679dfb"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="15dp"
+            android:text="/12"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <!--输入内容的长度-->
+        <LinearLayout
+            android:id="@+id/linear_length"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center|right"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvIdentityNum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:text="0"
+                android:textColor="@color/_72c6ae"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvIdentityEndNum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:text="/20"
+                android:textColor="@color/_999999"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:hint="请输入"
+        android:paddingLeft="15dp"
+        android:maxLength="20"
+        android:paddingRight="15dp"
+        android:textColor="@color/_262a30"
+        android:textSize="15sp" />
+
+
+    <EditText
+        android:id="@+id/etWorkConten"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:maxLength="800"
+        android:textSize="15sp"
+        android:gravity="left|top"
+        android:padding="15dp"
+        android:paddingRight="15dp" />
+</LinearLayout>

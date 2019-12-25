@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imCommunityHeadItem"
+            android:layout_width="21dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/head_home"
+            android:layout_gravity="center"
+            android:layout_height="23dp"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

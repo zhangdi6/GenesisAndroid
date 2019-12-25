@@ -1,0 +1,171 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <!-- dialog进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+
+
+    <!--<style name="ShareTextViewStyle">-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_weight">1</item>-->
+        <!--<item name="android:layout_marginTop">@dimen/dp_8</item>-->
+        <!--<item name="android:textColor">@color/text_letter</item>-->
+        <!--<item name="android:drawablePadding">@dimen/dp_10</item>-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:textSize">@dimen/sp11</item>-->
+    <!--</style>-->
+
+    <!--自定义开关-->
+    <declare-styleable name="slideswitch">
+        <attr name="themeColor" format="color" />
+        <attr name="isOpen" format="boolean" />
+        <attr name="shape">
+            <enum name="rect" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!--自定义CheckBox-->
+    <declare-styleable name="AnimCheckBox">
+
+        <attr name="stroke_width" format="dimension" />
+
+        <attr name="stroke_color" format="color" />
+
+        <attr name="circle_color" format="color" />
+
+    </declare-styleable>
+
+    <style name="tab_button">
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:background">@color/bg_tab</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionSheetStyle">@style/ActionSheetStyleiOS7</item>
+    </style>
+
+    <!--展示图片的删除弹框-->
+    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 遮罩层 -->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <!--控制dialog进出动画-->
+    <style name="dialog_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <!-- 进入时的动画 -->
+        <item name="android:windowExitAnimation">@anim/dialog_exi</item>
+        <!-- 退出时的动画 -->
+    </style>
+
+    <!-- iOS7 Style -->
+    <style name="ActionSheetStyleiOS7">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonMiddleBackground">@drawable/slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/slt_as_ios7_other_bt_single</item>
+        <item name="cancelButtonTextColor">#1E82FF</item>
+        <item name="otherButtonTextColor">#1E82FF</item>
+        <item name="actionSheetPadding">10dp</item>
+        <item name="otherButtonSpacing">0dp</item>
+        <item name="cancelButtonMarginTop">10dp</item>
+        <item name="actionSheetTextSize">12sp</item>
+    </style>
+
+    <style name="Comment_Dialog" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <!--我的钱包 字体属性-->
+    <style name="Default_text_white_l">
+        <item name="android:textColor">@color/_333333</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--我的钱包 字体属性-->
+    <style name="Default_text_white_ll">
+        <item name="android:textColor">@color/_999999</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--我的钱包 竖 分割线-->
+    <style name="Default_view_gray_l">
+        <item name="android:background">@color/_f1f1f1</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>
+    <!--自定义dialog背景全透明无边框theme -->
+    <style name="whDialog" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="dialogWindowAnim" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+    <style name="ButtonStyle" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/_ff6161</item>
+    </style>
+
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+    </style>
+
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
+    <style name="UpdateDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/fuceng</item>
+    </style>
+</resources>

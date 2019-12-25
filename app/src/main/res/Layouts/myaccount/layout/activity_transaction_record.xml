@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_lay"></include>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout_tansaction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="#00000000"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="#00000000">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<com.iruiyou.pet.utils.GoTopScrollView-->
+                <!--android:id="@+id/wallet_GoTopScrollView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:fillViewport="true">-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingTop="8dp">
+                        <LinearLayout
+                            android:id="@+id/ll_transaction_crystal"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingEnd="18dp"
+                            android:paddingStart="18dp">
+
+                            <TextView
+                                android:id="@+id/tv_transaction_crystal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crystal"
+                                android:textColor="@color/_333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tv_transaction_crystal_blue_two"
+                                android:layout_width="35dp"
+                                android:layout_height="3dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_blue_corner"
+                                 />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_transaction_pbs"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingEnd="18dp"
+                            android:paddingStart="18dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_transaction_pbs"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pbs"
+                                android:textColor="@color/_333333"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_transaction_pbs_blue_one"
+                                android:layout_width="35dp"
+                                android:layout_height="3dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_blue_corner"
+                                android:visibility="invisible"/>
+                        </LinearLayout>
+                        <!--水晶收益列表-->
+                        <LinearLayout
+                            android:id="@+id/ll_crystal_revenue"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingEnd="14dp"
+                            android:paddingStart="14dp">
+
+                            <TextView
+                                android:id="@+id/tv_crystal_revenue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/crystal_revenue"
+                                android:textColor="@color/_333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tv_crystal_revenue_blue"
+                                android:layout_width="35dp"
+                                android:layout_height="3dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_blue_corner"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <!--孵化资产-->
+                        <LinearLayout
+                            android:id="@+id/ll_incubation_assets"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingEnd="18dp"
+                            android:paddingStart="18dp">
+
+                            <TextView
+                                android:id="@+id/tv_incubation_assets"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fixed_deposit2"
+                                android:textColor="@color/_333333"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/tv_incubation_assets_blue"
+                                android:layout_width="35dp"
+                                android:layout_height="3dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/bg_blue_corner"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line2" />
+                    <!--水晶收支列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_crystal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                         />
+                    <!--pbs收支列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_pbs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone"/>
+
+                    <!--水晶收益列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_crystal_revenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+                    <!--孵化收支列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_incubation_assets"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:visibility="gone" />
+
+
+                    <!--暂无数据-->
+                    <LinearLayout
+                        android:id="@+id/llWalletNodata"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wallet_nodata" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:text="@string/no_record"
+                            android:textColor="@color/_999999"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            <!--</com.iruiyou.pet.utils.GoTopScrollView>-->
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_top_wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="58dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/im_top"
+        android:visibility="gone" />
+</RelativeLayout>

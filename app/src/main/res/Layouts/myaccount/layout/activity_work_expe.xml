@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/companyLl"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/companyLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/commpany"
+                    android:textColor="#262a30"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/companyTv"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="11dp"
+                    android:drawableRight="@drawable/go"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:hint="@string/str_input"
+                    android:textColorHint="#b6b6b6"
+                    android:textColor="#b6b6b6"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <include layout="@layout/line2" />
+
+            <LinearLayout
+                android:id="@+id/positionLl"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/positionLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/positionName"
+                    android:textColor="#262a30"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/positionTv"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="11dp"
+                    android:drawableRight="@drawable/go"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:hint="@string/str_input"
+                    android:textColorHint="#b6b6b6"
+                    android:textColor="#b6b6b6"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <include layout="@layout/line2" />
+
+            <LinearLayout
+                android:id="@+id/manLl"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/manLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/numberOfCompanies"
+                    android:textColor="#262a30"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/manTv"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="11dp"
+                    android:drawableRight="@drawable/go"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="@string/pleaseFillIn"
+                    android:textColor="#b6b6b6"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <include layout="@layout/line2" />
+
+            <LinearLayout
+                android:id="@+id/timeLl"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/durationLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/str_time"
+                    android:textColor="#262a30"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/durationTv"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="11dp"
+                    android:drawableRight="@drawable/go"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="@string/str_start_work_time"
+                    android:textColor="#b6b6b6"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <include layout="@layout/line2" android:visibility="gone" />
+
+            <!--工作内容-->
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llWorkContent"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/tvWorkContentLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/jobContent"
+                    android:textColor="#262a30"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvWorkContent"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="11dp"
+                    android:visibility="visible"
+                    android:drawableRight="@drawable/go"
+                    android:gravity="right"
+                    android:text="@string/pleaseFillIn"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="#b6b6b6"
+                    android:textSize="11sp" />
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:src="@drawable/go"-->
+                    <!--android:layout_height="wrap_content" />-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginLeft="@dimen/spacing28dp"
+                android:layout_marginRight="@dimen/spacing28dp"
+                android:layout_marginTop="@dimen/dp_24"
+                android:background="@null"
+                android:gravity="center"
+                android:text="@string/delete_exp"
+                android:textColor="@color/_999999"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginLeft="@dimen/spacing28dp"
+                android:layout_marginRight="@dimen/spacing28dp"
+                android:layout_marginTop="@dimen/dp_33"
+                android:background="@drawable/bt_psw_details_shape2"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                android:visibility="gone"/>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:visibility="gone"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:paddingLeft="15dp"-->
+                <!--android:paddingRight="15dp">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/jobContent"-->
+                    <!--android:textColor="#262a30"-->
+                    <!--android:textSize="14sp" />-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<include layout="@layout/line2"></include>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/content"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="220dp"-->
+                <!--android:background="@color/white"-->
+                <!--android:maxLength="800"-->
+                <!--android:textSize="11sp"-->
+                <!--android:gravity="left|top"-->
+                <!--android:padding="15dp"-->
+                <!--android:paddingRight="15dp" />-->
+
+            <!--<include layout="@layout/line1"></include>-->
+            <!--<include layout="@layout/include_text_length"></include>-->
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/saveLl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/saveTv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginLeft="38dp"-->
+            <!--android:layout_marginRight="38dp"-->
+            <!--android:background="@drawable/shape_679dfb"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/save"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="18dp"-->
+
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

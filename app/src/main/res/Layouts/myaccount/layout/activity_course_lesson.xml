@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/title_lay"></include>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_course_lesson"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_45"
+        app:srlAccentColor="#00000000"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="#00000000">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.iruiyou.pet.utils.GoTopScrollView
+                android:id="@+id/scrollView_workplace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <!--header-->
+                        <com.baijiayun.videoplayer.widget.BJYPlayerView
+                            android:id="@+id/activity_new_video_fl"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:visibility="gone"
+                            app:aspect_ratio="fit_parent_16_9"
+                            app:render_type="texture_view" />
+
+                        <com.baijiayun.videoplayer.ui.widget.BJYVideoView
+                            android:id="@+id/bjy_video_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            android:layout_gravity="center"
+                            app:render_type="texture_view"
+                            app:aspect_ratio="fit_parent_16_9" />
+
+                        <!--<include layout="@layout/line5" />-->
+                        <include
+                            android:id="@+id/hover"
+                            layout="@layout/hover_item" />
+                        <!--职场课程-->
+                        <LinearLayout
+                            android:id="@+id/ll_workplace_course"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="16dp"
+                                android:layout_marginLeft="15dp"
+                                android:background="@color/_26c68a"></View>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="11dp"
+                                android:layout_weight="1"
+                                android:text="课程目录"
+                                android:textColor="@color/_333333"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@drawable/find_in"
+                                    android:visibility="invisible"
+                                    android:textColor="@color/_999999"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--分割线-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <include layout="@layout/line1"></include>
+
+                            <!--课程内容列表-->
+                            <com.iruiyou.pet.utils.MaxRecyclerView
+                                android:id="@+id/mrv_lessons"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </com.iruiyou.pet.utils.GoTopScrollView>
+        </LinearLayout>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

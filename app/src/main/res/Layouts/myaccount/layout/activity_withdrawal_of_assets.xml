@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_account"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <!--提到交易所-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/_26c68a"
+                    android:id="@+id/view"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_alignTop="@id/view"
+                    android:layout_toRightOf="@id/view"
+                    android:id="@+id/text_tixian_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_weight="1"
+                    android:text="@string/str_tixian_biquan"
+                    android:textColor="@color/_666666"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"/>
+
+
+
+
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/spacing15dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/image_logo"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_20"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/bqex_icon"
+                        android:textColor="@color/_999999"
+                        android:textSize="10dp"
+                        android:visibility="visible"/>
+                    <TextView
+                        android:id="@+id/tv_bqex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/input_account_str"
+                        android:layout_gravity="center"
+                        android:textColor="@color/_666666"
+                        android:textSize="@dimen/sp_13" />
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/company_right_arrow"
+                        android:textColor="@color/_999999"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_tixian_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
+                    android:text="仅限工作日10:00-18:00提取(法定节假日除外)"
+                    android:textColor="#ff999999"
+                    android:textSize="10sp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/dp_22"
+                    android:layout_marginBottom="@dimen/dp_12"
+                    />
+            <include layout="@layout/line5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center" android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_balance_assets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blue_rectangle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_balance_assets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/balance_assets"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fixed_assets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_blue_rectangle_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_fixed_assets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/fixed_assets"
+                        android:textColor="@color/_72c6ae"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_frozen_assets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_blue_rectangle_white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/frozen_assets"
+                        android:textColor="@color/_72c6ae"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--提取资产-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/_26c68a" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_accounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_weight="1"
+                    android:text="@string/withdrawal_of_assets"
+                    android:textColor="@color/_666666"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/company_right_arrow"
+                        android:textColor="@color/_999999"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="30dp"
+                android:visibility="gone"
+                android:text="@string/pbs"
+                android:textColor="@color/_333333"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_usdt_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_usdt_two"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/crystal2"
+                            android:textColor="@color/_999999"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:id="@+id/tv_usdt_blue_two"
+                            android:layout_width="55dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_blue_corner"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginLeft="35dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_transfer_accounts_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/pbs"
+                            android:textColor="@color/_333333"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tv_transfer_accounts_blue_one"
+                            android:layout_width="35dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/bg_blue_corner" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="22dp"
+                android:visibility="gone"
+                android:text="@string/money_withdrawal_address"
+                android:textColor="@color/_666666"
+                android:textSize="12sp" />
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="@dimen/spacing15dp"
+                    android:layout_marginRight="@dimen/spacing15dp"
+                    android:id="@+id/tv_crash_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crystal2"
+                    android:textColor="@color/_999999"
+                    android:textSize="19sp" />
+            <!--提币地址输入框-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/power_gray_shape"
+                app:layout_constraintTop_toBottomOf="@+id/llPhone">
+
+                <com.iruiyou.pet.utils.ClearEditText
+                    android:id="@+id/et_money_withdrawal_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="11dp"
+                    android:background="@null"
+                    android:hint="@string/address_input_tips"
+                    android:inputType="text"
+                    android:textColor="@color/_333333"
+                    android:textColorHint="@color/_999999"
+                    android:textSize="@dimen/size14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="22dp"
+                android:text="@string/number"
+                android:textColor="@color/_666666"
+                android:textSize="12sp" android:visibility="gone" />
+
+            <!--数量输入框-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="11dp"
+                app:layout_constraintTop_toBottomOf="@+id/llPhone"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                >
+
+                <EditText
+                    android:id="@+id/et_quantity_extracted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="80dp"
+                    android:background="@null"
+                    android:digits="0123456789."
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/_999999"
+                    android:textSize="@dimen/sp_35"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/line_bg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_currency_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/pbs"
+                        android:textColor="@color/_999999"
+                        android:textSize="@dimen/size14sp" android:visibility="gone"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="10dp"
+                        android:background="@color/_f1f1f1" android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_withdrawal_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="全部提现"
+                        android:textColor="#72C6AE"
+                        android:textSize="@dimen/size14sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_22"
+                    android:layout_marginTop="@dimen/dp_10"
+                    >
+                    <TextView
+                        android:id="@+id/tv_withdrawal_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing15dp"
+                        android:layout_marginRight="@dimen/spacing15dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/available"
+                        android:textColor="@color/_999999"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_withdrawal_service_charge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/spacing15dp"
+                        android:layout_marginTop="11dp"
+                        android:text="50 PBS"
+                        android:textColor="@color/_666666"
+                        android:textSize="12sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing15dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="11dp"
+                        android:text="@string/service_charge"
+                        android:textColor="@color/_666666"
+                        android:textSize="12sp"
+                        android:layout_toLeftOf="@id/tv_withdrawal_service_charge"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="11dp"
+                android:visibility="gone"
+                android:background="@drawable/withdrawal_white_two_shape"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="22dp"
+                    android:layout_marginLeft="@dimen/spacing11dp"
+                    android:layout_marginRight="@dimen/spacing11dp"
+                    android:layout_marginTop="22dp"
+                    android:text="@string/extraction_of_asset_hints"
+                    android:textColor="@color/_333333"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/actual_achievement_quantity"
+                    android:textColor="@color/_999999"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/tv_actual_achievement_quantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:text="脉点"
+                    android:maxLines="1"
+                    android:textColor="@color/_999999"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent" android:background="@color/_f1f1f1"
+                android:layout_height="match_parent" android:orientation="vertical" android:paddingLeft="@dimen/dp_22"
+                android:paddingRight="@dimen/dp_22">
+                <LinearLayout android:visibility="visible" android:id="@+id/linear_tatol"
+                    android:layout_width="match_parent" android:layout_marginTop="@dimen/dp_10"
+                    android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:text="点击查看提现教程"
+                        android:textColor="#ff72c6ae"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（只有到币全才有）"
+                        android:textColor="#ffff0000"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/bt_withdrawal_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:background="@drawable/bt_psw_details_shape"
+                    android:text="@string/set3"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:enabled="false"/>
+                
+                <TextView
+                    android:id="@+id/text_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:textColor="@color/_999999"
+                    android:textSize="@dimen/sp_15"
+                    android:gravity="center"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

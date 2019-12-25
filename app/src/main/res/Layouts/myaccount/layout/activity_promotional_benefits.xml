@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/my_node"
+                android:textColor="@color/_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_my_node"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="121212"
+                android:textColor="@color/_666666"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <include layout="@layout/line6"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_expected_daily_rate_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/total_assets_calculated"
+                android:textColor="@color/_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_total_assets_calculated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="0.0"
+                android:textColor="@color/_666666"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <include layout="@layout/line6"></include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/number_of_nodes"
+                android:textColor="@color/_666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_number_of_nodes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="8"
+                android:textColor="@color/_666666"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_view_hatch_nodes"
+            android:layout_width="match_parent"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_blue_corner"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="@string/view_hatch_nodes"
+            android:layout_height="39dp" />
+
+    </LinearLayout>
+</LinearLayout>

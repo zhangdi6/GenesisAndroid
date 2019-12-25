@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="_50c7a8">#50C7A8</color>
+    <color name="_bebebe">#BEBEBE</color>
+    <color name="_72C6ae">#72C6AE</color>
+    <color name="ffca48">#FFCA48</color>
+    <color name="line_bg">#f1f1f1</color>
+    <color name="_f1f1f1">#F1F1F1</color>
+    <color name="_999999">#999999</color>
+    <color name="_f88702">#f88702</color>
+    <color name="_2f5866">#2f5866</color>
+    <color name="_3e767d">#3e767d</color>
+    <color name="_1669d9">#1669d9</color>
+    <color name="_0f2d3c">#0f2d3c</color>
+    <color name="_dedede">#dedede</color>
+    <color name="_7f8a90">#7f8a90</color>
+    <color name="_3a7179">#3a7179</color>
+    <color name="_8e9fab">#8e9fab</color>
+    <color name="black">#000000</color>
+    <color name="_ffca48">#ffca48</color>
+    <color name="_c7ced8">#c7ced8</color>
+    <color name="_e31020">#e31020</color>
+    <color name="_f7c854">#f7c854</color>
+    <color name="_FF9E00">#FF9E00</color>
+    <color name="_ff6161">#ff6161</color>
+    <color name="_ffc5e2d9">#ffc5e2d9</color>
+    <color name="_912629">#912629</color>
+    <color name="_2b771f">#2b771f</color>
+    <color name="_2c886d">#2c886d</color>
+    <color name="_72c6ae">#72c6ae</color>
+    <color name="_26c68a">#26c68a</color>
+    <color name="_56D8B3">#56D8B3</color>
+    <color name="_a0d8c8">#a0d8c8</color>
+    <color name="_666666">#666666</color>
+    <color name="_555555">#555555</color>
+    <color name="_f6f9fb">#f6f9fb</color>
+    <color name="_679dfb">#679dfb</color>
+    <color name="_333333">#333333</color>
+    <color name="_cbd9cd">#cbd9cd</color>
+    <color name="_dae0e8">#dae0e8</color>
+    <color name="_262a30">#262a30</color>
+    <color name="_4d6595">#4d6595</color>
+    <color name="colorPrimary">#262a30</color>
+    <color name="_329cd7">#329cd7</color>
+    <color name="_7a7a7a">#7a7a7a</color>
+    <color name="text_letter">#6f6f6f</color>
+    <color name="_85cdff">#85cdff</color>
+    <color name="_55D8B1">#55D8B1</color>
+    <color name="_feb633">#FEB633</color>
+    <!--高级会员-->
+    <color name="_ffe66464">#ffe66464</color>
+
+    <!--白金会员-->
+    <color name="_ff7c93a7">#ff7c93a7</color>
+
+    <!--初级会员-->
+    <color name="_ff999999">#ff999999</color>
+
+    <!--脉场空间合伙人-->
+    <color name="_ff2890d1">#ff2890d1</color>
+
+    <!--脉场空间股东-->
+    <color name="_ffffa820">#ffffa820</color>
+
+    <color name="item_click_press">#f5f5f5</color><!--灰色-->
+
+</resources>

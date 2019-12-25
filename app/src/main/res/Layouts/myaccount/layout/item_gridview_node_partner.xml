@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/shape_corner_gray"
+    android:orientation="vertical" android:padding="@dimen/dp_10">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/im_headIv_node_partner"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/head_home"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_border_color="@color/white2"
+        app:riv_border_width="3.5dp"
+        app:riv_corner_radius="10dp"
+        app:riv_mutate_background="true"
+        app:riv_oval="true"
+        app:riv_tile_mode="repeat" />
+
+    <TextView
+        android:id="@+id/tv_name_node_partner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="fdafad"
+        android:textColor="@color/_333333"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_company_node_partner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textColor="@color/_333333"
+        android:textSize="13sp"
+        android:text=""
+        android:ellipsize="end"
+        android:maxLines="2"
+        />
+
+    <TextView
+        android:id="@+id/tv_describe_node_partner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/_333333"
+        android:textSize="12sp"
+        android:text="职位"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_marginTop="11dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="11dp"
+        android:visibility="gone">
+        <!--加好友-->
+        <Button
+            android:id="@+id/bt_add_friends_node_partner"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:background="@drawable/shape_72c6ae"
+            android:padding="0dp"
+            android:text="@string/add_friends"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+        <!--关注-->
+        <Button
+            android:id="@+id/bt_follow_node_partner"
+            android:layout_width="58dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_ffca48"
+            android:padding="0dp"
+            android:text="@string/follow"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</LinearLayout>

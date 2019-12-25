@@ -1,0 +1,9 @@
+UMENG_CHANNEL yingyongbao yingyongbao
+UMENG_CHANNEL huawei huawei
+UMENG_CHANNEL xiaomi xiaomi
+UMENG_CHANNEL meizu meizu
+UMENG_CHANNEL lianxiang lianxiang
+UMENG_CHANNEL vivo vivo
+UMENG_CHANNEL baidu baidu
+UMENG_CHANNEL oppo oppo
+UMENG_CHANNEL sanxing sanxing

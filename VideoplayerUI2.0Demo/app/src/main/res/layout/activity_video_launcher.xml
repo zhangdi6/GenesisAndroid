@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".LauncherActivity">
+
+
+    <EditText
+        android:id="@+id/videoId_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="videoId"
+        />
+
+    <EditText
+        android:id="@+id/video_token_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="token"
+        />
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="在线播放"
+        />
+
+    <EditText
+        android:id="@+id/video_path_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="视频路径"
+        />
+
+    <Button
+        android:id="@+id/offline_play_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="离线播放"
+        />
+
+
+
+</LinearLayout>

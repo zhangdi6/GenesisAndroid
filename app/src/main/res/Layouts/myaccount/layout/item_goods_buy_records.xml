@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="@dimen/dp_140"
+    android:background="@drawable/shape_bg2"
+    android:padding="@dimen/dp_15" android:layout_marginTop="@dimen/dp_15" android:layout_marginLeft="@dimen/dp_15" android:layout_marginRight="@dimen/dp_15">
+
+    <RelativeLayout
+        android:id="@+id/relay_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/text_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥1245.46"
+            android:textColor="#ffff271c"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/text_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号：12435874568"
+            android:textColor="#ff999999"
+            android:textSize="10sp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#fff1f1f1"
+        android:layout_above="@id/relay_bottom"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:id="@+id/view_line"/>
+
+
+
+    <TextView
+        android:layout_above="@id/view_line"
+        android:id="@+id/text_buy_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="×1"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/text_title"
+        />
+
+    <TextView
+        android:id="@+id/text_buy_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥1245.46"
+        android:textColor="#ff666666"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/text_buy_count"
+        />
+
+    <TextView
+        android:layout_marginRight="@dimen/dp_22"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_34"
+        android:text=""
+        android:textColor="#ff333333"
+        android:textSize="12sp"
+        android:id="@+id/text_title"
+        android:layout_above="@id/view_line"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:layout_toLeftOf="@id/text_buy_price"
+        android:lineSpacingExtra="@dimen/dp_4"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/relay_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/text_title"
+        android:layout_marginBottom="@dimen/dp_12">
+
+        <ImageView
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:src="@drawable/icon_buy_history"
+            android:id="@+id/image_icon"/>
+        <TextView
+            android:layout_toRightOf="@id/image_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交易订单ID：23456789034567890"
+            android:textColor="#ff999999"
+            android:textSize="10sp"
+            android:id="@+id/text_order_id"
+            android:layout_marginLeft="@dimen/dp_3"
+            />
+
+        <TextView
+            android:id="@+id/text_order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已支付"
+            android:textColor="#ff999999"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

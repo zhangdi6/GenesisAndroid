@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/_f1f1f1">
+    <include layout="@layout/title_lay" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_12">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:id="@+id/relay_zhifubao"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8">
+
+            <ImageView
+                android:id="@+id/image_left"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:src="@drawable/icon_zhifbao"
+                android:layout_marginRight="@dimen/dp_8"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/image_right"
+                android:layout_width="@dimen/dp_5"
+                android:layout_height="@dimen/dp_10"
+                android:src="@drawable/go"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <LinearLayout
+                android:layout_toRightOf="@id/image_left"
+                android:layout_toLeftOf="@id/image_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="支付宝水晶提现"
+                    android:textColor="@color/_666666"
+                    android:textSize="@dimen/size14sp"
+                    android:layout_marginBottom="1.5dp"/>
+
+                <TextView
+                    android:layout_marginTop="1.5dp"
+                    android:id="@+id/walletTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="@string/crash_select_zhifubao_max"
+                    android:textColor="@color/_999999"
+                    android:textSize="@dimen/size10sp" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+        <include layout="@layout/line2" />
+        <RelativeLayout
+            android:id="@+id/relay_biquan"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8">
+
+            <ImageView
+                android:id="@+id/image_left_bq"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:src="@drawable/icon_bank"
+                android:layout_marginRight="@dimen/dp_8"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/image_right_bq"
+                android:layout_width="@dimen/dp_5"
+                android:layout_height="@dimen/dp_10"
+                android:src="@drawable/go"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <LinearLayout
+                android:layout_toRightOf="@id/image_left_bq"
+                android:layout_toLeftOf="@id/image_right_bq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="银行卡水晶提现"
+                    android:textColor="@color/_666666"
+                    android:textSize="@dimen/size14sp"
+                    android:layout_marginBottom="1.5dp"/>
+
+                <TextView
+                    android:layout_marginTop="1.5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="@string/crash_select_bank_max"
+                    android:textColor="@color/_999999"
+                    android:textSize="@dimen/size10sp" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/relay_pbs"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingBottom="@dimen/dp_8">
+
+            <ImageView
+                android:id="@+id/image_left_pbs"
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:src="@drawable/bqex_icon"
+                android:layout_marginRight="@dimen/dp_8"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/image_right_pbs"
+                android:layout_width="@dimen/dp_5"
+                android:layout_height="@dimen/dp_10"
+                android:src="@drawable/go"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <LinearLayout
+                android:layout_toRightOf="@id/image_left_pbs"
+                android:layout_toLeftOf="@id/image_right_pbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="币全PBS提现"
+                    android:textColor="@color/_666666"
+                    android:textSize="@dimen/size14sp"
+                    android:layout_marginBottom="1.5dp"/>
+
+                <TextView
+                    android:layout_marginTop="1.5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:text="@string/crash_select_biquan"
+                    android:textColor="@color/_999999"
+                    android:textSize="@dimen/size10sp" />
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

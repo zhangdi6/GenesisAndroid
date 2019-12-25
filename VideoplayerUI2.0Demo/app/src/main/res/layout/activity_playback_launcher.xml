@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:gravity="center"
+    tools:context=".PlaybackLauncherActivity"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/room_id_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="roomId"/>
+
+    <EditText
+        android:id="@+id/room_token_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="token(正式服必须填)"/>
+
+    <EditText
+        android:id="@+id/session_id_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="sessionId(仅长期课需填)"/>
+
+    <Button
+        android:id="@+id/start_playback_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="enter room"
+        android:inputType="number"
+        />
+
+</LinearLayout>

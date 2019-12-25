@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include layout="@layout/title_lay" />
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_100"
+        android:layout_gravity="center_horizontal">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/image_head"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:src="@drawable/head_home"
+            app:riv_border_color="@color/_feb633"
+            app:riv_border_width="3dp"
+            app:riv_corner_radius="10dp"
+            app:riv_mutate_background="true"
+            app:riv_oval="true"
+            app:riv_tile_mode="repeat"
+            />
+        <ImageView
+            android:id="@+id/image_genders"
+            android:layout_width="@dimen/dp_22"
+            android:layout_height="@dimen/dp_22"
+            android:src="@drawable/icon_males"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:id="@+id/tv_vip_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="股权合伙人"
+            android:gravity="center"
+            android:drawablePadding="@dimen/dp_2"
+            android:textSize="@dimen/sp_11"
+            android:background="@drawable/bg_round_vip"
+            android:layout_alignParentBottom="true"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="李林华"
+        android:textColor="#ff333333"
+        android:textSize="26sp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/text_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff373737"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <View
+        android:layout_marginTop="@dimen/dp_60"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:background="#E9E9E9" />
+    <LinearLayout
+        android:id="@+id/linear_fenhong"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/icon_money_black"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="每月分红"
+            android:textColor="@color/_333333"
+            android:textSize="@dimen/size14sp" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/go"
+            android:drawablePadding="10dp"
+            android:textColor="@color/_999999"
+            android:textSize="@dimen/size10sp" />
+
+    </LinearLayout>
+    <View
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:background="#E9E9E9" />
+    <LinearLayout
+        android:id="@+id/linear_online_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/icon_online_text"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="在线合同"
+            android:textColor="@color/_333333"
+            android:textSize="@dimen/size14sp" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/go"
+            android:drawablePadding="10dp"
+            android:textColor="@color/_999999"
+            android:textSize="@dimen/size10sp" />
+
+    </LinearLayout>
+    <View
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22"
+        android:background="#E9E9E9" />
+</LinearLayout>

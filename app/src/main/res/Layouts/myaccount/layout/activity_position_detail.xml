@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/title_lay" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_20">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_position_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="6K-7K"
+                        android:textColor="@color/_55D8B1"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/text_position_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_toLeftOf="@id/text_position_price"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="产品推广经理"
+                        android:textColor="#ff333333"
+                        android:textSize="@dimen/sp_26" />
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/text_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_address"
+                        android:text="-"
+                        android:textColor="@color/_999999"
+                        android:drawablePadding="@dimen/dp_2"/>
+
+                    <TextView
+                        android:id="@+id/text_position_class"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_position_class"
+                        android:text="-"
+                        android:textColor="@color/_999999"
+                        android:drawablePadding="@dimen/dp_2"/>
+
+                    <TextView
+                        android:id="@+id/text_ren"
+                        android:layout_marginLeft="@dimen/dp_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_ren"
+                        android:text="hjgh"
+                        android:textColor="@color/_999999"
+                        android:drawablePadding="@dimen/dp_2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/line_color"
+                android:layout_marginTop="@dimen/dp_20"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="职位详情"
+                android:textColor="#ff3d3d3d"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_position_detail"
+                android:lineSpacingExtra="@dimen/dp_13"
+                android:textColor="#434343"
+                android:text="岗位职责：
+1、负责移动产品界面的视觉图形设计；
+2、分析业务需求，并加以分解归纳出产品人机交互界面需求；
+3、参与移动产品设计体验、流程的制定和规范；
+4、负责移动产品整体表现风格的定位，对移动产品视觉感受做整体把握
+职位要求：
+1、两年以上移动 UI设计工作经验，美术、设计、计算机相关专业；
+2、有良好的美术功底与创作能力，手绘能力强"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/line_color"
+                android:layout_marginTop="@dimen/dp_20"/>
+            <TextView
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="职位要求"
+                android:textColor="#ff3d3d3d"
+                android:textSize="18sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20">
+                <TextView
+                    android:id="@+id/text_sex"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_position_require"
+                    android:text="fdafad"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:id="@+id/text_age"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_position_require"
+                    android:text="fdafad"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:id="@+id/text_school"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_position_require"
+                    android:text="fdafad"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公司地址"
+                android:textColor="#ff3d3d3d"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:id="@+id/text_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_address"
+                android:text="-"
+                android:textColor="@color/_999999"
+                android:drawablePadding="@dimen/dp_12"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

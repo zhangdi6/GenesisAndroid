@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@color/white"
+    android:orientation="vertical" android:gravity="center">
+
+    <!--<include layout="@layout/title_lay"></include>-->
+    <!--<include layout="@layout/line2"></include>-->
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:layout_marginRight="15dp"
+       android:layout_marginLeft="15dp"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center">
+
+
+       <!--查看资料-->
+       <LinearLayout
+           android:id="@+id/view_info"
+           android:layout_width="0dp"
+           android:layout_height="40dp"
+           android:layout_marginRight="20dp"
+           android:layout_weight="1"
+           android:background="@drawable/shape_ffca48"
+           android:gravity="center"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:id="@+id/im_follow"
+               android:layout_width="18dp"
+               android:layout_height="18dp"
+               android:src="@drawable/icon_watch" />
+
+           <TextView
+               android:id="@+id/tv_view_info"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:background="@null"
+               android:text="@string/watch_profile"
+               android:textColor="@color/white"
+               android:textSize="15sp" />
+
+           <TextView
+               android:id="@+id/text_see_price"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:text="脉点"
+               android:textColor="#ffffffff"
+               android:textSize="12sp"
+               android:visibility="gone" />
+       </LinearLayout>
+
+       <!--添加人脉-->
+       <LinearLayout
+           android:id="@+id/ll_add_friends"
+           android:layout_width="0dp"
+           android:layout_height="40dp"
+           android:layout_weight="1"
+           android:background="@drawable/shape_72c6ae"
+           android:gravity="center"
+           android:orientation="horizontal">
+
+           <ImageView
+               android:id="@+id/im_add_friends"
+               android:layout_width="18dp"
+               android:layout_height="18dp"
+               android:src="@drawable/add_friends" />
+
+           <TextView
+               android:id="@+id/tv_add_friends"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:text="@string/add_friends"
+               android:textColor="@color/white"
+               android:textSize="15sp" />
+
+           <TextView
+               android:id="@+id/text_friend_price"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="5dp"
+               android:text="脉点"
+               android:textColor="#ffffffff"
+               android:textSize="12sp"
+               android:visibility="gone" />
+       </LinearLayout>
+
+
+       <!--撤回申请-->
+       <LinearLayout
+           android:visibility="gone"
+           android:id="@+id/ll_back_request"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:background="@drawable/shape_72c6ae"
+           android:layout_height="40dp">
+
+           <ImageView
+               android:layout_width="18dp"
+               android:layout_height="18dp"
+               android:src="@drawable/icon_back_request"
+                />
+           <TextView
+               android:layout_width="wrap_content"
+               android:text="@string/back_request"
+               android:layout_marginLeft="5dp"
+               android:textSize="16sp"
+               android:textColor="@color/white"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+
+
+   </LinearLayout>
+</LinearLayout>

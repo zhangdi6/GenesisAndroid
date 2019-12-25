@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+    <include layout="@layout/line2"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/psw_white_one_shape"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="45dp">
+
+        <com.iruiyou.pet.utils.ClearEditText
+            android:id="@+id/pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/oldPassword"
+            android:layout_marginLeft="11dp"
+            android:background="@null"
+            android:layout_marginRight="33dp"
+            android:layout_centerVertical="true"
+            android:inputType="textPassword"
+            android:textSize="15sp" />
+        <CheckBox
+            android:id="@+id/cbPwdHideDisplaynew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:button="@drawable/checkbox_background_pass"
+            android:checked="false"
+            android:gravity="center"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/psw_white_one_shape"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp">
+
+        <com.iruiyou.pet.utils.ClearEditText
+            android:id="@+id/pwdAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/newPassword"
+            android:layout_marginLeft="11dp"
+            android:background="@null"
+            android:layout_marginRight="33dp"
+            android:layout_centerVertical="true"
+            android:inputType="textPassword"
+            android:textSize="15sp" />
+        <CheckBox
+            android:id="@+id/cbPwdDuplicate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:button="@drawable/checkbox_background_pass"
+            android:checked="false"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <!--<EditText-->
+        <!--android:id="@+id/pwd"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="28dp"-->
+        <!--android:layout_marginRight="28dp"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:hint="@string/newPassword"-->
+        <!--android:textSize="12dp" />-->
+
+
+    <!--<EditText-->
+        <!--android:id="@+id/pwdAgain"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="28dp"-->
+        <!--android:layout_marginRight="28dp"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:hint="@string/duplicatePassword"-->
+        <!--android:textSize="12dp" />-->
+
+
+    <Button
+        android:id="@+id/sure"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/bt_psw_details_shape"
+        android:text="@string/sure"
+        android:textColor="@color/white" />
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_lay" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/transparent_db" android:padding="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_220"
+            android:background="@drawable/bg_goods_head">
+            <RelativeLayout
+                android:id="@+id/relay_title"
+                android:layout_margin="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_goods_title">
+                <ImageView
+                    android:layout_width="@dimen/dp_96"
+                    android:layout_height="@dimen/dp_96"
+                    android:id="@+id/image_cover"
+                    android:layout_margin="@dimen/dp_10"
+                    android:src="@drawable/icon"/>
+                <TextView
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_title"
+                    android:layout_toRightOf="@id/image_cover"
+                    android:text="产品名称"
+                    android:textColor="@color/_666666"
+                    android:textSize="@dimen/sp_14"/>
+
+                <TextView
+                    android:id="@+id/text_chengben_bottom"
+                    android:layout_toRightOf="@id/image_cover"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥37.00个/利润"
+                    android:textColor="#ff999999"
+                    android:textSize="14sp"
+                    android:layout_alignBottom="@id/image_cover"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_6"
+                    android:gravity="right"
+                    android:visibility="visible"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/relay_title"
+                android:id="@+id/text_xiaoshoujia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="销售价格"
+                android:textColor="#ffbebebe"
+                android:textSize="12sp"
+                android:layout_marginLeft="@dimen/dp_33"
+                />
+
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_below="@id/text_xiaoshoujia"
+                android:id="@+id/text_lirun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="成本：¥37.00"
+                android:textColor="#ff999999"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/dp_33"
+                />
+
+
+
+            <TextView
+                android:layout_marginRight="@dimen/dp_33"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/text_lirun"
+                android:id="@+id/text_lirunlv"
+                android:layout_width="77dp"
+                android:layout_height="42dp"
+                android:text="106%"
+                android:textColor="#ffff271c"
+                android:textSize="20sp"
+                android:gravity="right|bottom"
+                />
+
+            <TextView
+                android:layout_marginRight="@dimen/dp_33"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/relay_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="利润率"
+                android:textColor="#ff999999"
+                android:textSize="12sp"
+                android:layout_marginTop="-6dp"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relay_product_detail"
+            android:background="@drawable/bg_goods_head"
+            android:layout_marginTop="@dimen/dp_11"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="产品详情"
+                android:textColor="#ff333333"
+                android:textSize="14sp"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_centerVertical="true"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/go"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_22"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_72"
+            android:layout_marginTop="@dimen/dp_11"
+            android:background="@drawable/bg_goods_head">
+            <Button
+                android:id="@+id/btn_tuangou"
+                android:layout_marginBottom="@dimen/dp_17"
+                android:layout_marginTop="@dimen/dp_17"
+                android:layout_marginLeft="@dimen/dp_22"
+                android:layout_marginRight="@dimen/dp_22"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:text="发起团购"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_create_goods"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

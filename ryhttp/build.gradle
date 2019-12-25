@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 2
+        versionName "2.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            buildConfigField "boolean", "ENABLE_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            buildConfigField "boolean", "ENABLE_DEBUG", "true"
+        }
+    }
+
+}
+
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'org.greenrobot:greendao:3.2.2'
+    /*rx-android-java*/
+    api 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    api 'com.trello:rxlifecycle:1.0'
+    api 'com.trello:rxlifecycle-components:1.0'
+    /*rotrofit*/
+    api 'com.squareup.retrofit2:retrofit:2.1.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.0.0'
+
+    api 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    api 'com.orhanobut:logger:1.15'
+
+    api 'org.greenrobot:eventbus:3.0.0'
+}
+

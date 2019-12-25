@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_w" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/close"
+        android:layout_width="35dp"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@+id/back"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close_w" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/title"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="17dp" />
+
+    <ImageView
+        android:id="@+id/image_share"
+        android:padding="@dimen/dp_13"
+        android:layout_width="@dimen/dp_45"
+        android:layout_height="@dimen/dp_45"
+        android:src="@drawable/icon_more"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+</RelativeLayout>

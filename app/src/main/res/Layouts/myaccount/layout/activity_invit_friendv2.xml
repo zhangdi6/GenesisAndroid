@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/line_bg">
+    <include layout="@layout/title_lay" />
+
+
+    <ScrollView
+        android:layout_below="@id/titleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_invit_friend_top"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:paddingTop="@dimen/dp_160"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/dp_20"
+                android:paddingRight="@dimen/dp_20">
+                <LinearLayout
+                    android:layout_width="match_parent" android:background="@drawable/shape_white"
+                    android:layout_height="wrap_content" android:orientation="vertical"  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的邀请码"
+                        android:textColor="@color/_999999"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_15"/>
+
+                    <TextView
+                        android:id="@+id/text_invite_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_28"
+                        android:textColor="@color/_333333"
+                        android:text="234567"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_5"/>
+
+                    <Button
+                        android:id="@+id/btn_copy"
+                        android:text="点击复制"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="@dimen/dp_30"
+                        android:background="@drawable/bg_green_selector"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_20"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_20" android:visibility="visible"
+                    android:layout_width="match_parent" android:background="@drawable/shape_white"
+                    android:layout_height="wrap_content" android:orientation="vertical"  >
+                    <TextView
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邀请奖励"
+                        android:textColor="#ff333333"
+                        android:textSize="18sp"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <ImageView
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_invite_friend"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_marginRight="@dimen/dp_15"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center|bottom">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_16"
+                                android:textColor="@color/_666666"
+                                android:text="邀请"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_26"
+                                android:textColor="@color/_56D8B3"
+                                android:text="3"
+                                android:layout_marginLeft="@dimen/dp_5"
+                                android:layout_marginRight="@dimen/dp_5"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_16"
+                                android:textColor="@color/_666666"
+                                android:text="位好友"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="@dimen/dp_15"
+                            android:gravity="center|bottom"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_16"
+                                android:textColor="@color/_666666"
+                                android:text="获得"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_26"
+                                android:textColor="@color/_56D8B3"
+                                android:text="5"
+                                android:layout_marginLeft="@dimen/dp_5"
+                                android:layout_marginRight="@dimen/dp_5"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp_16"
+                                android:textColor="@color/_666666"
+                                android:text="个脉点"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="注：邀请好友注册并完善资料后可领取脉点"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/sp_10"
+                        android:textColor="@color/_999999"
+                        android:layout_marginBottom="@dimen/dp_20"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_10" android:layout_marginBottom="@dimen/dp_24"
+                    android:layout_width="match_parent" android:background="@drawable/shape_white"
+                    android:layout_height="@dimen/dp_90" android:orientation="horizontal"
+                    android:gravity="center" android:visibility="gone">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/dp_40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:src="@drawable/icon_invite_weixin_friend"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="微信邀请"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/sp_10"
+                            android:layout_marginTop="@dimen/dp_3"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="@dimen/dp_44"
+                            android:layout_height="@dimen/dp_44"
+                            android:src="@drawable/icon_invite_weixin_quan"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="朋友圈邀请"
+                            android:textColor="@color/_666666"
+                            android:textSize="@dimen/sp_10"
+                            android:layout_marginTop="@dimen/dp_3"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

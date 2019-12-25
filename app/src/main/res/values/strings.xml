@@ -1,0 +1,683 @@
+<resources>
+    <string name="app_name">脉场</string>
+    <string name="renmai">人脉</string>
+    <string name="str_crystals_number">水晶提现数量</string>
+    <string name="str_agree">已通过</string>
+    <string name="get_pbs">通过获得%1$dPBS</string>
+    <string name="back_get_pbs">撤回后返还PBS</string>
+    <string name="after_get_pbs">通过后获得PBS</string>
+    <string name="mine_friend_request">我的申请</string>
+    <string name="withdrawal_records">提现记录</string>
+    <string name="pay_addfriend_str">需要支付%1$.2fPBS获得添加人脉的资格</string>
+    <string name="pay_info_str">需要支付%1$.2fPBS获得查看资料的资格</string>
+    <string name="biquan_account">币全账户</string>
+    <string name="alipay_account">支付宝账户</string>
+    <string name="bank_account">银行账户</string>
+    <string name="input_hint">输入您的真实姓名以便于核实</string>
+    <string name="zhifubao">请输入您的支付宝账号</string>
+    <string name="hint_bank">请输入您的银行卡号</string>
+    <string name="hint_bank_name">请输开户行名称 (例:招商银行北京朝阳区富力城支行)</string>
+    <string name="hint_bank_about_name">请输入开户人姓名</string>
+    <string name="look_for_sb">找人</string>
+    <string name="phoneNum">手机号</string>
+    <string name="pwd">密码</string>
+    <string name="forgetPwd">忘记密码</string>
+    <string name="register">手机注册</string>
+    <string name="loading">加载中...</string>
+    <string name="login">登录</string>
+    <string name="crash_select_zhifubao">水晶提现数量100-1000，每7天限一次</string>
+    <string name="crash_select_bank">水晶提现数量100-10000，每7天限一次</string>
+    <string name="crash_select_zhifubao_max">手续费1%,水晶提现数量&lt;=1000，每周限一次</string>
+    <string name="crash_select_bank_max">手续费1.5%,水晶提现数量&lt;=10000，每周限一次</string>
+    <string name="crash_select_biquan">单次最少提现2000个PBS</string>
+    <string name="ProtocolAndPrivacy">用户协议及隐私政策</string>
+    <string name="code">验证码</string>
+    <string name="resend">重新发送（60s）</string>
+    <string name="myResume">我的资料</string>
+    <string name="promoteCombat">提升算力</string>
+    <string name="invitingFriends">邀请好友</string>
+    <string name="invitingFriends_new">邀请好友增加影响力</string>
+    <string name="member_purchase">开通高级会员</string>
+    <string name="open_membership">开通会员</string>
+    <string name="power">职业算力</string>
+    <string name="friends">联系人</string>
+    <string name="mine">我的</string>
+    <string name="send_out2">为保障你的账户安全已发送短信验证码到你登陆的手机号：%1$s 进行验证</string>
+    <string name="primary_member_rights">初级会员权益</string>
+    <string name="my_senior_member">高级会员权益</string>
+    <string name="my_vip_member">商务会员权益</string>
+    <string name="my_vip_jiyukongjian_quanyi">合伙人权益</string>
+    <string name="my_baijin_member">白金会员权益</string>
+    <string name="my_enterprise_member">企业会员权益</string>
+    <string name="my_jiyukongjian_member">股东权益</string>
+    <string name="my_senior_member1">高级会员</string>
+    <string name="my_vip_member1">商务会员</string>
+    <string name="string_empty"></string>
+    <string name="string_jiyu_kafei">用于在脉场空间购买咖啡</string>
+    <string name="my_vip_jiyukongjian">消费合伙人</string>
+    <string name="my_vip_jiyukongjian_partner">股权合伙人</string>
+    <string name="my_baijin_member1">白金会员</string>
+    <string name="my_enterprise_member1">企业会员</string>
+    <string name="my_senior_member2">高级会员</string>
+    <string name="my_vip_member2">商务会员</string>
+    <string name="my_baijin_member2">白金会员</string>
+    <string name="my_zuanshi">钻石会员</string>
+    <string name="my_zuanshi_price">钻石会员权益</string>
+    <string name="my_enterprise_member2">企业会员</string>
+    <string name="primary_member">初级会员</string>
+    <string name="primary_member_price">130</string>
+    <string name="primary_member_price2">¥ 18.8</string>
+    <string name="primary_member_price3">¥ 399</string>
+    <string name="senior_member_price">1,300元</string>
+    <string name="senior_member_price2">¥ 399</string>
+    <string name="vip_member_price">6,500元</string>
+    <string name="vip_member_price2">10,000元</string>
+    <string name="baijin_member_price">12,500元</string>
+    <string name="baijin_member_price2">¥ 10,000</string>
+    <string name="zuanshi_member_price">¥ 30,000</string>
+    <string name="enterprise_member_price">55,900元</string>
+    <string name="enterprise_member_price2">50,000元</string>
+    <string name="currentMiningCombat">当前挖矿职业算力</string>
+    <string name="combat">算力</string>
+    <string name="addBasicInformation">添加基本资料</string>
+    <string name="upload_photos">上传职业照</string>
+    <string name="addWorkExperience">添加工作背景</string>
+    <string name="addEducationalExperience">添加教育背景</string>
+    <string name="myWallet">我的钱包</string>
+    <string name="myCombat">我的算力</string>
+    <string name="myOrder">我的订单</string>
+    <string name="buyHistory">购买记录</string>
+    <string name="pbs_transaction">PBS定存资产</string>
+    <string name="bqex_exchange">币全交易所</string>
+    <string name="bqex_exchange2">币全数字产品下载平台</string>
+    <string name="accountSetting">设置</string>
+    <string name="resumeIsComplete">资料完整度</string>
+    <string name="name">姓名</string>
+    <string name="education">学历</string>
+    <string name="company">公司</string>
+    <string name="companyAddr">公司注册地</string>
+    <string name="companyNature">公司性质</string>
+    <string name="blockChainEnthusiasts">区块链从业者</string>
+    <string name="myPBS">我的PBS</string>
+    <string name="fromOurAccount">提现</string>
+    <string name="temporarilyNotOpen">暂未开放</string>
+    <string name="recordOfRevenueAndExpenditure">收支记录</string>
+    <string name="pbs_current_price">PBS当前价格</string>
+    <string name="changePassword">修改密码</string>
+    <string name="aboutUs">关于我们</string>
+    <string name="user_details">的资料</string>
+    <string name="currentVersion">当前版本</string>
+    <string name="logout">退出登录</string>
+    <string name="set">设置</string>
+    <string name="position">当前职位</string>
+    <string name="positionName">职位</string>
+    <string name="professional_identity">职业身份</string>
+    <string name="professional_title">职业头衔</string>
+    <string name="companyName">所在公司</string>
+    <string name="numberOfCompanies">公司人数</string>
+    <string name="duration">在校时间段</string>
+    <string name="jobContent">工作描述</string>
+    <string name="str_time">时间</string>
+    <string name="save">保存</string>
+    <string name="accept">接受</string>
+    <string name="workExperience">工作经历</string>
+    <string name="pleaseFillIn">请填写</string>
+    <string name="str_input">请输入</string>
+    <string name="str_start_edu_time">入学时间</string>
+    <string name="str_start_work_time">入职时间</string>
+    <string name="school">学校</string>
+    <string name="major">专业</string>
+    <string name="copy_url">复制链接</string>
+    <string name="schoolExperience">在校经历</string>
+    <string name="educationalExperience">教育经历</string>
+    <string name="blockChainIdentity">区块链身份</string>
+    <string name="blockChainEmploymentTime">区块链从业时间</string>
+    <string name="blockChainExpertise">区块链专长</string>
+    <string name="blockChainInfo">区块链信息</string>
+    <string name="choiceBlockChainIdentity">请选择区块链身份</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+    <string name="ignore">忽略</string>
+    <string name="blockChainAttentionTime">区块链关注时间</string>
+    <string name="blockChainIntentionalProfession">区块链意向职业</string>
+    <string name="moreWorkExperienceCanEnhanceYourCareerRanking">更多的工作经历可以提升自己的职业排名</string>
+    <string name="HRIsMuchMoreInterestedInJobSeekersWithEducationalBackground">HR更加青睐于有教育背景的求职者</string>
+    <string name="chooseAPhoto">选择照片</string>
+    <string name="agree_user">我已阅读并同意</string>
+    <string name="invite_confirm">确认不需要填写邀请码吗？</string>
+    <string name="Camera">照相机</string>
+    <string name="gallery">图库</string>
+    <string name="member">第</string>
+    <string name="member2">位脉场成员</string>
+    <string name="FileDirectoryCreationFailed">文件目录创建失败</string>
+    <string name="FailedToGetPhotos">获取照片失败</string>
+    <string name="FrozenPBS">冻结PBS</string>
+    <string name="frozen">冻结</string>
+    <string name="resend2">重新发送</string>
+    <string name="RegainValidationCode">重新获取验证码</string>
+    <string name="ForgetPassword">忘记密码</string>
+    <string name="next">下一步</string>
+    <string name="newPassword">新密码</string>
+    <string name="duplicatePassword">重复密码</string>
+    <string name="resend3">秒后可重新发送</string>
+    <string name="PasswordModificationSucceeded">修改密码成功</string>
+    <string name="oldPassword">旧密码</string>
+    <string name="ChangePassword">修改密码</string>
+    <string name="setPassword">设置密码</string>
+    <string name="getValidationCode">获取验证码</string>
+    <string name="inputCode">请输入验证码</string>
+    <string name="register22">注册</string>
+    <string name="CountryRegion">国家地区</string>
+    <string name="china">中国</string>
+    <string name="InputPassword">输入密码</string>
+    <string name="complete">完成</string>
+    <string name="selectConutry">选择国家</string>
+    <string name="selectEducation">请选择学历</string>
+    <string name="PleaseSelectTheNumberOfCompanies">请选择公司人数</string>
+    <string name="BasicInformation">基本资料</string>
+    <string name="username">姓名</string>
+    <string name="SchoolName">毕业院校</string>
+    <string name="PleaseFillInYourPersonalDescription">请填写个人描述</string>
+    <string name="TransactionExtraction">交易提取</string>
+    <string name="Invitation">邀请</string>
+    <string name="not_invited">未邀请</string>
+    <string name="AlreadyInvited">已邀请</string>
+    <string name="PleaseEnterTheBitPasswordOld">请输入6-12位旧密码</string>
+    <string name="PleaseEnterTheBitPasswordNew">请输入6-12位新密码</string>
+    <string name="PleaseEnterTheBitPassword">请输入6-12位密码</string>
+    <string name="ThePasswordEnteredTwoTimesIsInconsistent">两次密码输入不一致</string>
+    <string name="PressAgainAndExitTheProgram">再按一次,退出程序</string>
+    <string name="language">选择语言</string>
+    <string name="Chinese">中文</string>
+    <string name="English">英语</string>
+    <string name="CurrentRankings">当前排名</string>
+    <string name="MyCombat">我的职业算力</string>
+    <string name="CurrentCombat">当前算力</string>
+    <string name="NotOnTheList">未上榜</string>
+    <string name="CombatRanking">算力排行</string>
+    <string name="ScanDownloadAPP">扫码下载APP</string>
+    <string name="InviteFriendsToIncreasePower">邀请好友增加矿力</string>
+    <string name="YourInvitationCode">您的邀请码</string>
+    <string name="ReplicatingSuccess">复制成功</string>
+    <string name="invitationCode">请输入邀请码 (选填)</string>
+    <string name="registerCode">输入邀请码</string>
+    <string name="tips1">填写资料</string>
+    <string name="tips">可跳过，但你和邀请者将错过奖励</string>
+    <string name="skip">跳过</string>
+    <string name="refuseJurisdiction">拒绝权限</string>
+    <string name="Loadaddressbookfriends">加载通讯录好友中...</string>
+    <string name="ReceiveSuccess">收件人已成功接收</string>
+    <string name="SMSissentsuccessfully">短信发送成功</string>
+    <string name="InvitedByMe">由我邀请</string>
+    <string name="sms_verification">短信验证</string>
+    <string name="Registered">已注册</string>
+    <string name="product">产品</string>
+    <string name="join">加盟</string>
+    <string name="project">项目</string>
+    <string name="agent">代理</string>
+    <string name="food">食品</string>
+    <string name="allGoods">百货</string>
+    <string name="digital">数码</string>
+    <string name="nursing">洗护</string>
+    <string name="perinatal">母婴</string>
+    <string name="financial">投融资</string>
+
+    <string name="message">好友</string>
+
+    <string name="register1">中国</string>
+    <string name="register2">+86</string>
+    <string name="register3">手机号码</string>
+    <string name="register4">下一步</string>
+    <string name="register5">验证码</string>
+    <string name="register6">设置密码</string>
+    <string name="register7">重复密码</string>
+    <string name="register8">昵称</string>
+    <string name="register9">邀请码</string>
+    <string name="set3">确认</string>
+    <string name="pet0">宠物名称</string>
+    <string name="pet1">宠物性别</string>
+    <string name="pet2">宠物种类</string>
+    <string name="pet3">选择宠物种类</string>
+    <string name="pet4">宠物品种</string>
+    <string name="pet5">选择宠物品种</string>
+    <string name="pet6">宠物生日</string>
+    <string name="pet7">选择宠物生日</string>
+    <string name="pet8">保存</string>
+    <string name="pet9">雄性</string>
+    <string name="pet10">雌性</string>
+    <string name="code0">已有宠链星球账号</string>
+    <string name="login0">忘记密码</string>
+    <string name="login1">注册</string>
+    <string name="user0">昵称</string>
+    <string name="user1">账号</string>
+    <string name="user2">我的邀请码</string>
+    <string name="user3">我的PETS</string>
+    <string name="assets0">PETS总数</string>
+    <string name="assets4">收支记录</string>
+    <string name="assets1">冻结Pest数</string>
+    <string name="assets2">PETS 简介</string>
+    <string name="assets3">收支记录</string>
+    <string name="assets5">我的资产</string>
+    <string name="assets6">兑换</string>
+    <string name="petd0">名称</string>
+    <string name="petd1">性别</string>
+    <string name="petd2">种类</string>
+    <string name="petd3">品种</string>
+    <string name="pet_detail">删除</string>
+    <string name="pet00">云宠邮箱账号</string>
+    <string name="pet11">密码</string>
+    <string name="pet22">绑定</string>
+
+    <!--首页 职业算力-->
+    <string name="dialogue">根据影响力，每六小时签到一次</string>
+    <string name="code_content">验证码已发送至</string>
+    <string name="required">(必填)</string>
+    <string name="tips2">让世界知道我是谁</string>
+    <string name="occupation">选择职业身份</string>
+    <string name="select_language">选择语言</string>
+    <string name="praise">求好评</string>
+    <string name="recharge1">充值</string>
+    <string name="official_website">我们的官网</string>
+    <string name="information">基本信息</string>
+    <string name="work_information">工作信息</string>
+    <string name="mining">正在生成中...</string>
+    <string name="mining2">成长</string>
+    <string name="synchronization">同步</string>
+    <string name="synchronized_tip">您现在还未曾同步通讯录</string>
+    <string name="work_experience">工作经验</string>
+    <string name="not_add">暂未添加</string>
+    <string name="position_tips">请填写当前职位</string>
+    <string name="company_tips">请填写所在公司</string>
+    <string name="time_slot_tips">请填写工作时间段</string>
+    <string name="input_education_name">请输入学校名称</string>
+    <string name="input_education_position">请输入专业名称</string>
+    <string name="input_education_time">请输入入学时间</string>
+    <string name="input_commpany_position">填写自己的职位</string>
+    <string name="str_crash_zhifubao">水晶提现数量 ≤ 1000个，每周限一次</string>
+    <string name="str_crash_biquan">水晶提现数量 > 1000个，每月限一次</string>
+    <string name="str_crash_pbs">单次最少提现2000个PBS</string>
+    <string name="no_record">暂无记录</string>
+    <string name="follow">关注</string>
+    <string name="back_request">撤回申请</string>
+    <string name="watch_profile">查看资料</string>
+    <string name="add_friends">添加人脉</string>
+    <string name="send">发消息</string>
+    <string name="all">全部</string>
+    <string name="square">广场</string>
+    <string name="clear_success">清除成功</string>
+    <string name="news">消息</string>
+    <string name="university">大学</string>
+    <string name="pulse_field">脉场</string>
+    <string name="verification">通过验证</string>
+    <string name="unfollow">取消关注</string>
+    <string name="fans">粉丝</string>
+    <string name="added">已添加</string>
+    <string name="network_expand">人脉拓展</string>
+    <string name="network_dynamic">人脉动态</string>
+    <string name="str_class">脉场课堂</string>
+    <string name="Contacts">通讯录</string>
+    <string name="search">搜索</string>
+    <string name="search_hint">&#160;&#160;搜索</string>
+    <string name="friend_application">人脉申请</string>
+    <string name="new_friend_application_request">新的人脉</string>
+    <string name="my_attention">我的关注</string>
+    <string name="my_fans">我的粉丝</string>
+    <string name="my_friend">我的好友</string>
+    <string name="my_group">我的群聊</string>
+    <string name="chat">聊天</string>
+    <string name="interaction">互动</string>
+    <string name="elite_recommends">精英推荐</string>
+    <string name="workplace_power">算力排行</string>
+    <string name="workplace_course">职场课程</string>
+    <string name="course_description">课程说明</string>
+    <string name="find">发现</string>
+    <string name="hot">热门</string>
+    <string name="newest">最新</string>
+    <string name="release">发布</string>
+    <string name="fenxiao">分销</string>
+    <string name="text">正文</string>
+    <string name="comment">评论</string>
+    <string name="fabulous">点赞</string>
+    <string name="pbs">脉点</string>
+    <string name="membership_content">Hi %1$s，开通脉场会员特权，即刻开始享受专属权益，开启你的职业巅峰！</string>
+    <string name="membership_content2">Hi %1$s，你已是脉场%2$s会员，正在享受相应的独享权益！</string>
+    <string name="exchange_price">(交易所实时价格)</string>
+    <string name="crystal">水晶</string>
+    <string name="crystal2">水晶收益</string>
+    <string name="one_crystal">100 水晶 = 10 算力，最多可得 300 算力</string>
+    <string name="company_home">公司主页</string>
+    <string name="add_community">加入官方社区</string>
+    <string name="team_members">团队成员</string>
+    <string name="company_profile">公司简介</string>
+
+    <string name="recharge">水晶充值</string>
+    <string name="crystal_balance">水晶余额</string>
+    <string name="my_crystal">我的水晶</string>
+    <string name="my_assets_valuation">我的资产估值</string>
+    <string name="exchange5">*目前9PBS=1水晶</string>
+    <string name="exchange6">*目前1水晶=%1$sPBS</string>
+    <string name="use">使用</string>
+    <string name="exchange">兑换</string>
+    <string name="understand">了解详情</string>
+    <string name="exchange3">持有水晶得业务分成，持有越多分成越多</string>
+    <string name="annual_division_rate">年化分成率</string>
+    <string name="exchange_success">兑换成功</string>
+    <string name="view_home_page">查看职业主页</string>
+    <string name="welcome_to_interesting_workplace">欢迎使用脉场</string>
+    <string name="recommendation">群聊推荐</string>
+    <string name="member_information">成员信息</string>
+    <string name="classroom">课堂</string>
+    <string name="opportunities">商机</string>
+    <string name="help">帮助</string>
+    <string name="purchase">购买</string>
+    <string name="donot_disturb">免打扰切换</string>
+    <string name="donot_disturb2">免打扰</string>
+    <string name="cancel_no_bother">取消免打扰</string>
+    <string name="inviting_friends">邀请好友增加算力</string>
+    <string name="buy_crystal">购买水晶增加算力</string>
+    <string name="course_category_5">企业管理</string>
+    <string name="course_category_6">创业指导</string>
+    <string name="course_category_7">营销指南</string>
+    <string name="course_category_8">投资管理</string>
+    <string name="course_category_9">职业发展</string>
+    <string name="networking_platform">提供商业与就业机会</string>
+    <string name="the_course">本课程将于%1$s天后正式开课\n\t\t\t版权归原作者所有</string>
+    <string name="add_friend">请求添加你为好友</string>
+    <string name="pbs_hatch">PBS定存资产</string>
+    <string name="subscribe_pbs_deposit">认购PBS定存资产</string>
+    <string name="pbs_hight_save">PBS高端定存资产</string>
+    <string name="subscribe_pbs_high_deposit_treasury">认购PBS高端定存资产</string>
+    <string name="profit_times">5-10倍</string>
+    <string name="fixed_deposit">定存资产</string>
+    <string name="expected_daily_rate">预期日化率</string>
+    <string name="promotion_award">推广奖励</string>
+    <string name="return_of_monthly_principal">每月返还本金</string>
+    <string name="expected_return">预期收益</string>
+    <string name="achieving_promotion_benefits">推广越多 收益越高</string>
+    <string name="return_all_principal">7个月返还全部本金</string>
+    <string name="release_month">定存180天</string>
+    <string name="fixed_deposit2">脉点收益</string>
+    <string name="crystal_revenue">水晶收益</string>
+    <string name="str_hint_tixian">请确认您输入的信息正确，避免信息错误导致的资金损失！
+申请提交后将于24小时内到账。</string>
+    <string name="input_account_bank_str">请绑定银行账户</string>
+    <string name="input_account_str">请绑定币全交易所账户</string>
+    <string name="input_account_zhifubao_str">请绑定支付宝账户</string>
+    <string name="incubation_time">定存时间：</string>
+    <string name="release_time">发布时间：</string>
+    <string name="asset_extraction_method">提取资产方式：转至交易所或钱包</string>
+    <string name="incubation_mode">孵化方式</string>
+    <string name="immediate_incubation">立即孵化</string>
+    <string name="total_pbs">定存收益</string>
+    <string name="regional_assets">人脉收益</string>
+    <string name="incubation_assets">团队收益</string>
+    <string name="assets_deposited">存入资产</string>
+    <string name="assets_pbs">PBS提现</string>
+    <string name="my_treasure">我的定存</string>
+    <string name="successful_transfer">转账成功</string>
+    <string name="transfer_accounts">转账给会员</string>
+    <string name="transfer_to_accounts">转入账号/手机号</string>
+    <string name="withdrawal_of_assets">提取资产</string>
+    <string name="promotional_benefits">推广数据</string>
+    <string name="view_hatch_nodes">查看孵化节点</string>
+    <string name="my_node">我的节点:</string>
+    <string name="number_of_nodes">节点人数:</string>
+    <string name="total_assets_calculated">算力总资产:</string>
+    <string name="internal_revenue">内盘交易</string>
+    <string name="prompt">提示</string>
+    <string name="prompt2">即将开通</string>
+    <string name="prompt3">开通时间为%1$s年,开通后即刻生效</string>
+    <string name="editing_materials">编辑资料</string>
+    <string name="prompt_pbs">使用1水晶兑换为PBS，得到PBS数量以交易所实时波动价值为准，是否兑换？</string>
+    <string name="replication_success">复制成功</string>
+    <string name="pbs_tips">(量)24小时\t%1$s万</string>
+    <string name="notice">脉场对申请页面、填写资料等多个页面进行优化</string>
+    <string name="notice2">公告</string>
+    <string name="str_tixian_zhifubao">提现至支付宝账户</string>
+    <string name="str_tixian_biquan">提现至币全账户</string>
+    <string name="str_tixian_bank">提现至银行卡</string>
+    <string name="money_withdrawal_address">提币地址</string>
+    <string name="address_input_tips">输入或长按粘贴地址</string>
+    <string name="quantity_input_tips">最小提取数量2000</string>
+    <string name="quantity_transfer_count">请输入脉点</string>
+    <string name="quantity_account_number">请输入账号</string>
+    <string name="available">可用</string>
+    <string name="transfer_accounts_tips">请确认转账账号/手机号 正确，转入后不可找回</string>
+    <string name="number">数量</string>
+    <string name="service_charge">手续费</string>
+    <string name="extraction_of_asset_hints">最小提币数量为：2000 脉点。\n
+为保障资金安全，当您账户安全策略变更、密码修改我们会对提币进行人工审核，请耐心等待工作人员电话货邮件联系。\n
+请务必确认电脑及浏览器安全，防止信息被篡改或泄漏。</string>
+    <string name="actual_achievement_quantity">实际到账数量</string>
+    <string name="verification_amount">验证金额</string>
+    <string name="copy_amount">复制金额</string>
+    <string name="click_replication">点击复制</string>
+    <string name="save_hints">请向下方地址转入随机生成的验证金额，用以验证存入的账号</string>
+    <string name="recharge_address">充值地址</string>
+    <string name="copy_address">复制地址</string>
+    <string name="mail_list">暂未导入通讯录</string>
+    <string name="mail_list2">通讯录内无联系人</string>
+    <string name="mail_list3">获取权限失败</string>
+    <string name="recharge_code">充值二维码</string>
+    <string name="save_code">保存二维码</string>
+    <string name="recharge_prompt">禁止向PBS地址充值除PBS之外的资产，任何充入PBS地址的非PBS资产将不可找回。\n使用PBS地址充值需要3个以上网络确认才能到账。</string>
+    <string name="current_pbs_balance">当前脉点余额</string>
+    <string name="select_the_number">填写存入水晶数量</string>
+    <string name="deposit_in">存入水晶数量</string>
+    <string name="discount_locked_quantity">提现中</string>
+
+    <string name="current_crystal_balance">当前水晶余额</string>
+    <string name="crystal_portion">水晶/份</string>
+    <string name="subscription_quantity">认购数量</string>
+    <string name="opening_time">开通时长</string>
+    <string name="year">年</string>
+    <string name="profit_times2">2-10倍</string>
+    <string name="day">天</string>
+    <string name="resource_library">脉场资源库</string>
+    <string name="resource_library_tips">脉场功能的开发正在火热进行中</string>
+    <string name="pulse_valuation">脉场资产估值</string>
+    <string name="node_partner">城市合伙人</string>
+    <string name="node_partner2">城市合伙人</string>
+    <string name="invited_contacts">已邀请的联系人</string>
+    <string name="my_network">我的人脉</string>
+    <string name="my_network_bank">我的人脉库</string>
+    <string name="import_address_book">导入手机通讯录</string>
+    <string name="node_partner_tips">脉场城市节点合伙人</string>
+    <string name="node_partner_tips1">中文社区节点合伙人计划开启！节点合伙人团队将于脉场紧密合作，携手共同构建职业社交生态，致力于实现颠覆传统职业社交的愿景。快来找找你所在城市的合伙人吧！</string>
+    <string name="invitation">我邀请了%1$s人</string>
+    <string name="invite_tips1">每邀请一个好友，获得</string>
+    <string name="invite_tips2">10算力</string>
+    <string name="invite_tips3">增长</string>
+    <string name="invite_tips5">邀请的第5人额外</string>
+    <string name="invite_tips6">+50算力</string>
+    <string name="invite_tips7">邀请的第10人额外</string>
+    <string name="invite_tips8">+150算力</string>
+    <string name="invite_tips9">邀请的第20人额外</string>
+    <string name="invite_tips10">+300算力</string>
+    <string name="invite_tips11">邀请无上限</string>
+    <string name="fixed_assets">定存资产</string>
+    <string name="frozen_assets">冻结资产</string>
+    <string name="balance_assets">余额资产</string>
+    <string name="yuan">元</string>
+    <string name="fixed_assets2">定存资产转账</string>
+    <string name="my_user">我的人脉资源超过了%1$s的用户</string>
+    <string name="resource_library_tips2">脉场意为人脉资源市场\n是一个用户可以进行交易\n将人脉变现的广场</string>
+    <string name="chuji1">永久享受8.8折（饮品）</string>
+    <string name="chuji2">邀请好友办理即可免除管理费</string>
+    <string name="chuji3">生日优惠-任意消费即可领取一份甜品</string>
+    <string name="chuji4">每月可免费试听一次课程</string>
+    <string name="chuji5">折扣仅限于饮品消费</string>
+
+    <string name="chuji2_1">储值399元即可成为高级会员</string>
+    <string name="chuji2_2">免除18.8元会员管理费</string>
+    <string name="chuji2_3">享受7.5折优惠（饮品）</string>
+    <string name="chuji2_4">办理成功送3杯饮品免单券，每次限一杯</string>
+    <string name="chuji2_5">成为美食体验官-每季新品免费品尝一份</string>
+    <string name="chuji2_6">生日优惠-任意消费即可领取一份甜品</string>
+    <string name="chuji2_7">每月可免费试听一次官方主办课程</string>
+    <string name="chuji2_8">每月100元商城优惠代金券</string>
+
+
+    <string name="chuji3_1">饮品7.5折</string>
+    <string name="chuji3_2">会议室8.5折</string>
+    <string name="chuji3_3">办卡1年内每周可免费在店内消费1杯咖啡（不可累计）</string>
+    <string name="chuji3_4">成为美食体验官每季新品免费品尝一份</string>
+    <string name="chuji3_5">生日优惠-全场5折并赠送一份甜品</string>
+    <string name="chuji3_6">每月免费试听官方主办5堂收费课程</string>
+    <string name="chuji3_7">每周100元商城优惠代金券</string>
+    <string name="chuji3_8">免除18.8元会员管理费</string>
+
+
+    <string name="chuji4_1">饮品7.5折</string>
+    <string name="chuji4_2">会议室8.5折</string>
+    <string name="chuji4_3">办卡1年内每周可免费在店内消费3杯咖啡（不可累计）</string>
+    <string name="chuji4_4">成为美食体验官每季新品免费品尝一份</string>
+    <string name="chuji4_5">生日优惠-全场5折并赠送一份甜品</string>
+    <string name="chuji4_6">每月免费试听官方主办5堂收费课程</string>
+    <string name="chuji4_7">每周100元商城优惠代金券</string>
+    <string name="chuji4_8">免除18.8元会员管理费</string>
+
+
+    <string name="senior_member_nine">享受脉场线上课程9折优惠</string>
+    <string name="maichang_tushu">享受脉场空间全场图书9.5折</string>
+    <string name="commpany">公司</string>
+    <string name="input_commpany">填写公司</string>
+    <string name="senior_member">高级会员\t\t\t1000元/年</string>
+    <string name="senior_member1">¥ %1$s</string>
+    <string name="senior_member2">享受脉场线上课程8折优惠</string>
+    <string name="senior_member3">职业搜索排名靠前</string>
+    <string name="senior_member5">求职培训与职业生涯规划</string>
+
+    <string name="vip_member">商务会员\t\t\t5,000元/年 </string>
+    <string name="vip_member2">脉场课堂全场7.5折</string>
+    <string name="vip_member3">商务人脉搜索排名靠前</string>
+    <string name="vip_member5">商务与投融资机会</string>
+    <string name="vip_member6">行业专家深度规划咨询</string>
+
+
+    <string name="vip_jiyu_1">每月现金分红</string>
+    <string name="vip_jiyu_2">单店数量最多100人</string>
+    <string name="vip_jiyu_3">十倍收益退出机制</string>
+    <string name="vip_jiyu_4">股份分红收益</string>
+    <string name="vip_jiyu_5">工商登记变更为自然人股东</string>
+    <string name="vip_jiyu_6">单店数量最多40人</string>
+
+    <string name="baijin_membership">白金会员\t\t\t10,000元/年 </string>
+    <string name="baijin_membership2">享受脉场线上课程7折优惠</string>
+    <string name="baijin_membership3">商务机会搜索排名置顶</string>
+    <string name="baijin_membership5">商务与投融资机会</string>
+    <string name="baijin_membership6">海外优质商业资源对接</string>
+    <string name="baijin_membership7">免费投资机构通讯录</string>
+
+    <string name="zhongchou1">每一位合伙人需要认同脉场空间的经营理念和商业模式，拥有相同价值观，接受并愿意传播众筹开店这种商业模式，愿意与脉场·机遇空间共同成长
+合伙人将享有其在本城所负责项目的利润分成，并且拥有脉场空间品牌在当地的部分使用权，共享空间的部分商业资源。</string>
+    <string name="zhongchou2">1.所有股东享有相应股份分成权益；\n2.所有股东按股份享有脉场APP的部分升值服务；\n3.所有股东将享有股权升值带来的价值。</string>
+    <string name="corporate_membership">企业会员\t\t\t50,000元/年</string>
+    <string name="corporate_membership2">脉场课堂全场5.5折</string>
+    <string name="corporate_membership3">商务机会搜索排名置顶</string>
+    <string name="corporate_membership5">企业品牌推广宣传</string>
+    <string name="corporate_membership6">企业导师辅导</string>
+    <string name="corporate_membership7">大咖私密交流活动</string>
+    <string name="corporate_membership8">免费行业研究报告</string>
+    <string name="str_member_agree">脉场会员协议</string>
+    <string name="course_buy_now">立即购买</string>
+    <string name="course_learn_now">立即学习</string>
+    <string name="delete_exp">删除此项经历</string>
+    <string name="jiyu_rule">
+        1.用户可以在脉场空间线下实体店使用会员卡进行支付\n\n
+        2.会员卡可支持脉场空间线下实体店购买\n\n
+        3.充值成功后，会员卡到账可能会存在一定延时，请耐心等待，如果遇到长时间未到账，请联系我们。\n\n
+        4.开通脉场空间合伙人权益和股东权益必须先开通白金会员卡\n
+    </string>
+    <string name="hehuoren_agreement">
+        \n第一章/总则\n
+第一条 根据《民法通则》、《民法通则意见》、《中华人民共和国合伙企业法》及有关法律、行政法规、规章的有关规定，各合伙人经协商致订立本协议。\n
+第二条 脉场是合伙人根据协议自愿组成的合法共同经营体。全体合伙人愿意遵守国家有关的法律、法规、规章，依法纳税，守法经营。\n
+第三条 本协议条款与法律、行政法规、规章不符的，以法律、行政法规、规章的规定为准。\n
+第四条 本协议经合伙人签名、脉场盖章后生效。合伙人按照合伙协议及《脉场合伙人手册》享有权利、履行义务。\n
+
+\n\n第二章/合伙组织的名称和主要经营场所的地点\n
+第五条合伙组织名称: 脉场空间\n
+第六条组织经营场所: 脉场空间\n
+
+\n\n第三章/合伙目的和合伙经营范围及合伙期限\n
+第七条合伙目的: 为了保护全体合伙人的合伙权益，使脉场通过合法经营获得最佳经济效益。\n
+第八条合伙经营范围: 加盟脉场，合法指定经营脉场相关产品。\n
+
+\n\n第四章/合伙人的分类及权益\n
+第九条根据合伙人的出资方式、数额以及《脉场合伙人手册》规定的合伙模式，合伙人分为固定合伙人、投资合伙人及消费合伙人三类，一旦正式入伙，永久分配权益，具体权利与义务、利润分配以《脉场合伙人手册》为准。
+脉场空间日常所需开支仅有店铺租金及所需水电费用，超出上述两项支出的费用未经全体合伙人同意，不得分摊到本店支出，否则一切债务由营业执照登记经营者承担，其他合伙人不承担责任。
+本人自愿以合伙人身份加入脉场。\n
+
+\n\n第五章/合伙事务的执行\n
+第十条 固定合伙人对执行合伙事务享有同等的权利;其他有限合伙人无权决定合伙事务。\n
+经全体固定合伙人决定，委托_      (列出所委托合伙人)执行合伙事务;其他合伙人不再执行合伙事务。执行合伙事务的合伙人对外代表本脉场。\n
+第十一条 不执行合伙事务的合伙人有权监督执行事务合伙人执行合伙事务的情况。执行事务合伙人应当定期向其他合伙人报告事务执行情况以及脉场的经营和财务状况，其执行合伙事务所产生的收益归脉场所有，所产生的费用和亏损由本脉场承担。\n
+第十二条 固定合伙人分别执行合伙事务的，执行事务合伙人可以对其他合伙人执行的事务提出异议。提出异议时，暂停该事务的执行。如果发生争议，依照第十三条规定作出决定。受委托执行合伙事务的合伙人不按照合伙协议的决定执行事务的，其他合伙人可以决定撤销该委托。\n
+第十三条 固定合伙人对脉场有关事项作出决议，实行合伙人一人一票并经全体固定合伙人过半数通过的表决办法。\n
+第十四条 脉场的下列事项应当经全体固定合伙人一致同意:\n
+(一)改变合伙组织的经营范围、主要经营场所的地点;\n
+(二)处分合伙组织的不动产;\n
+(三)转让或者处分合伙组织的知识产权和其他财产权利;\n
+第十五条  固定合伙人不得自营或者同他人合作经营与脉场相竞争的业务。除经全体固定合伙人一致同意外，合伙人不得同脉场进行关联交易。合伙人不得从事损害脉场利益的活动。\n
+第十六条 脉场任何合伙人不得以本店名义贷款、对外担保及以本店资产对外质押，否则，一切法律责任由其个人承担，与本店无关，其他合伙人拥有对其追究法律责任的权利。\n
+\n\n第六章/入伙与退伙\n
+第十七条 新合伙人入伙，依法订立本书面协议，视为经全体合伙人一致同意入伙。订立入伙协议时，原合伙人应当向新合伙人如实告知脉场的经营状况和财物状况。入伙的新合伙人与原合伙人享有同等权利，承担同等责任，\n
+第十八条 合伙人在脉场事务执行造成不利影响的情况下，可以退伙，但应当提前三十日通知其他合伙人。退伙事由实际发生之日为退伙生效日，退伙不退资金。\n
+第十九条 合伙人有未履行出资义务，因故意或者重大过失给本脉场造成损失及执行合伙事务时有不正当行为等情形之一的，经其他合伙人一致同意，可以决议将其除名。\n
+第二十条 本协议签约周期为一年，续签无需缴纳费用。若合伙人不履行或者消极履行《脉场合伙人手册》中约定的义务，经其他合伙人一致同意，可以决议将其除名，若其店内投资款尚未全额回本，在每月承担店内费用的前提下，可继续享受合伙人权益进行分红，直至投资款全额回本；若未承担店内费用，则无权分红。\n
+\n\n第七章/争议解决办法\n
+第二十一条  合伙人履行合作协议发生争议的，合伙人可以通过协商或者调解解决。不愿通过协商解决或协商、调解不成的，约定由本合同签订地人民法院诉讼解决。\n
+\n\n第八章/违约责任\n
+第二十二条  合伙人违反合伙协议的，应当依法承担违约责任。\n
+\n\n第九章/其他事项\n
+第二十三条  经全体合伙人协商一致，可以修改或者补充本合伙协议。本协议未尽事宜，按国家有关法律规定执行。\n
+
+    </string>
+    <string name="member_agreement">
+\n\n特别提示\n\n
+海南职趣科技有限公司（以下称“职趣公司”），在此特别提醒您，在您注册成为脉场会员之前，请认真阅读本《脉场会员协议》（以下简称“会员协议”），确保您充分理解会员协议中各条款，包括免除职趣公司责任的条款及限制会员权利的条款。请您审慎阅读并选择接受或不接受本会员协议。除非您接受本会员协议所有条款，否则您不得注册、登录或使用本会员协议所涉服务。您的注册、登录、使用等行为将视为对本会员协议的接受，并同意接受本会员协议各项条款的约束。
+本会员协议约定职趣公司与您之间关于“脉场会员”服务的各项事项。“会员”是指注册、登录、使用本会员协议中职趣公司提供的各种服务的个人。脉场会员服务是有偿的增值服务，会员必须完全同意本会员协议，并完成付费，才能享受相关服务。
+本会员协议是基于“脉场”软件的《脉场服务协议》而制定，是其不可分割的一部分。同时，职趣公司不时发布的关于会员服务的各种规范、规则等也是本会员协议的一部分。您选择接受本会员协议，开通会员服务成为会员用户，即表示您同意接受本会员协议、《脉场服务协议》及各种规范、规则的各项约束，并将遵守。如果您不接受本会员协议，则不能享受本会员协议所涉会员服务。职趣公司变更本会员协议，已有会员不同意的，职趣公司有权单方终止本会员协议。
+本会员协议可由职趣公司随时更新，更新后的会员协议一旦公布即代替原来的会员协议，恕不再另行通知。\n\n
+一、总则\n\n
+1、脉场是由职趣公司创建、运营的社交平台。\n
+2、脉场用户是指完成全部注册流程，愿意接受《脉场服务协议》并在脉场相关使用规范的规定下使用脉场服务的注册用户。\n
+3、脉场会员服务是脉场为脉场用户提供的有偿增值服务，用户向脉场支付相关费用后，方可享受专门为会员提供的各项服务。\n
+4、脉场会员必须遵守《脉场服务协议》及本会员协议。\n\n
+二、服务费用\n\n
+1、会员资格以月或年为单位计算（每月服务是当月日期至到次月相同日期为止，每年服务是当年日期到次年相同日期为止，没有相同日期按月最后一天计算）\n
+2、职趣公司可以根据实际情况随时调整会员服务费用标准，经调整的会员服务费用标准将在会员资格支付页上显示，自公布的调整日后需要向职趣公司付费的用户按调整后的服务费用标准支付后方可享有或延续会员资格。已按原会员服务费用标准购买会员服务的用户，其会员资格以及所享有的会员服务在已取得的会员资格期限内不受影响，无需补充缴纳差额。\n\n
+三、服务内容\n\n
+脉场将为会员提供多种专享的增值服务，具体内容将在会员页面显示。
+脉场可以根据实际情况随时调整会员服务内容。\n\n
+四、服务的开通和终止\n\n
+1、脉场用户完成用户注册程序，并通过脉场平台提供的付费途径完成会员费用的支付后，即取得脉场会员资格。\n
+2、脉场用户通过脉场平台完成会员注册，所提交的内容与个人资料必须真实有效。当会员的个人资料发生变化时，会员应及时修改注册的个人资料，否则由此造成的会员权利不能全面有效行使或其他任何后果、责任由会员自行承担。会员同意：脉场在提供会员服务、遵守《脉场服务协议》的情况下使用会员的信息。\n
+3、会员资格有效期自脉场会员服务开通之时起算，具体可以登录客户端“会员中心”页查看。\n
+4、除非用户开通自动延续功能，会员资格有效期届满后，职趣公司将终止向该用户提供会员增值服务，该用户可以通过续交会员服务费用延续会员资格。\n
+会员在会员资格有效期内续费，会员资格有效期将在原有效期基础上相应延长。此外，职趣公司提供自动延续会员资格的功能，用户亦可在其会员资格有效期内开通该项功能，授权职趣公司在用户会员资格有效期届满时，自动对其会员资格期限予以续期并从其用户账户中扣除相应的费用，并在续期届满后依此自动延续。如用户账户内费用不足以支付该续期费用，则该功能无法实现。\n\n
+五、会员的权利和义务\n\n
+1、脉场会员平等享有会员的权利，同时应遵守职趣公司的各项规范、规则，包括但不限于本会员协议和《脉场服务协议》，以及以后职趣公司关于会员新增及变更的文件。\n
+2、因个人原因违反《脉场社区规范》>导致被封禁的用户，会员权益不予退回，相关损失由用户自行承担，请与脉场共同营造一个良好文明的职场社交平台。\n
+3、会员在会员资格有效期内可以享受脉场会员的各项增值服务。\n
+4、如会员在会员资格有效期内主动终止或取消会员资格，职趣公司不负责退还与该会员剩余会员资格有效期对应的服务费用。\n
+5、会员自行承担在脉场中传送、发布信息、使用脉场免费服务或收费服务等脉场没有同意过的行为产生的法律责任，会员使用脉场服务，包括免费服务与收费服务的行为，均应遵守各项法律法规、规章、规范性文件（以下简称“法律法规”），会员违法的行为，会员自行承提法律后果。\n\n
+六、职趣公司的权利和义务\n\n
+1、职趣公司有义务保证遵守本会员协议、《脉场服务协议》及各项规范、规则的会员正常使用会员服务，当出现技术故障影响会员服务的正常提供时，淘友科技应尽快排除故障。\n
+2、脉场在未经会员授权时，不得公开、编辑或透露会员注册及保存的非公开信息，但法律法规明确规定及《脉场服务协议》约定的情形除外。\n
+3、职趣公司将通过脉场系统对会员进行通知和公告，通知发出后，会员在24小时内没有回复，即视为知悉并同意。\n
+4、因不可抗力造成会员服务提供的中断或其它缺陷，职趣公司不承担任何责任，但将尽力减少因此给会员造成的损失和影响。不可抗力包括但不限于水灾、火灾、地震、停电、政府行为、计算机病毒、黑客攻击、技术更新、技术故障。\n
+5、因会员原因造成的脉场帐号密码泄露，脉场不承担责任，同时为避免脉场帐号被盗用后滥用而引起法律风险，脉场可以在用户举报该情形后采取一切措施避免第三方对用户的会员帐号实施操作行为，而不论该第三方基于何种目的、获取方式是否善意，用户举报时，按脉场要求提供信息。\n
+6、如会员在使用脉场免费服务或收费服务的过程中，故意进行有损职趣公司、脉场平台、其他脉场用户合法权益的行为，或存在《脉场服务协议》约定的相关情形，职趣公司有权取消该会员的会员资格或中断一项或多项会员服务而无须给予任何补偿，并保留追究该会员法律责任的权利。\n
+7、如会员在使用脉场免费服务或收费服务的过程中，存在违反法律法规的行为，职趣公司有权取消该会员的会员资格而无须给予任何补偿，且该会员须自行承担全部责任。\n\n
+七、其他\n\n
+1、职趣公司发布的关于会员服务的规范、规则等，是本服务条款不可分割的一部分。\n
+2、如本会员协议与《脉场服务协议》发生冲突或本会员协议无规定时，应以《脉场服务协议》的规定为准。\n
+3、本会员协议的解释，效力及纠纷的解决，适用中华人民共和国法律。若会员和职趣公司之间发生任何纠纷或争议，首先应友好协商解决，协商不成的，会员同意将纠纷或争议提交职趣公司住所地有管辖权的人民法院管辖。\n
+4、本会员协议的版权由职趣公司所有，职趣公司保留一切解释和修改的权利。\n
+5、职趣公司可依照脉场发展的不同阶段，随着社区管理经验的不断丰富，出于维护脉场会员秩序的目的，不断完善本会员协议。\n
+
+    </string>
+
+</resources>

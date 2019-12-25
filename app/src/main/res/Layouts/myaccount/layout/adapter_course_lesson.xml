@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_11"
+        android:layout_marginRight="@dimen/dp_11">
+
+        <LinearLayout
+            android:id="@+id/ll_play"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_play"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_22"
+                android:src="@drawable/video_play_normal"/>
+
+            <TextView
+                android:id="@+id/tv_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:textColor="@color/_dedede"
+                android:textSize="8sp"
+                android:visibility="gone"
+                android:text="点击播放"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/ll_play"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_lesson_name"
+                android:layout_width="wrap_content"
+                android:text="KING"
+                android:textSize="12sp"
+                android:textColor="@color/_333333"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_video_sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/video_sign"
+                    android:gravity="center"
+                    android:text="视频"
+                    android:textColor="@color/_999999"
+                    android:textSize="8sp"/>
+
+                <TextView
+                    android:id="@+id/tv_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:textSize="10sp"
+                    android:text="KING"
+                    android:textColor="@color/_999999"
+                    android:maxLines="1"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/_f1f1f1"
+            android:layout_alignParentBottom="true">
+
+        </View>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.baijiayun.videoplayer.widget.BJYPlayerView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+
+                </LinearLayout>
+
+                <com.baijiayun.playback.ppt.WhiteboardView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+            <com.baijiayun.videoplayer.widget.BJYPlayerView
+                android:id="@+id/activity_new_video_fl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:aspect_ratio="fit_parent_16_9"
+                app:render_type="texture_view" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+            <Button
+                android:id="@+id/bt_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始/暂停" />
+
+            <Button
+                android:id="@+id/button_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bt_play"
+                android:text="1.0x" />
+
+            <Button
+                android:id="@+id/button_definition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/button_rate"
+                android:layout_toRightOf="@+id/button_rate"
+                android:text="hd" />
+
+            <Button
+                android:id="@+id/bt_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/bt_play"
+                android:text="停止" />
+
+            <Button
+                android:id="@+id/bt_seekTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/bt_stop"
+                android:text="seekTo" />
+                <EditText
+                    android:id="@+id/et_seek_time"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/bt_seekTo"
+                    android:inputType="number"
+                    android:text="100" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

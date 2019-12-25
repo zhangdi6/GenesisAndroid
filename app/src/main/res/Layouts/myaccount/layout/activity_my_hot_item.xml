@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/dp_44">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+       <!-- app:srcCompat="@drawable/tt_lefterbackicon_titlebar"-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回复"
+            android:textColor="@color/_333333"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/layout"
+        android:layout_height="1px"
+        android:background="@color/_999999" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_loading"
+        android:layout_weight="1"
+            android:layout_above="@+id/edit"
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_3"
+                android:layout_marginBottom="@dimen/dp_3"
+                android:background="@drawable/shape_white"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/im_find_head"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_find_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_find_describe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="10dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="#999999"
+                            android:textSize="10sp"
+                            app:layout_constraintStart_toStartOf="@+id/tv_find_name"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_find_name" />
+
+                        <TextView
+                            android:id="@+id/text_work"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:textSize="@dimen/sp_10"
+                            app:layout_constraintBottom_toBottomOf="@+id/tv_find_name"
+                            app:layout_constraintStart_toEndOf="@+id/tv_find_name" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_find_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="9dp"
+                    android:lineSpacingExtra="@dimen/dp_8"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="9dp"
+                    android:textColor="@color/_666666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_find_content_below"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="9dp"
+                    android:text="全部内容"
+                    android:textColor="@color/_55D8B1"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <com.iruiyou.pet.utils.MultiImageView
+                    android:id="@+id/gridView_find_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_6" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:background="#eaeaea" />
+
+                <!--pbs 评论-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tv_find_pbs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/like"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/_333333"
+                        android:textSize="@dimen/size12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_find_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/mess"
+                        android:drawablePadding="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:textColor="@color/_999999"
+                        android:textSize="@dimen/size14sp" />
+
+
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/commentRlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginVertical="@dimen/dp_10"
+        android:singleLine="false"
+        android:gravity="top"
+        android:inputType="text"
+        android:background="@drawable/editbg"
+        android:imeOptions="actionSend"
+        android:hint="率先发表你的观点"
+        android:padding="@dimen/dp_8"
+        android:textSize="@dimen/sp_12" />
+
+
+
+</RelativeLayout>

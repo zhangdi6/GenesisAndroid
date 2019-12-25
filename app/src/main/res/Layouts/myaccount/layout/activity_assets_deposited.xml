@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="22dp"
+                android:text="@string/verification_amount"
+                android:textColor="@color/_666666"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_assets_deposited_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="11dp"
+                android:text="--"
+                android:textColor="@color/_26c68a"
+                android:textSize="23sp" />
+            <Button
+                android:id="@+id/bt_assets_deposited_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="11dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_blue_corner"
+                android:text="@string/copy_amount"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="22dp"
+                android:text="@string/save_hints"
+                android:textColor="@color/_ff6161"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginRight="@dimen/spacing15dp"
+                android:layout_marginLeft="@dimen/spacing15dp"
+                android:layout_marginBottom="@dimen/spacing15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/spacing15dp"
+                    android:layout_marginRight="@dimen/spacing15dp"
+                    android:layout_marginTop="22dp"
+                    android:text="@string/recharge_address"
+                    android:textColor="@color/_666666"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing15dp"
+                    android:layout_marginRight="@dimen/spacing15dp"
+                    android:layout_marginTop="11dp"
+                    android:gravity="center"
+                    android:text="0x953916e928080a0f3f538a23474db730809dca4f"
+                    android:textColor="@color/_666666"
+                    android:textSize="15sp" />
+                <Button
+                    android:id="@+id/bt_assets_deposited_copy_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/assets_deposited_blue_shape"
+                    android:text="@string/copy_address"
+                    android:textColor="@color/_26c68a"
+                    android:textSize="12sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/spacing15dp"
+                    android:layout_marginRight="@dimen/spacing15dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/recharge_code"
+                    android:textColor="@color/_999999"
+                    android:textSize="12sp" />
+                <ImageView
+                    android:layout_width="189dp"
+                    android:src="@drawable/wallet_address"
+                    android:layout_gravity="center"
+                    android:layout_height="189dp" />
+                <Button
+                    android:id="@+id/bt_assets_deposited_save_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/assets_deposited_blue_shape"
+                    android:text="@string/save_code"
+                    android:textColor="@color/_26c68a"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing15dp"
+                    android:layout_marginRight="@dimen/spacing15dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="22dp"
+                    android:text="@string/recharge_prompt"
+                    android:textColor="@color/_999999"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/spacing15dp"-->
+                <!--android:layout_marginRight="@dimen/spacing15dp"-->
+                <!--android:layout_marginTop="11dp"-->
+                <!--android:text="@string/wallet_address"-->
+                <!--android:textColor="@color/_333333"-->
+                <!--android:textSize="13sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_wallet_address"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="@dimen/spacing15dp"-->
+                <!--android:layout_marginRight="@dimen/spacing15dp"-->
+                <!--android:layout_marginTop="11dp"-->
+                <!--android:background="@null"-->
+                <!--android:editable="false"-->
+                <!--android:gravity="center"-->
+                <!--android:text="121esd2e2232dwdsd3"-->
+                <!--android:textColor="@color/_333333"-->
+                <!--android:textIsSelectable="true"-->
+                <!--android:textSize="13sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="@dimen/spacing15dp"-->
+                <!--android:layout_marginRight="@dimen/spacing15dp"-->
+                <!--android:layout_marginTop="11dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/long_press_replication"-->
+                <!--android:textColor="@color/_333333"-->
+                <!--android:textSize="13sp" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/im_QR_code"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginLeft="@dimen/spacing15dp"-->
+                <!--android:layout_marginRight="@dimen/spacing15dp"-->
+                <!--android:layout_marginTop="11dp"-->
+                <!--android:gravity="center"-->
+                <!--android:src="@drawable/head_home"-->
+                <!--android:textColor="@color/_333333" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/bt_duplicate_wallet_address"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="39dp"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:background="@drawable/bg_blue_corner"-->
+                <!--android:text="@string/duplicate_wallet_address"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_marginLeft="@dimen/spacing15dp"-->
+                <!--android:layout_marginRight="@dimen/spacing15dp"-->
+                <!--android:layout_marginTop="11dp"-->
+                <!--android:text="@string/reminder_wallet"-->
+                <!--android:textColor="@color/_333333"-->
+                <!--android:textSize="9sp" />-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

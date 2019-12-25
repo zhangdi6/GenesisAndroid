@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/line5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+                    <!--当前水晶余额-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/current_crystal_balance"
+                            android:textColor="@color/_666666"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                    <!--当前水晶余额-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/crystal_icon" />
+
+                        <TextView
+                            android:id="@+id/tv_crystal_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:maxLines="1"
+                            android:text="--"
+                            android:textColor="@color/_333333"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/bt_recharge_ordinary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_blue_corner"
+                        android:text="@string/recharge1"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/line5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/expected_daily_rate"
+                    android:textColor="@color/_666666"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_incubation_time_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|right"
+                    android:text="@string/incubation_time"
+                    android:textColor="@color/_666666"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_expected_daily_rate_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/_26c68a"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_release_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|right"
+                    android:text="@string/crystal_portion"
+                    android:textColor="@color/_666666"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+            <include layout="@layout/line1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/subscription_quantity"
+                    android:textColor="@color/_666666"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center|right"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/im_reduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/reduce"
+                        android:textColor="@color/_666666"
+                        android:textSize="13sp" />
+                    <!--提币地址输入框-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/power_gray_shape">
+
+                        <EditText
+                            android:id="@+id/et_subscription_quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:background="@null"
+                            android:hint="0"
+                            android:maxLength="2"
+                            android:singleLine="true"
+                            android:digits="1234567890"
+                            android:inputType="text"
+                            android:textColor="@color/_333333"
+                            android:textColorHint="@color/_999999"
+                            android:textSize="@dimen/size14sp" />
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/im_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:src="@drawable/add2"
+                        android:textColor="@color/_666666"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/bt_ordinary_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/bg_blue_corner"
+                android:text="@string/set3"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

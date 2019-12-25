@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/tv_successful_withdrawals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="提现发起成功"
+            android:textColor="@color/_333333"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/tv_presentation_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="预计1-3个工作日到账"
+            android:textColor="@color/_999999"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+    <!--官网-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="提现金额"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:textColor="@color/_666666" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1.5"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:text="8883333322222222222"
+                android:textSize="15sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <include layout="@layout/line2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="到账银行卡"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:textColor="@color/_666666" />
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1.5"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:text="3420293238273738242"
+                android:textSize="15sp"
+                android:textColor="@color/_666666" />
+        </LinearLayout>
+        <include layout="@layout/line2"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="发起时间"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:textColor="@color/_666666" />
+
+            <TextView
+                android:id="@+id/tv_initiation_time"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1.5"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical|right"
+                android:text="2108-08-08"
+                android:textSize="15sp"
+                android:textColor="@color/_666666" />
+        </LinearLayout>
+        <include layout="@layout/line2"/>
+    </LinearLayout>
+</LinearLayout>

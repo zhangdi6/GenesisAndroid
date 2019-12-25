@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/login_bg"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送成功："/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:text="请先登录邮箱并激活，然后点击刷新"/>
+
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_width="71dp"
+        android:layout_height="30dp"
+        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:text="刷新"
+        android:id="@+id/sure"
+        android:gravity="center"
+        android:background="@drawable/shape_login_btn"/>
+
+    <TextView
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重新发送"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

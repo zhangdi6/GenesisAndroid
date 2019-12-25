@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="75dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imHead_course"
+            android:layout_width="45dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/head_home"
+            android:layout_gravity="center"
+            android:layout_height="45dp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_coursetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/_666666"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/tv_coursebackground"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/bg_blue_corner"
+            android:textColor="@color/_666666"
+            android:textSize="11sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

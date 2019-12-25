@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/spaces_img"
+        android:layout_width="@dimen/dp_353"
+        android:layout_height="@dimen/dp_115"
+        android:src="@drawable/kongjian"
+        android:layout_marginTop="@dimen/dp_17"
+        android:layout_centerHorizontal="true"
+
+        />
+
+</RelativeLayout>

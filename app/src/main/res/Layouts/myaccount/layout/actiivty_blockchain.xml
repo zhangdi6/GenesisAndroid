@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_dae0e8"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/blockIdenLl"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/blockChainIdentity"
+                android:textColor="#262a30"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/blockIdenTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/go"
+                android:text="@string/pleaseFillIn"
+                android:textColor="#b6b6b6"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blockTimeLl"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="13dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/blockTimeLeft"
+                android:text="@string/blockChainEmploymentTime"
+                android:textColor="#262a30"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/blockTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/go"
+                android:text="@string/pleaseFillIn"
+                android:textColor="#b6b6b6"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <include layout="@layout/line2"></include>
+
+        <LinearLayout
+            android:id="@+id/blockExpLl"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/blockChainExpertise"
+                android:id="@+id/blockExpLeft"
+                android:textColor="#262a30"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/blockExpTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="3dp"
+                android:drawableRight="@drawable/go"
+                android:text="@string/pleaseFillIn"
+                android:textColor="#b6b6b6"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/saveLl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginRight="38dp"
+            android:background="@drawable/shape_679dfb"
+            android:gravity="center"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+
+            />
+    </LinearLayout>
+</LinearLayout>

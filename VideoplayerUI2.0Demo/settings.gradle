@@ -1,0 +1,5 @@
+include ':app', ':videoplayer-ui'
+include ':videoplayer-core'
+
+//project(":videoplayer-core").projectDir = new File('/Users/Shubo/Desktop/workspace/video-player/VideoPlayer/videoplayer-core')
+project(":videoplayer-core").projectDir = new File('/Users/yongjiaming/AndroidStudioProjects/VideoPlayer/videoplayer-core')

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_lay" />
+
+    <TextView
+        android:id="@+id/tvNotData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/no_record"
+        android:textColor="@color/_999999"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:id="@+id/scroll_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:paddingLeft="@dimen/dp_22"
+                android:paddingRight="@dimen/dp_22">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/friend_application"
+                    android:textSize="@dimen/sp_12" />
+
+
+                <LinearLayout
+                    android:id="@+id/linear_get"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_toLeftOf="@id/image_right"
+                        android:text="@string/after_get_pbs"
+                        android:textColor="#ff999999"
+                        android:textSize="10sp" />
+                    <ImageView
+                        android:id="@+id/image_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_xia" />
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/_bebebe" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/friendApplicationRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:paddingLeft="@dimen/dp_22"
+                android:paddingRight="@dimen/dp_22">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mine_friend_request"
+                    android:textSize="@dimen/sp_12" />
+
+                <LinearLayout
+                    android:id="@+id/linear_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_8"
+                        android:layout_toLeftOf="@id/image_right_mine"
+                        android:text="@string/back_get_pbs"
+                        android:textColor="#ff999999"
+                        android:textSize="10sp" />
+                    <ImageView
+                        android:id="@+id/image_right_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_xia" />
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:background="@color/_bebebe" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mineFriendApplicationRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

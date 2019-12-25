@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+    <!--带有红色消息提示的标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relayout_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:background="@color/white">
+            <ImageView
+                android:id="@+id/image_back"
+                android:padding="@dimen/dp_15"
+                android:layout_width="@dimen/dp_45"
+                android:layout_height="match_parent"
+                android:src="@drawable/back_balck"
+                android:visibility="visible"/>
+            <!--中间标题-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="@string/pulse_field"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/text_title"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/text_my_network"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_45"
+                android:text="@string/my_network"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/_26c68a"/>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_below="@id/relayout_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_f1f1f1" />
+            <!--<include layout="@layout/line2" />-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/positionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+
+
+
+        <!--右侧红色消息提示-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/find_add" />
+        </RelativeLayout>
+        <!--左侧返回按钮-->
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/back_balck" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/line2" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/shape_white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_violet_gradual_change_corner_red"
+                    android:orientation="vertical">
+
+                    <!--脉场资源库-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/im_vein"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/resources" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toRightOf="@+id/im_vein"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|left"
+                                    android:text="@string/resource_library"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|right"
+                                    android:text="@string/resource_library_tips"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <com.iruiyou.pet.utils.RaiseNumberAnimTextView
+                                android:id="@+id/tv_vein_resource_library_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:text="--"
+                                android:textColor="@color/white"
+                                android:textSize="30sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pulse_valuation"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <com.iruiyou.pet.utils.RaiseNumberAnimTextView
+                                android:id="@+id/tv_vein_asset_valuation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="11dp"
+                                android:text="--"
+                                android:layout_marginBottom="12dp"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:gravity="right"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/resource_library_tips2"
+                            android:layout_marginBottom="12dp"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/pulse_valuation"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="12sp" />-->
+
+                        <!--<com.iruiyou.pet.utils.RaiseNumberAnimTextView-->
+                            <!--android:id="@+id/tv_vein_asset_valuation"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="11dp"-->
+                            <!--android:text="&#45;&#45;"-->
+                            <!--android:layout_marginBottom="12dp"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="12sp" />-->
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="11dp"-->
+                            <!--android:gravity="right"-->
+                            <!--android:text="@string/resource_library_tips2"-->
+                            <!--android:layout_marginBottom="12dp"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textSize="10sp" />-->
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone"
+                    android:text="@string/resource_library_tips2"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/_999999"
+                    android:textSize="10sp" />
+
+                <!--节点合伙人-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_vein_node_partner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a"></View>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/node_partner"
+                            android:textColor="@color/_666666"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/find_in"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/nodePartnerRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/white"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+            </LinearLayout>
+            <include layout="@layout/line5"></include>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/shape_white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_violet_gradual_change_corner2"
+                    android:orientation="vertical">
+
+                    <!--我的人脉库-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/im_vein_connections"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/connections" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toRightOf="@+id/im_vein_connections"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center|left"
+                                    android:text="@string/my_network_bank"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:gravity="center|right">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@drawable/right_white_arrow"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <com.iruiyou.pet.utils.RaiseNumberAnimTextView
+                                android:id="@+id/tv_vein_connections_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center|left"
+                                android:text="--"
+                                android:textColor="@color/white"
+                                android:textSize="30sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_my_invitation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/invitation"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_assets_valuation"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tv_vein_my_asset_valuation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:text="--"
+                            android:layout_marginBottom="12dp"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:id="@+id/tv_my_friendsourcing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:gravity="right"
+                            android:text="@string/my_user"
+                            android:layout_marginBottom="12dp"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_my_network_bank"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                <!--我的人脉库-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_vein_my_network_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/_26c68a"></View>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/my_network_bank"
+                            android:textColor="@color/_666666"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/find_in"
+                                android:textColor="@color/_999999"
+                                android:textSize="10dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.iruiyou.pet.utils.MaxRecyclerView
+                        android:id="@+id/myNetworkBankRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="11dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/white"
+                        android:overScrollMode="never" />
+
+                    <!--暂无数据-->
+                    <LinearLayout
+                        android:id="@+id/ll_no_data"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/im_no_data"
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/no_data1"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_no_data"
+                            android:layout_width="wrap_content"
+                            android:text="@string/mail_list"
+                            android:layout_marginTop="5dp"
+                            android:textSize="13sp"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/_666666"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_vein_import_address_book"
+                    android:layout_width="match_parent"
+                    android:text="@string/import_address_book"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/bg_blue_corner"
+                    android:layout_height="36dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout_find"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:srlAccentColor="#00000000"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="#00000000">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_6" />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

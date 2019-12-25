@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:padding="@dimen/dp_15">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image_head"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@drawable/icon_head_default_new"
+        />
+    <RelativeLayout
+        android:id="@+id/relay_commentor"
+        android:layout_width="match_parent" android:layout_toRightOf="@id/image_head"
+        android:layout_height="wrap_content" android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_10" android:layout_alignTop="@id/image_head"
+        android:layout_alignBottom="@id/image_head">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/_333333"
+            android:id="@+id/text_name"
+            android:hint="姓名"
+            />
+
+        <TextView
+            android:id="@+id/text_commpany_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="公司"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/_999999"
+            android:textSize="@dimen/size9sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/text_position_title"
+            android:layout_toRightOf="@id/text_commpany_name"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="职位"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/_999999"
+            android:textSize="@dimen/size9sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_comment_content"
+        android:layout_alignLeft="@id/relay_commentor"
+        android:layout_below="@id/relay_commentor" android:layout_marginTop="@dimen/dp_12"
+        android:hint="论内容评论内容评论内容评论内容" android:gravity="left|top" />
+
+
+    <View android:layout_width="match_parent" android:layout_height="@dimen/dp_1" android:background="@color/_f1f1f1"
+         android:layout_below="@id/text_comment_content"
+        android:id="@+id/view_line" android:layout_marginTop="@dimen/dp_15"/>
+</RelativeLayout>

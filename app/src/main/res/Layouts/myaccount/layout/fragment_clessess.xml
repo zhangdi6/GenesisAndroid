@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_layout"
+    android:background="@color/_f1f1f1"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:id="@+id/linear_top">
+
+
+        <ImageView
+            android:id="@+id/rl_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_balck"/>
+
+        <TextView
+            android:id="@+id/text_class"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="课程"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:id="@+id/text_position"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:gravity="center"
+            android:text="热门职位"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/sp_18" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/text_project"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:alpha="0.5"
+            android:gravity="center"
+            android:text="项目"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+        <include layout="@layout/line2"></include>
+
+    </RelativeLayout>
+    <include layout="@layout/line2"></include>
+    <LinearLayout
+        android:id="@+id/linear_class"
+        android:layout_below="@id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" android:visibility="visible">
+        <!--带有红色消息提示的标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white" android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/back_balck" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="@string/classroom"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+            <!--红色消息提示-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/im_add_find"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/find_add" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/line2"></include>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout_find"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="#00000000"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="#00000000">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.iruiyou.pet.utils.GoTopScrollView
+                    android:id="@+id/scrollView_workplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <!--精英推荐-->
+                            <LinearLayout
+                                android:id="@+id/resumeLFind"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:visibility="gone"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="3dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:background="@color/_26c68a"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/workplace_power"
+                                    android:textColor="@color/_333333"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@drawable/find_in"
+                                        android:textColor="@color/_999999"
+                                        android:textSize="10dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:visibility="gone"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/findRecyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@color/white"
+                                    android:overScrollMode="never" />
+                            </LinearLayout>
+
+                            <!--<include layout="@layout/line5" />-->
+                            <include
+                                android:id="@+id/hover"
+                                layout="@layout/hover_item" />
+                            <!--职场课程-->
+                            <LinearLayout
+                                android:id="@+id/ll_workplace_course"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <View
+                                    android:layout_width="3dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:background="@color/_26c68a"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/workplace_course"
+                                    android:textColor="@color/_333333"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@drawable/find_in"
+                                        android:textColor="@color/_999999"
+                                        android:textSize="10dp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/workplace_course_RecyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:overScrollMode="never" />
+
+                                <include layout="@layout/line1"></include>
+                            </LinearLayout>
+                            <!--分割线-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/line1"></include>
+
+                                <!--课程内容列表-->
+                                <com.iruiyou.pet.utils.MaxRecyclerView
+                                    android:id="@+id/course_content_RecyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white" />
+
+                                <ImageView
+                                    android:id="@+id/im_no_courses"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/no_courses" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <include
+                            android:id="@+id/top_buy_layout"
+                            layout="@layout/hover_item" />
+                    </FrameLayout>
+                </com.iruiyou.pet.utils.GoTopScrollView>
+            </LinearLayout>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear_position"
+        android:layout_below="@id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:visibility="gone">
+        <LinearLayout
+            android:padding="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_30">
+            <Spinner
+                android:layout_marginLeft="@dimen/dp_30"
+                android:id="@+id/spinner_position_quanzhi"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_30" />
+            <Spinner
+                android:id="@+id/spinner_position_area"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_30" />
+            <Spinner
+                android:id="@+id/spinner_position_class"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_30" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="@dimen/dp_1" android:background="@color/line_color" />
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout_position"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlAccentColor="#00000000"
+            app:srlEnablePreviewInEditMode="true"
+            app:srlPrimaryColor="#00000000"
+            >
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.iruiyou.pet.view.PageNumberRecyclerView
+                android:id="@+id/recycle_position"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/im_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:src="@drawable/im_top"
+        android:layout_marginBottom="58dp"
+        android:layout_marginRight="25dp"
+        android:textColor="@color/colorPrimary" />
+</RelativeLayout>
