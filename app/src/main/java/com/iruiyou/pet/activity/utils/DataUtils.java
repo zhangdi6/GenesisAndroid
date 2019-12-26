@@ -9,7 +9,7 @@ public class DataUtils {
     private static SimpleDateFormat sf;
 
     /*获取系统时间 格式为："yyyy/MM/dd "*/
-    public static String getCurrentDate() {
+    public static String getCurrentDate(long time) {
         Date d = new Date();
         sf = new SimpleDateFormat("yyyy年MM月dd日");
         return sf.format(d);

@@ -99,11 +99,12 @@ public class DynamicAdapter extends RecyclerView.Adapter {
             String date = updatedAt.substring(5 , createdAt.lastIndexOf("T"));*/
 
             long time1 = essaysBean.getTime();
-            String dateToString = DataUtils.getDateToString(time1);
+            String dateToString = DataUtils.getCurrentDate(time1);
 
             holder.tv_find_name.setText("" + basicInfo.getRealName());
             holder.tv_find_describe.setText(dateToString);
             holder.tv_work.setText(basicInfo.getPositionTitle());
+
 //                if (TextUtils.isEmpty(company) && !TextUtils.isEmpty(position_user)) {
 //                    holder.tv_find_describe.setText(position_user);
 //                } else if (TextUtils.isEmpty(position_user) && !TextUtils.isEmpty(company)) {

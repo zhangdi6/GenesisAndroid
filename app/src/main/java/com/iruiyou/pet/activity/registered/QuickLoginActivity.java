@@ -1,11 +1,14 @@
 package com.iruiyou.pet.activity.registered;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.text.Editable;
+import android.text.SpannableString;
 import android.text.TextWatcher;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -20,12 +23,14 @@ import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.ForgetActivity3;
 import com.iruiyou.pet.activity.MCLoginActivity;
+import com.iruiyou.pet.activity.WebActivity;
 import com.iruiyou.pet.base.BaseActivity;
 import com.iruiyou.pet.bean.RegisterBean;
 import com.iruiyou.pet.utils.Constant;
 import com.iruiyou.pet.utils.DialogUtils;
 import com.iruiyou.pet.utils.SoftKeyboardUtils;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 //import com.j256.ormlite.stmt.query.In;
@@ -42,6 +47,9 @@ public class QuickLoginActivity extends BaseActivity {
     private LinearLayout llPhone;
     private TextInputEditText mPhone_edittext;
 
+    @BindView(R.id.agree)
+    TextView agree;
+
     String mCountry[] = {"86"};
 
     @Override
@@ -54,6 +62,23 @@ public class QuickLoginActivity extends BaseActivity {
         ButterKnife.bind(this);
         initView();
         initClick();
+        agree.setText("注册表示同意《脉场协议》");
+        String s = agree.getText().toString();
+        SpannableString spannableString = new SpannableString(s);
+        ForegroundColorSpan text = new ForegroundColorSpan(Color.parseColor("#3fa5f2"));
+        spannableString.setSpan(text,6,s.length(),0);
+        agree.setText(spannableString);
+        agree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//     /genesis/protocol
+               // StartActivityManager.startWebViewActivity(QuickLoginActivity.this, "脉场用户协议", "https://www.maichangapp.com/genesis/protocol", false, true);
+                Intent intent = new Intent(QuickLoginActivity.this, WebActivity.class);
+                intent.putExtra("url","https://www.maichangapp.com/genesis/protocol");
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initClick() {

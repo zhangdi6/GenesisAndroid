@@ -1,6 +1,8 @@
 package com.iruiyou.pet.activity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,11 +25,11 @@ import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.utils.DataUtils;
 import com.iruiyou.pet.activity.utils.GsonUtil;
-import com.iruiyou.pet.activity.utils.StartActivityManager;
 import com.iruiyou.pet.adapter.HotItemComentAdapter;
 import com.iruiyou.pet.base.BaseActivity;
 import com.iruiyou.pet.bean.GetEssaysBean;
 import com.iruiyou.pet.bean.GetEssaysBean2;
+import com.iruiyou.pet.bean.MineRefreshBean;
 import com.iruiyou.pet.utils.MultiImageView;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 
@@ -83,12 +85,16 @@ public class MyHotItemActivity extends BaseActivity {
 
     @BindView(R.id.tv_find_message)
     TextView tv_find_message;//消息数量
+/*
+    @BindView(R.id.tv_vip_level)
+    TextView tvVipLevel;*/
 
     private GetEssaysBean.DataBean bean2;
     private GetEssaysBean2 bean;
     private String userId;
     private int commentCount = 0;
     private HotItemComentAdapter comentAdapter;
+    private MineRefreshBean mineRefreshBean;
 
 
     @Override
@@ -132,7 +138,7 @@ public class MyHotItemActivity extends BaseActivity {
 
 
             long time1 = bean2.getTime();
-            String dateToString = DataUtils.getDateToString(time1);
+            String dateToString = DataUtils.getCurrentDate(time1);
 
             if (basicInfo.getRealName() != null) {
                 tv_find_name.setText("" + basicInfo.getRealName());
@@ -148,8 +154,11 @@ public class MyHotItemActivity extends BaseActivity {
                 tv_find_content.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        StartActivityManager.startUserDetailsActivity(MyHotItemActivity.this,
-                                basicInfo.getUserId(), basicInfo.getRealName());
+                       /* StartActivityManager.startUserDetailsActivity(MyHotItemActivity.this,
+                                basicInfo.getUserId(), basicInfo.getRealName());*/
+
+                        Intent intent = new Intent(MyHotItemActivity.this, PersonalMsgActivity.class);
+                        startActivity(intent);
                     }
                 });
 
@@ -211,12 +220,111 @@ public class MyHotItemActivity extends BaseActivity {
         });
 
 
-
+       // initData();
 
     }
+/*
+    private void initData() {
+        new UserTask(new HttpOnNextListener() {
+            @Override
+            public void onNext(String resulte, String method) {
+                mineRefreshBean = GsonUtils.parseJson(resulte, MineRefreshBean.class);
+                if ((mineRefreshBean != null) && mineRefreshBean.getStatusCode() == Constant.SUCCESS && (mineRefreshBean.getData() != null)) {
+                    if (mineRefreshBean.getData().getBasicInfo() != null) {
+                      //  GlideUtils.displayRound(MyHotItemActivity.this, BaseApi.baseUrlNoApi + mineRefreshBean.getData().getBasicInfo().getHeadImg(), mHeadIv);
+                        String company = mineRefreshBean.getData().getBasicInfo().getCompany();
+                        String positionmine = mineRefreshBean.getData().getBasicInfo().getPosition();
+                        int vipLevel = mineRefreshBean.getData().getUserInfo().getVipLevel();
+                        int crowdFundLevel = mineRefreshBean.getData().getUserInfo().getCrowdFundLevel();
+//                        ivVipLevel.setVisibility(View.VISIBLE);
+                        tvVipLevel.setVisibility(View.VISIBLE);
+                        GradientDrawable drawable = (GradientDrawable) tvVipLevel.getBackground();
+
+                        if (crowdFundLevel == 1) {
+                          //  ivVipLevel.setImageResource(R.drawable.vip_icon_6);
+
+                            tvVipLevel.setText("合伙人");
+                            Drawable drawableLeft = getResources().getDrawable(R.drawable.vip_icon_6);
+                            drawableLeft.setBounds(0, 0, Utils.dip2px(MyHotItemActivity.this, 16), Utils.dip2px(MyHotItemActivity.this, 16));
+                            tvVipLevel.setCompoundDrawables(drawableLeft, null, null, null);
+
+                            tvVipLevel.setTextColor(getResources().getColor(R.color._ff2890d1));
+                            drawable.setStroke(Utils.dip2px(MyHotItemActivity.this, 1), getResources().getColor(R.color._ff2890d1));
+                            tvVipLevel.setBackground(drawable);
+                            // linear_my_right.setVisibility(View.VISIBLE);
+                        } else if (crowdFundLevel == 2) {
+                           // ivVipLevel.setImageResource(R.drawable.vip_icon_7);
+                            tvVipLevel.setText("股东");
+
+                            Drawable drawableLeft = getResources().getDrawable(R.drawable.vip_icon_7);
+                            drawableLeft.setBounds(0, 0, Utils.dip2px(MyHotItemActivity.this, 16), Utils.dip2px(MyHotItemActivity.this, 16));
+                            tvVipLevel.setCompoundDrawables(drawableLeft, null, null, null);
+
+                            tvVipLevel.setTextColor(getResources().getColor(R.color._ffffa820));
+                            drawable.setStroke(Utils.dip2px(MyHotItemActivity.this, 1), getResources().getColor(R.color._ffffa820));
+                            tvVipLevel.setBackground(drawable);
+                            // linear_my_right.setVisibility(View.VISIBLE);
+                        } else if (vipLevel == 1 || vipLevel == 2) {
+                           // ivVipLevel.setImageResource(R.drawable.vip_icon_1);
+                            tvVipLevel.setText(R.string.my_senior_member1);
+
+                            Drawable drawableLeft = getResources().getDrawable(R.drawable.vip_icon_1);
+                            drawableLeft.setBounds(0, 0, Utils.dip2px(MyHotItemActivity.this, 16), Utils.dip2px(MyHotItemActivity.this, 16));
+                            tvVipLevel.setCompoundDrawables(drawableLeft, null, null, null);
+
+                            tvVipLevel.setTextColor(getResources().getColor(R.color._ffe66464));
+                            drawable.setStroke(Utils.dip2px(MyHotItemActivity.this, 1), getResources().getColor(R.color._ffe66464));
+                            tvVipLevel.setBackground(drawable);
+                        } else if (vipLevel == 3 || vipLevel == 4) {
+                          //  ivVipLevel.setImageResource(R.drawable.vip_icon_3);
+                            tvVipLevel.setText(R.string.my_baijin_member1);
+
+                            Drawable drawableLeft = getResources().getDrawable(R.drawable.vip_icon_3);
+                            drawableLeft.setBounds(0, 0, Utils.dip2px(MyHotItemActivity.this, 16), Utils.dip2px(MyHotItemActivity.this, 16));
+                            tvVipLevel.setCompoundDrawables(drawableLeft, null, null, null);
+
+                            tvVipLevel.setTextColor(getResources().getColor(R.color._ff7c93a7));
+                            drawable.setStroke(Utils.dip2px(MyHotItemActivity.this, 1), getResources().getColor(R.color._ff7c93a7));
+                            tvVipLevel.setBackground(drawable);
+                        } else if (vipLevel == 5) {
+                          //  ivVipLevel.setImageResource(R.drawable.vip_icon_5);
+                            tvVipLevel.setText(R.string.primary_member);
+
+
+                            Drawable drawableLeft = getResources().getDrawable(R.drawable.vip_icon_5);
+                            drawableLeft.setBounds(0, 0, Utils.dip2px(MyHotItemActivity.this, 16), Utils.dip2px(MyHotItemActivity.this, 16));
+                            tvVipLevel.setCompoundDrawables(drawableLeft, null, null, null);
+
+
+                            tvVipLevel.setTextColor(getResources().getColor(R.color._ff999999));
+                            drawable.setStroke(Utils.dip2px(MyHotItemActivity.this, 1), getResources().getColor(R.color._ff999999));
+                            tvVipLevel.setBackground(drawable);
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+            @Override
+            public void onError(ApiException e) {
+
+                T.showShort(e.getMessage());
+            }
+        },this).mineRefresh();
+    }*/
 
     private void initGetFabulous() {
 
+        if (bean.getData().getIsFabulous()==1){
+            tv_find_pbs.setTextColor(Color.parseColor("#54D7B4"));
+            tv_find_pbs.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.likes),null,null,null);
+        }else{
+            tv_find_pbs.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.like),null,null,null);
+            tv_find_pbs.setTextColor(Color.parseColor("#333333"));
+        }
         //设置成全局来计数
         tv_find_pbs.setText("赞"+"("+bean.getData().getTotalFabulous()+")");
         tv_find_message.setText("回复"+"("+commentCount+")");
@@ -224,19 +332,22 @@ public class MyHotItemActivity extends BaseActivity {
         tv_find_pbs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //点赞
 
                 //此时isFabulous==0是未点赞过，可以点赞，否则已赞过不能再赞
                 if (bean.getData().getIsFabulous()==0){
                     initDianZan();
                 }else{
-
+                    T.showShort("已赞");
                 }
 
             }
         });
 
+
     }
+
+
+
 
     private void initDianZan() {
         new UserTask(new HttpOnNextListener() {
@@ -246,6 +357,15 @@ public class MyHotItemActivity extends BaseActivity {
                 //点赞成功，+1
                 int fabulous = bean.getData().getTotalFabulous()+1;
                 tv_find_pbs.setText("赞"+"("+fabulous+")");
+                if (bean.getData().getIsFabulous()==0){
+
+
+                    tv_find_pbs.setTextColor(Color.parseColor("#54D7B4"));
+                    tv_find_pbs.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.likes),null,null,null);
+                }else{
+                    tv_find_pbs.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.like),null,null,null);
+                    tv_find_pbs.setTextColor(Color.parseColor("#333333"));
+                }
             }
 
             @Override
@@ -263,10 +383,10 @@ public class MyHotItemActivity extends BaseActivity {
             @Override
             public void onNext(String resulte, String method) {
                 Log.e("chu",resulte);
-                GetEssaysBean2 bean2 = GsonUtil.GsonToBean(resulte, GetEssaysBean2.class);
-                ArrayList<GetEssaysBean2.Comments> comments = (ArrayList<GetEssaysBean2.Comments>) bean2.getData().getComments();
+                bean = GsonUtil.GsonToBean(resulte, GetEssaysBean2.class);
+                ArrayList<GetEssaysBean2.Comments> comments = (ArrayList<GetEssaysBean2.Comments>) bean.getData().getComments();
 
-                bean = bean2;
+
                 commentCount = bean.getData().getComments().size();
                 //获取原点赞评论数据
                 initGetFabulous();

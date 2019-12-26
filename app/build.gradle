@@ -93,7 +93,7 @@ android {
             debuggable false
             minifyEnabled false
             multiDexEnabled true
-            zipAlignEnabled  false  //Zip代码压缩优化
+            zipAlignEnabled false  //Zip代码压缩优化
             shrinkResources false // 移除无用的resource文件
             signingConfig signingConfigs.release
             buildConfigField "boolean", "ENABLE_DEBUG", "true"
@@ -233,6 +233,7 @@ dependencies {
     implementation files('libs/ormlite-android-5.1.jar')
     implementation files('libs/ormlite-core-5.1.jar')
 
+    implementation 'com.jaeger.statusbarutil:library:1.4.0'
     //    androidTestImplementation 'junit:junit:4.12'
     implementation files('libs/umeng-common-2.0.2.jar')
     implementation files('libs/umeng-share-core-6.9.4.jar')

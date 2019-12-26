@@ -331,6 +331,9 @@ public class MainActivity extends BaseActivity implements DragPointView.OnDragLi
     public void setFriendsCount(int count){
         mineFragment.setFriendCount(count);
     }
+    public void setHotlist(int count){
+        mineFragment.setHotlist(count);
+    }
 
     public void setAccessCount(int accessCount){
         mineFragment.setAccessCount(accessCount);

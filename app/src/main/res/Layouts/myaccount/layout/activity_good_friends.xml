@@ -74,60 +74,39 @@
         </LinearLayout>
     </RelativeLayout>
 
-    <LinearLayout
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layout"
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_45"
-            android:orientation="horizontal"
-            android:background="@color/white">
+        android:layout_alignParentTop="true"
+        android:layout_height="@dimen/dp_44">
 
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/tt_lefterbackicon_titlebar"
+            />
 
-
-            <ImageView
-                android:id="@+id/back"
-                android:layout_width="@dimen/dp_20"
-                android:layout_height="@dimen/dp_20"
-                android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/dp_20"
-                android:src="@drawable/back_w"/>
-
-
-            <TextView
-                android:id="@+id/text_chat"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="我的好友"
-                android:textSize="@dimen/sp_18" />
-
-            <TextView
-                android:id="@+id/mine_interaction"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/dp_15"
-                android:alpha="0.5"
-                android:gravity="center"
-                android:visibility="gone"
-                android:text="好友"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_18" />
-
-            <TextView
-                android:id="@+id/text_see_me"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="@dimen/dp_15"
-                android:alpha="0.5"
-                android:gravity="center"
-                android:text="看过我"
-                android:visibility="gone"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_18" />
-
-        </LinearLayout>
+        <!-- app:srcCompat="@drawable/tt_lefterbackicon_titlebar"-->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的好友"
+            android:textColor="@color/_333333"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back" />
+    </android.support.constraint.ConstraintLayout>
         <include layout="@layout/line2" android:id="@+id/view_line_top" android:visibility="gone"/>
         <!--<LinearLayout android:visibility="gone"-->
         <!--android:layout_width="match_parent"-->
@@ -159,7 +138,6 @@
 
         <!--</LinearLayout>-->
 
-    </LinearLayout>
     <include layout="@layout/line2" />
 
     <FrameLayout

@@ -21,6 +21,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/tt_lefterbackicon_titlebar"
              />
 
        <!-- app:srcCompat="@drawable/tt_lefterbackicon_titlebar"-->
@@ -93,6 +94,7 @@
 
                         <TextView
                             android:id="@+id/tv_find_name"
+                            android:text="renwu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="left"
@@ -112,6 +114,7 @@
                             android:layout_gravity="left"
                             android:layout_marginTop="10dp"
                             android:ellipsize="end"
+                            android:text="shijian"
                             android:singleLine="true"
                             android:textColor="#999999"
                             android:textSize="10sp"
@@ -122,10 +125,32 @@
                             android:id="@+id/text_work"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:text="zhiwei"
                             android:textSize="@dimen/sp_10"
-                            app:layout_constraintBottom_toBottomOf="@+id/tv_find_name"
-                            app:layout_constraintStart_toEndOf="@+id/tv_find_name" />
+                            app:layout_constraintStart_toEndOf="@+id/tv_find_describe"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_find_name" />
+
+
+                        <TextView
+                            android:id="@+id/tv_vip_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/bg_vip_level"
+                            android:drawableLeft="@drawable/vip_icon_1"
+                            android:drawablePadding="@dimen/dp_2"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_4"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:textSize="@dimen/sp_11"
+                            app:layout_constraintStart_toEndOf="@+id/tv_find_name"
+                            app:layout_constraintTop_toTopOf="parent" />
 
                     </android.support.constraint.ConstraintLayout>
                 </LinearLayout>

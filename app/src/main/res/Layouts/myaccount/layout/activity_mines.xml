@@ -143,9 +143,9 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/main_setting"
                             android:layout_width="@dimen/dp_20"
                             android:layout_height="@dimen/dp_20"
+                            android:visibility="gone"
                             android:src="@drawable/setting2"
                             android:layout_marginBottom="@dimen/dp_24"
                             android:layout_marginRight="@dimen/dp_25"
@@ -245,10 +245,10 @@
                                         android:paddingRight="@dimen/dp_8"
                                         android:paddingTop="@dimen/dp_4"
                                         android:paddingBottom="@dimen/dp_4"
+                                        android:visibility="gone"
                                         android:id="@+id/tv_vip_level"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text=""
                                         android:gravity="center"
                                         android:drawablePadding="@dimen/dp_2"
                                         android:textSize="@dimen/sp_11"
@@ -934,6 +934,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/main_setting"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -942,7 +943,18 @@
                         android:layout_marginTop="@dimen/dp_10"
                         android:orientation="vertical">
 
-
+                        <ImageView
+                            android:layout_width="@dimen/dp_25"
+                            android:layout_height="@dimen/dp_25"
+                            android:layout_gravity="center"
+                            android:src="@drawable/settings_mine"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/sp_12"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="设置"/>
                     </LinearLayout>
 
 

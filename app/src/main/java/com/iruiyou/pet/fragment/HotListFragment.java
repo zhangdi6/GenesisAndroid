@@ -3,6 +3,7 @@ package com.iruiyou.pet.fragment;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -101,7 +102,7 @@ public class HotListFragment extends BaseFragment implements HotListAdapter.OnVi
     private List<CheckRegisterBean.DataBean> isAccountList;
 
     public HotListFragment() {
-        // Required empty public constructor
+        // Required empty public constructorƒ
     }
 
 
@@ -263,11 +264,17 @@ public class HotListFragment extends BaseFragment implements HotListAdapter.OnVi
                             if (isRefresh) {
                                 data.clear();
                             }
+                            ArrayList<GetEssaysBean.DataBean> objects = new ArrayList<>();
                             for (int i = 0; i < getEssaysBean.getData().size(); i++) {
                                 if (!getEssaysBean.getData().get(i).isHead()){
                                     data.add(getEssaysBean.getData().get(i));
+                                    if ((getEssaysBean.getData().get(i).getUserId()+"").equals(SharePreferenceUtils.getBaseSharePreference().
+                                            readUserId())){
+                                        objects.add(getEssaysBean.getData().get(i));
+                                    }
                                 }
                             }
+                            ((MainActivity)getActivity()).setHotlist(objects.size());
                             businessChanceAdapter.notifyDataSetChanged();
                             if (isRefresh ) {
                             /*    GetEssaysBean.DataBean bean = new GetEssaysBean.DataBean();
@@ -285,12 +292,16 @@ public class HotListFragment extends BaseFragment implements HotListAdapter.OnVi
                                 @Override
                                 public void onItemFabu(int position , TextView view) {
                                     if (data.get(position).getIs_fabulous()==1){
+                                        view.setTextColor(Color.parseColor("#54D7B4"));
+                                        view.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.likes),null,null,null);
                                         T.showShort("已赞");
                                     }else{
                                         new UserTask(new HttpOnNextListener() {
                                             @Override
                                             public void onNext(String resulte, String method) {
                                                 view.setText(data.get(position).getTotal_fabulous()+1+"");
+                                                view.setTextColor(Color.parseColor("#54D7B4"));
+                                                view.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.likes),null,null,null);
                                             }
 
                                             @Override
@@ -509,7 +520,6 @@ public class HotListFragment extends BaseFragment implements HotListAdapter.OnVi
         }, (MainActivity) getContext()).homeRefresh();
 
     }
-
 
 
 

@@ -31,6 +31,7 @@ import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.ContactsActivity;
 import com.iruiyou.pet.activity.ContactsSearchActivity;
+import com.iruiyou.pet.activity.GoodFriendsActivity;
 import com.iruiyou.pet.activity.MainActivity;
 import com.iruiyou.pet.activity.registerlast.OccupationAdapter;
 import com.iruiyou.pet.activity.registerlast.OccupationBeen;
@@ -90,60 +91,7 @@ public class MessageFragment2 extends BaseFragment {
 
     @BindView(R.id.linear_mine)
     LinearLayout linear_mine;
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
-//hahahahahhhahhahf佛祖保佑代码无bug
+
 
 
     @BindView(R.id.rl_news_contacts)
@@ -270,9 +218,9 @@ public class MessageFragment2 extends BaseFragment {
                 break;
 
             case R.id.goto_contacts:
-                StartActivityManager.startNetWorkActivity(getActivity());
-                /*Intent intent2 = new Intent(getContext(), GoodFriendsActivity.class);
-                startActivity(intent2);*/
+               // StartActivityManager.startNetWorkActivity(getActivity());
+                Intent intent2 = new Intent(getContext(), GoodFriendsActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

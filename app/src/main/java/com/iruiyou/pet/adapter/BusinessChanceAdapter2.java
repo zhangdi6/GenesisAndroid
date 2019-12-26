@@ -690,9 +690,9 @@ public class BusinessChanceAdapter2 extends RecyclerView.Adapter<RecyclerView.Vi
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            home_renqi = itemView.findViewById(R.id.home_renqi);
-            home_kecheng = itemView.findViewById(R.id.home_kecheng);
-            home_zhiwei = itemView.findViewById(R.id.home_zhiwei);
+            home_renqi = itemView.findViewById(R.id.home_recy_renqi);
+            home_kecheng = itemView.findViewById(R.id.home_recy_kecheng);
+            home_zhiwei = itemView.findViewById(R.id.home_recy_zhiwei);
 
         }
 

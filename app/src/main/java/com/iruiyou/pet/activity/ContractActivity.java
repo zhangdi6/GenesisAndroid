@@ -3,6 +3,8 @@ package com.iruiyou.pet.activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.gson.Gson;
 import com.iruiyou.common.http.task.UserTask;
@@ -24,6 +26,8 @@ public class ContractActivity extends BaseActivity {
 
     @BindView(R.id.recy_contract)
     RecyclerView recy_contract;
+    @BindView(R.id.back)
+    ImageView ing;
 
     private ConstractBean conbean;
     private List<ConstractBean.ConData> list;
@@ -40,6 +44,12 @@ public class ContractActivity extends BaseActivity {
 
         getData();
 
+        ing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void getData() {

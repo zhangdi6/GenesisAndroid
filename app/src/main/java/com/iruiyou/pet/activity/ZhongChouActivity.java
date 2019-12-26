@@ -10,13 +10,15 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.iruiyou.common.http.task.UserTask;
+import com.iruiyou.common.utils.GsonUtils;
 import com.iruiyou.http.retrofit_rx.exception.ApiException;
 import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.adapter.ZhongchouAdapter;
 import com.iruiyou.pet.base.BaseActivity;
+import com.iruiyou.pet.bean.MineRefreshBean;
 import com.iruiyou.pet.bean.ZhongChouBean;
-import com.j256.ormlite.stmt.query.In;
+import com.iruiyou.pet.utils.Constant;
 
 import java.util.List;
 
@@ -37,12 +39,15 @@ public class ZhongChouActivity extends BaseActivity {
     private List<ZhongChouBean.DataBean> list;
     private ZhongChouBean bean;
     private ZhongchouAdapter zhongchouAdapter;
+    private MineRefreshBean mineRefreshBean;
 
     @Override
     public void OnActCreate(Bundle savedInstanceState) {
         ButterKnife.bind(this);
 
         getData();
+
+        initData();
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,8 +62,39 @@ public class ZhongChouActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
+
     }
 
+    private void initData() {
+
+        new UserTask(new HttpOnNextListener() {
+            @Override
+            public void onNext(String resulte, String method) {
+                mineRefreshBean = GsonUtils.parseJson(resulte, MineRefreshBean.class);
+                if ((mineRefreshBean != null) && mineRefreshBean.getStatusCode() == Constant.SUCCESS && (mineRefreshBean.getData() != null)) {
+                    if (mineRefreshBean.getData().getBasicInfo() != null) {
+                        int crowdFundLevel = mineRefreshBean.getData().getUserInfo().getCrowdFundLevel();
+                        if (crowdFundLevel == 1) {
+                            text_contract.setVisibility(View.VISIBLE);
+                        } else if (crowdFundLevel == 2) {
+                            text_contract.setVisibility(View.VISIBLE);
+                        }
+                    }
+
+                }
+
+            }
+
+            @Override
+            public void onError(ApiException e) {
+
+            }
+        },this).mineRefresh();
+    }
     @Override
     public int getLayout() {
         return R.layout.activity_zhong_chou;

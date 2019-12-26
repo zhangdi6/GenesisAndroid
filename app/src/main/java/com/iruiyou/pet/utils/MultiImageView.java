@@ -58,8 +58,9 @@ public class MultiImageView extends LinearLayout {
 
     public void setList(List<GetEssaysBean.DataBean.ImagesBean> lists) throws IllegalArgumentException {
         if (lists == null) {
-            throw new IllegalArgumentException("imageList is null...");
+            setVisibility(GONE);
         }
+        setVisibility(VISIBLE);
         imagesList = lists;
 
         if (MAX_WIDTH > 0) {

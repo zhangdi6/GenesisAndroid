@@ -50,11 +50,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.DynamicActivity"></activity>
+        <activity android:name=".activity.PersonalMsgActivity"></activity>
+        <activity android:name=".activity.UserDataActivity" />
+        <activity android:name=".activity.BlackCardActivity" />
+        <activity android:name=".activity.WebActivity" />
+        <activity android:name=".activity.DynamicActivity" /> <!-- 我的-动态 -->
         <activity android:name=".activity.ContractActivity" />
-        <activity android:name=".activity.registered.QuickLoginActivity" />
-        <activity android:name=".activity.GoodFriendsActivity" />
-        <activity android:name=".activity.LookMeActivity" />
+        <activity android:name=".activity.registered.QuickLoginActivity" /> <!-- 快速登录 -->
+        <activity android:name=".activity.GoodFriendsActivity" /> <!-- 我的-好友 -->
+        <activity android:name=".activity.LookMeActivity" /> <!-- 我的-看过我 -->
         <activity
             android:name=".activity.MyHotItemActivity"
             android:windowSoftInputMode="adjustPan" />

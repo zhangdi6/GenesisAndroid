@@ -3,6 +3,7 @@ package com.iruiyou.pet.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -15,13 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.iruiyou.common.http.task.UserTask;
-import com.iruiyou.common.utils.ACache;
 import com.iruiyou.common.utils.GlideUtils;
 import com.iruiyou.common.utils.SharePreferenceUtils;
 import com.iruiyou.http.retrofit_rx.Api.BaseApi;
-import com.iruiyou.http.retrofit_rx.exception.ApiException;
-import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.SaveImageActivity;
 import com.iruiyou.pet.activity.utils.DataUtils;
@@ -46,7 +43,7 @@ public class HotListAdapter extends RecyclerView.Adapter {
     private LayoutInflater inflater;
     private Context context;
     private String userId;
-    private List<GetEssaysBean.DataBean> data;
+    public List<GetEssaysBean.DataBean> data;
     private OnViewClickListener onViewClickListener;
     private onItemFabuClick onFabuClick;
     private int total_fabulous;
@@ -104,11 +101,9 @@ public class HotListAdapter extends RecyclerView.Adapter {
             String createdAt = basicInfo.getCreatedAt();
             String updatedAt = basicInfo.getUpdatedAt();
 
-         /*   String time = updatedAt.substring(createdAt.lastIndexOf("T")+1, createdAt.lastIndexOf("T") + 6);
-            String date = updatedAt.substring(5 , createdAt.lastIndexOf("T"));*/
 
             long time1 = dataBean.getTime();
-            String dateToString = DataUtils.getDateToString(time1);
+            String dateToString = DataUtils.getCurrentDate(time1);
 
             holder.tv_find_name.setText("" + basicInfo.getRealName());
             holder.tv_find_describe.setText(dateToString);
@@ -140,7 +135,7 @@ public class HotListAdapter extends RecyclerView.Adapter {
         if (images != null) {
             if (images.size() == 0) {
                 holder.gridView_find_pic.setVisibility(View.GONE);
-//                holder.gridView_find_pic.setList(null);
+                holder.gridView_find_pic.setList(null);
             } else {
                 holder.gridView_find_pic.setVisibility(View.VISIBLE);
                 holder.gridView_find_pic.setList(images);
@@ -188,6 +183,13 @@ public class HotListAdapter extends RecyclerView.Adapter {
             holder.gridView_find_pic.setVisibility(View.VISIBLE);
             holder.mLL.setVisibility(View.VISIBLE);
             holder.tv_find_pbs.setText(total_fabulous + "");
+            if (dataBean.getIs_fabulous()==1){
+                holder.tv_find_pbs.setTextColor(Color.parseColor("#54D7B4"));
+                holder.tv_find_pbs.setCompoundDrawablesWithIntrinsicBounds(holder.tv_find_message.getContext().getResources().getDrawable(R.drawable.likes),null,null,null);
+            }else{
+                holder.tv_find_pbs.setCompoundDrawablesWithIntrinsicBounds(holder.tv_find_message.getContext().getResources().getDrawable(R.drawable.like),null,null,null);
+                holder.tv_find_pbs.setTextColor(Color.parseColor("#333333"));
+            }
             holder.tv_find_message.setText(dataBean.getTotal_comment() + "");
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -30,7 +30,6 @@ import com.iruiyou.common.http.task.UserTask;
 import com.iruiyou.common.utils.DensityUtil;
 import com.iruiyou.common.utils.GsonUtils;
 import com.iruiyou.common.utils.SharePreferenceUtils;
-import com.iruiyou.common.utils.T;
 import com.iruiyou.common.utils.TagConstants;
 import com.iruiyou.http.retrofit_rx.exception.ApiException;
 import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
@@ -328,7 +327,7 @@ public class SplashActivity extends BaseActivity implements PermissionInterface 
 
                 }
                 if (!isSuccess) {
-                    T.showShort(errorMessage);
+                    /*T.showShort(errorMessage);*/
                 }
 
             }
@@ -336,7 +335,7 @@ public class SplashActivity extends BaseActivity implements PermissionInterface 
             @Override
             public void onError(ApiException e) {
 
-                T.showShort(e.getMessage());
+                /*T.showShort(e.getMessage());*/
 
             }
         }, this).config();
@@ -420,7 +419,6 @@ public class SplashActivity extends BaseActivity implements PermissionInterface 
         if (SharePreferenceUtils.getBaseSharePreference().readIsShowWelcome().equals("1")) {
             startActivity(LoginOrRegisterActivity.class);
             SharePreferenceUtils.getBaseSharePreference().saveIsShowWelcome("-1");
-
             finish();
         } else {
             if (SharePreferenceUtils.getBaseSharePreference().readlogin()){

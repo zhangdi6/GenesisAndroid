@@ -95,17 +95,12 @@ public class GoodFriendsActivity extends BaseActivity {
     @BindView(R.id.positionRecyclerView)
     RecyclerView positionRecyclerView;
 
-    @BindView(R.id.text_see_me)
-    TextView text_see_me;
 
 //    @BindView(R.id.text_new_friend)
 //    TextView text_new_friend;
 
     @BindView(R.id.text_chat)
     TextView text_chat;
-
-    @BindView(R.id.mine_interaction)
-    TextView mine_interaction;
 
     @BindView(R.id.view_line_top)
     View view_line_top;

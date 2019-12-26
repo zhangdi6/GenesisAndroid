@@ -37,6 +37,7 @@ import com.iruiyou.http.retrofit_rx.listener.upload.UploadProgressListener;
 import com.iruiyou.http.retrofit_rx.utils.EventBusUtils;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.BasicInfoActivity;
+import com.iruiyou.pet.activity.BlackCardActivity;
 import com.iruiyou.pet.activity.DynamicActivity;
 import com.iruiyou.pet.activity.GoodFriendsActivity;
 import com.iruiyou.pet.activity.LookMeActivity;
@@ -124,6 +125,8 @@ public class MineFragment2 extends TakePhotoFragment {
     SmartRefreshLayout refreshLayout_mine;
     @BindView(R.id.text_friend_count)
     TextView text_friend_count;
+    @BindView(R.id.text_dynamic_count)
+    TextView text_dynamic_count;
     @BindView(R.id.text_access_count)
     TextView text_access_count;
     @BindView(R.id.linear_top_mine)
@@ -134,8 +137,7 @@ public class MineFragment2 extends TakePhotoFragment {
     LinearLayout linear_my_inviter;
 */
 
-    @BindView(R.id.main_setting)
-    ImageView setting;
+
 
 
     @BindView(R.id.main_message)
@@ -472,6 +474,7 @@ public class MineFragment2 extends TakePhotoFragment {
         EventBusUtils.getInstance().unregister(this);
         MineFragment2.this.userId.clearAnimator();
 
+
     }
     @Override
     public void onResume() {
@@ -481,6 +484,20 @@ public class MineFragment2 extends TakePhotoFragment {
 //        getData();
     }
 
+  /*  @Override
+    public boolean getUserVisibleHint() {
+        return super.getUserVisibleHint();
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser){
+            getData();
+            getPBSData();
+        }
+    }
+*/
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onShowMessageEvent(EventBean t) {
 
@@ -542,12 +559,14 @@ public class MineFragment2 extends TakePhotoFragment {
                 //TODO
                 break;
             case R.id.llMember://会员
-                if (mineRefreshBean !=null&&(mineRefreshBean.getData()!=null)&&(mineRefreshBean.getData().getBasicInfo()!=null)&&(mineRefreshBean.getData().getUserInfo()!=null)) {
+               /* if (mineRefreshBean !=null&&(mineRefreshBean.getData()!=null)&&(mineRefreshBean.getData().getBasicInfo()!=null)&&(mineRefreshBean.getData().getUserInfo()!=null)) {
                     StartActivityManager.startSeniorMemberActivity(context,mineRefreshBean.getData().getBasicInfo().getRealName(),
                             mineRefreshBean.getData().getBasicInfo().getHeadImg(),mineRefreshBean.getData().getUserInfo().getVipLevel());
                 } else  {
                     T.showShort("数据加载未完成");
-                }
+                }*/
+                Intent intent5 = new Intent(getContext(), BlackCardActivity.class);
+                startActivity(intent5);
                 break;
             case R.id.llAbout://关于我们
                 StartActivityManager.startAboutUsActivity(context);
@@ -755,6 +774,9 @@ public class MineFragment2 extends TakePhotoFragment {
         this.onItemClickListener = onItemClickListener;
     }
 
+    public void setHotlist(int count) {
+        text_dynamic_count.setText(String.valueOf(count));
+    }
 
 
     public interface OnItemClickListener{

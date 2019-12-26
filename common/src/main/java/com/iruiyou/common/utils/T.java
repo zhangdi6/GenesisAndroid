@@ -14,7 +14,12 @@ public class T {
      * 短时间显示Toast
      */
     public static void showShort(CharSequence message) {
-        show(message,Toast.LENGTH_SHORT);
+        if (message.equals("无效的token")){
+
+        }else{
+            show(message,Toast.LENGTH_SHORT);
+        }
+
     }
 
     /**
