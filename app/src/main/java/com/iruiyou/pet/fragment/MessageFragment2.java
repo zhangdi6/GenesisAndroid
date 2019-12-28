@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
@@ -31,6 +32,7 @@ import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.ContactsActivity;
 import com.iruiyou.pet.activity.ContactsSearchActivity;
+import com.iruiyou.pet.activity.FriendRequestActivity;
 import com.iruiyou.pet.activity.GoodFriendsActivity;
 import com.iruiyou.pet.activity.MainActivity;
 import com.iruiyou.pet.activity.registerlast.OccupationAdapter;
@@ -300,7 +302,7 @@ public class MessageFragment2 extends BaseFragment {
         fragment.setUri(uri);
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         //rong_content 为你要加载的 id
-        transaction.add(R.id.conversationlist, fragment);
+        transaction.add(R.id.conversationlist, (Fragment) fragment);
         transaction.commit();
         /**
          * 设置会话列表界面操作的监听器。
@@ -328,7 +330,9 @@ public class MessageFragment2 extends BaseFragment {
         linear_friend_request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                StartActivityManager.startFriendApplication(getActivity());
+                //StartActivityManager.startFriendApplication(getActivity());
+                Intent intent = new Intent(getActivity(), FriendRequestActivity.class);
+                startActivity(intent);
             }
         });
 

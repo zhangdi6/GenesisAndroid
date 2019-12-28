@@ -46,6 +46,7 @@ import com.iruiyou.pet.activity.OrdinaryDepositTreasureActivity;
 import com.iruiyou.pet.activity.PDFShowActivity;
 import com.iruiyou.pet.activity.PartnerRightsActivity;
 import com.iruiyou.pet.activity.PbsIncubationActivity;
+import com.iruiyou.pet.activity.PersonalMsgActivity;
 import com.iruiyou.pet.activity.PositionActivity;
 import com.iruiyou.pet.activity.PositionDetailActivity;
 import com.iruiyou.pet.activity.RecommendGroupsActivity;
@@ -645,6 +646,23 @@ public class StartActivityManager {
         intent.putExtras(bundle);
         act.startActivity(intent);
     }
+
+
+
+
+    /**
+     * 每一个用户的详细资料
+     * @param act
+     */
+    public static void startPersonalMsgActivity(Context act,int userid,String realName) {
+        Intent intent = new Intent(act, PersonalMsgActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("userid", userid);
+        bundle.putString("realName", realName);
+        intent.putExtras(bundle);
+        act.startActivity(intent);
+    }
+
 
     /**
      * 公司社区

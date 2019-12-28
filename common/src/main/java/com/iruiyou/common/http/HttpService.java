@@ -719,6 +719,6 @@ public interface HttpService {
     @POST(UrlContent.dynamic)
     @FormUrlEncoded
     Observable<String> getdynamic(@Field("dic") RequestBody requestBody, @Field("pageNum") int pageNum, @Field("essayNum") int essayNum
-            , @Field("token") String token, @Field("userId") String userId);
+           );
 
 }

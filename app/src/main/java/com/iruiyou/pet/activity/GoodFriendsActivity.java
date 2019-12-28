@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
@@ -15,7 +16,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.iruiyou.common.http.task.UserTask;
 import com.iruiyou.common.utils.GsonUtils;
@@ -99,8 +99,8 @@ public class GoodFriendsActivity extends BaseActivity {
 //    @BindView(R.id.text_new_friend)
 //    TextView text_new_friend;
 
-    @BindView(R.id.text_chat)
-    TextView text_chat;
+ /*   @BindView(R.id.text_chat)
+    TextView text_chat;*/
 
     @BindView(R.id.view_line_top)
     View view_line_top;
@@ -196,7 +196,7 @@ public class GoodFriendsActivity extends BaseActivity {
         fragment.setUri(uri);
         FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
         //rong_content 为你要加载的 id
-        transaction.add(R.id.conversationlist, fragment);
+        transaction.add(R.id.conversationlist, (Fragment) fragment);
         transaction.commit();
         /**
          * 设置会话列表界面操作的监听器。

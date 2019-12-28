@@ -105,7 +105,8 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
             }else
             {
                 text_application.setVisibility(View.GONE);
-                btn_action.setVisibility(View.VISIBLE);
+               // btn_action.setVisibility(View.VISIBLE);
+                btn_action.setVisibility(View.GONE);
                 if(isMine) //我申请的
                 {
                     btn_action.setText(context.getResources().getText(R.string.back_request));

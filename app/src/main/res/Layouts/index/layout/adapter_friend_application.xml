@@ -80,7 +80,7 @@
             android:background="@drawable/btn_green_bg"
             android:textColor="#ff72c6ae"
             android:textSize="@dimen/sp_11"
-            android:visibility="invisible" />
+            android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/linear_new_action"

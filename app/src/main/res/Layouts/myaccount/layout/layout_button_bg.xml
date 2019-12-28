@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/activity_personal_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_add_friend"
+        android:layout_marginBottom="@dimen/dp_20"
+        />
+    <RelativeLayout
+        android:id="@+id/ll_add_friend"
+
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/ll_add_friends"
+            android:layout_width="272dp"
+            android:layout_height="@dimen/dp_38"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:background="#ff54d7b4"
+            android:layout_marginBottom="@dimen/dp_8"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,7 +1,6 @@
 package com.iruiyou.pet.activity;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -25,6 +24,7 @@ import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.utils.DataUtils;
 import com.iruiyou.pet.activity.utils.GsonUtil;
+import com.iruiyou.pet.activity.utils.StartActivityManager;
 import com.iruiyou.pet.adapter.HotItemComentAdapter;
 import com.iruiyou.pet.base.BaseActivity;
 import com.iruiyou.pet.bean.GetEssaysBean;
@@ -151,14 +151,11 @@ public class MyHotItemActivity extends BaseActivity {
             if (bean2 != null) {
                 tv_find_content.setText(bean2.getContent());
                 tv_find_content_below.setVisibility(View.GONE);
-                tv_find_content.setOnClickListener(new View.OnClickListener() {
+                im_find_head.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                       /* StartActivityManager.startUserDetailsActivity(MyHotItemActivity.this,
-                                basicInfo.getUserId(), basicInfo.getRealName());*/
-
-                        Intent intent = new Intent(MyHotItemActivity.this, PersonalMsgActivity.class);
-                        startActivity(intent);
+                        StartActivityManager.startPersonalMsgActivity(MyHotItemActivity.this,
+                                basicInfo.getUserId(), basicInfo.getRealName());
                     }
                 });
 

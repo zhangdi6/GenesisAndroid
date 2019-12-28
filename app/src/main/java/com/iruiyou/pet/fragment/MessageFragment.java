@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
@@ -286,7 +287,7 @@ public class MessageFragment extends BaseFragment {
         fragment.setUri(uri);
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         //rong_content 为你要加载的 id
-        transaction.add(R.id.conversationlist, fragment);
+        transaction.add(R.id.conversationlist, (Fragment) fragment);
         transaction.commit();
         /**
          * 设置会话列表界面操作的监听器。

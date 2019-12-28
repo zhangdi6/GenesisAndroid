@@ -2318,7 +2318,7 @@ public class UserTask extends HttpManagerApi {
 
 
 
-    public void getminedynamic(int pageNum,int essayNum,String userId) {
+    public void getminedynamic(int pageNum,int essayNum,int userId,String token) {
         setCache(false);
         HttpService httpService = getRetrofit().create(HttpService.class);
 
@@ -2335,8 +2335,8 @@ public class UserTask extends HttpManagerApi {
         String string = jsonObject.toString();
 
         RequestBody requestBody = RequestBody.create(MediaType.parse("application/json;charset=utf-8"), string);
-        doHttpDeal(httpService.getdynamic(requestBody,1,15, SharePreferenceUtils.getBaseSharePreference().readToken()
-                , SharePreferenceUtils.getBaseSharePreference().readUserId()));
+        doHttpDeal(httpService.getdynamic(requestBody,pageNum,essayNum
+              ));
     }
 
 }
