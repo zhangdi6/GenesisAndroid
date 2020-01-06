@@ -99,7 +99,7 @@ public class DynamicAdapter extends RecyclerView.Adapter {
             String date = updatedAt.substring(5 , createdAt.lastIndexOf("T"));*/
 
             long time1 = essaysBean.getTime();
-            String dateToString = DataUtils.getCurrentDate(time1);
+            String dateToString = DataUtils.getDateToStringByDatse(time1);
 
             holder.tv_find_name.setText("" + basicInfo.getRealName());
             holder.tv_find_describe.setText(dateToString);

@@ -101,7 +101,7 @@ public class DyAdapter extends RecyclerView.Adapter {
 
 
             long time1 = dataBean.getTime();
-            String dateToString = DataUtils.getCurrentDate(time1);
+            String dateToString = DataUtils.getDateToStringByDatse(time1);
 
             holder.tv_find_name.setText("" + basicInfo.getRealName());
             holder.tv_find_describe.setText(dateToString);

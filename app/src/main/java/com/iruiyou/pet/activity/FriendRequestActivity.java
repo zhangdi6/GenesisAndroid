@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.iruiyou.common.http.task.UserTask;
 import com.iruiyou.common.utils.T;
@@ -25,7 +26,9 @@ import butterknife.ButterKnife;
 
 public class FriendRequestActivity extends BaseActivity {
 
-    private FriendApplicationListAdapter friendApplicationListAdapter,mineFriendApplicationListAdapter;
+    private FriendApplicationListAdapter friendApplicationListAdapter;
+
+    private FriendRefuseListAdapter  mineFriendApplicationListAdapter;
 
     @BindView(R.id.radio_wart)//待处理请求
     RadioButton radio_wart;
@@ -45,6 +48,14 @@ public class FriendRequestActivity extends BaseActivity {
     @BindView(R.id.tvNotData)
     ImageView tvNotData;
 
+    @BindView(R.id.backess)
+    ImageView backess;
+
+    @BindView(R.id.textView6)
+    TextView textView6;
+
+
+
     @Override
     public int getLayout() {
         return R.layout.activity_friend_request;
@@ -53,7 +64,7 @@ public class FriendRequestActivity extends BaseActivity {
     @Override
     public void OnActCreate(Bundle savedInstanceState) {
         ButterKnife.bind(this);
-        mineFriendApplicationListAdapter=new FriendApplicationListAdapter(true, FriendRequestActivity.this);
+        mineFriendApplicationListAdapter=new FriendRefuseListAdapter(true, FriendRequestActivity.this);
         friendApplicationListAdapter=new FriendApplicationListAdapter(false, FriendRequestActivity.this);
         friendApplicationRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mineFriendApplicationRecyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -63,6 +74,14 @@ public class FriendRequestActivity extends BaseActivity {
         friendApplicationRecyclerView.setNestedScrollingEnabled(false);
 
         getData();
+        backess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
 
         radio_group.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -84,8 +103,11 @@ public class FriendRequestActivity extends BaseActivity {
 
                         if (friendApplicationListAdapter.getItemCount()==0){
                             tvNotData.setVisibility(View.VISIBLE);
-                            friendApplicationRecyclerView.setVisibility(View.GONE);
-                            mineFriendApplicationRecyclerView.setVisibility(View.GONE);
+                            textView6.setVisibility(View.VISIBLE);
+                            friendApplicationRecyclerView.setVisibility(View.VISIBLE);
+                        }else{
+                            tvNotData.setVisibility(View.GONE);
+                            textView6.setText(View.GONE);
                         }
                         break;
 
@@ -107,13 +129,19 @@ public class FriendRequestActivity extends BaseActivity {
 
                         if (mineFriendApplicationListAdapter.getItemCount()==0){
                             tvNotData.setVisibility(View.VISIBLE);
+                            textView6.setVisibility(View.VISIBLE);
                             friendApplicationRecyclerView.setVisibility(View.GONE);
                             mineFriendApplicationRecyclerView.setVisibility(View.GONE);
+                        }else{
+                            tvNotData.setVisibility(View.GONE);
+                            textView6.setVisibility(View.GONE);
+                            mineFriendApplicationRecyclerView.setVisibility(View.VISIBLE);
                         }
                         break;
                 }
             }
         });
+
 
 
     }
@@ -139,22 +167,27 @@ public class FriendRequestActivity extends BaseActivity {
                             {
                                 friendApplicationListAdapter.setNewdataAndCount(getAppliersBean.getData().getInfoCount(),getAppliersBean.getData().getApplyMe());
                             }
-/*
-                            if((mineFriendApplicationListAdapter.getItemCount()+friendApplicationListAdapter.getItemCount())==0)
+
+
+
+                            if((mineFriendApplicationListAdapter.getItemCount())==0 || friendApplicationListAdapter.getItemCount()==0)
                             {
                                // scrollView.setVisibility(View.GONE);
                                 tvNotData.setVisibility(View.VISIBLE);
+                                textView6.setVisibility(View.VISIBLE);
                             }
                             else
                             {
                                // scrollView.setVisibility(View.VISIBLE);
                                 tvNotData.setVisibility(View.GONE);
-                            }*/
+                                textView6.setVisibility(View.GONE);
+                            }
                         }
                         else
                         {
                             //scrollView.setVisibility(View.GONE);
                             tvNotData.setVisibility(View.VISIBLE);
+                            textView6.setVisibility(View.VISIBLE);
                         }
                     }
                     else if(StringUtil.isNoBlankAndNoNull(getAppliersBean.getMessage()))
@@ -169,5 +202,13 @@ public class FriendRequestActivity extends BaseActivity {
 
             }
         }, FriendRequestActivity.this).getApplyMeAndMyApply();
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getData();
+
     }
 }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.iruiyou.common.utils.GlideUtils;
 import com.iruiyou.http.retrofit_rx.Api.BaseApi;
 import com.iruiyou.pet.R;
+import com.iruiyou.pet.activity.utils.DataUtils;
 import com.iruiyou.pet.bean.GetEssaysBean2;
 
 import java.util.ArrayList;
@@ -41,6 +42,14 @@ public class HotItemComentAdapter extends RecyclerView.Adapter {
         GlideUtils.displayRound(holder1.comment.getContext(),
                 BaseApi.baseUrlNoApi + mList.get(position).getBasicInfo().getHeadImg(), holder1.img);
         holder1.comment.setText(mList.get(position).getContent());
+
+        holder1.identity.setText(mList.get(position).getBasicInfo().getPositionTitle());
+
+        long time1 = mList.get(position).getTime();
+        String dateToString = DataUtils.getCurrentDate(time1);
+
+        holder1.tv_time.setText(dateToString+"   回复");
+
         holder1.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -68,6 +77,9 @@ public class HotItemComentAdapter extends RecyclerView.Adapter {
         private  ImageView img;
         private  TextView name;
         private TextView comment;
+        private TextView identity;
+        private TextView tv_time;
+
 
         public CommentViewholder(View itemView) {
             super(itemView);
@@ -75,6 +87,8 @@ public class HotItemComentAdapter extends RecyclerView.Adapter {
             img = itemView.findViewById(R.id.img_head);
             name = itemView.findViewById(R.id.tv_name);
             comment = itemView.findViewById(R.id.tv_comment);
+            identity = itemView.findViewById(R.id.tv_identity);
+            tv_time = itemView.findViewById(R.id.tv_time);
         }
     }
     public interface onItemClickListener{

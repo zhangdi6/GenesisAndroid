@@ -1,6 +1,5 @@
 package com.iruiyou.pet.adapter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
@@ -21,7 +20,8 @@ import com.iruiyou.http.retrofit_rx.exception.ApiException;
 import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.activity.FriendApplicationListActivity;
-import com.iruiyou.pet.activity.UserDetailsActivity;
+import com.iruiyou.pet.activity.FriendRequestActivity;
+import com.iruiyou.pet.activity.utils.StartActivityManager;
 import com.iruiyou.pet.bean.AdoptBean;
 import com.iruiyou.pet.bean.BaseBean;
 import com.iruiyou.pet.bean.BasicInfoBean;
@@ -36,6 +36,9 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
     private Context context;
     private int infoCount;
     private boolean isNewVersion;
+
+
+
     public FriendApplicationListAdapter(boolean isMine, Context context) {
         super(R.layout.adapter_friend_application);
         this.isMine=isMine;
@@ -69,6 +72,10 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
         ImageView iconComplete=helper.getView(R.id.image_complete);
         LinearLayout linearCount=helper.getView(R.id.linear_count);
         LinearLayout view_bottom=helper.getView(R.id.view_bottom);
+
+
+
+
 
         if(item.getUserIdA()== Integer.valueOf(SharePreferenceUtils.getBaseSharePreference().readUserId()))
         {
@@ -126,7 +133,7 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
             }
 
             if(!isNewVersion){
-                linearCount.setVisibility(View.VISIBLE);
+              //  linearCount.setVisibility(View.VISIBLE);
             }else{
                 linearCount.setVisibility(View.GONE);
             }
@@ -140,12 +147,12 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
                     if(fenshu>=1)
                     {
                         iconComplete.setImageResource(R.drawable.icon_comlete);
-                        linearCount.setBackgroundResource(R.drawable.bg_pulse_complete);
+                      //  linearCount.setBackgroundResource(R.drawable.bg_pulse_complete);
                     }
                     else
                     {
                         iconComplete.setImageResource(R.drawable.icon_un_comlete);
-                        linearCount.setBackgroundResource(R.drawable.bg_pulse_un_complete);
+                     //   linearCount.setBackgroundResource(R.drawable.bg_pulse_un_complete);
                     }
                     String value=((int)(fenshu*100))+"%";
                     helper.setText(R.id.text_complete_count,value);
@@ -154,9 +161,16 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
             helper.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    UserDetailsActivity.startAction((Activity) context,userId,realName);
+
+                  //  PersonalMsgActivity.startAction((Activity) context,userId,realName);
+                    StartActivityManager.startPersonalMsgActivity(context,userId,realName);
+
                 }
             });
+
+
+
+
             btn_action.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -207,7 +221,7 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
             @Override
             public void onError(ApiException e) {
             }
-        }, (FriendApplicationListActivity)context).adopt(userid);
+        }, (FriendRequestActivity)context).adopt(userid);
     }
 
     private void ignore(int userid, GetAppListBean.ApplyBean item){
@@ -263,6 +277,9 @@ public class FriendApplicationListAdapter extends BaseQuickAdapter<GetAppListBea
             }
         }, (FriendApplicationListActivity)context).cancelApply(targetUserId);
     }
+
+
+
 
 
 }

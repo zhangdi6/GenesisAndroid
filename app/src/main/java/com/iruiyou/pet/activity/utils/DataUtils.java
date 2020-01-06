@@ -22,6 +22,23 @@ public class DataUtils {
         return sf.format(d);
     }
 
+
+
+
+    /*时间戳转换成字符窜*/
+    public static String getDateTo(long time) {
+        Date d = new Date(time);
+        sf = new SimpleDateFormat("HH:mm:ss");
+        return sf.format(d);
+    }
+
+    /*时间戳转换成字符窜*/
+    public static String getDateToStringByDatse(long time) {
+        Date d = new Date(time);
+        sf = new SimpleDateFormat("yyyy年MM月dd日");
+        return sf.format(d);
+    }
+
     /*将字符串转为时间戳*/
     public static long getStringToDate(String time) {
         sf = new SimpleDateFormat("yyyy年MM月dd日");

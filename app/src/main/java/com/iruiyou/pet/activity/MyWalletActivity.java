@@ -186,8 +186,14 @@ public class MyWalletActivity extends BaseActivity {
             View ll_deposit_funds;
     @BindView(R.id.ll_index_extraction)// 提取资产  section title
             View ll_index_extraction;
+
+   /*
+
     @BindView(R.id.linear_promotional_benefits)// 推广收益  section title
             View linear_promotional_benefits;
+    */
+
+
     @BindView(R.id.ll_invite_friends_wallet)// 邀请好友  section title
             View ll_invite_friends_wallet;
 
@@ -297,7 +303,7 @@ public class MyWalletActivity extends BaseActivity {
         if(StringUtil.isNotEmpty(userChannle)){
             setSettingUpChannels(8,8,8,View.VISIBLE,8,View.VISIBLE,8,8,0);
         }else {
-            linear_promotional_benefits.setVisibility(View.INVISIBLE);
+          //  linear_promotional_benefits.setVisibility(View.INVISIBLE);
         }
 //        if ("".equals(userChannle)) {
 //            //无渠道的会员
@@ -652,21 +658,27 @@ public class MyWalletActivity extends BaseActivity {
             String hatchAmount = harvestBean.getData().getUserInfo().getHatchAmount();
             double crystalAmount = Double.valueOf(harvestBean.getData().getUserInfo().getCrystalAmount());
             double rebateCrystal = Double.valueOf(harvestBean.getData().getUserInfo().getRebateCrystal());
-            double pbsAmount = Double.valueOf(add_deposit_futures_tran_sellTrade).doubleValue();
+
+            double pbssAmount = Double.valueOf(add_deposit_futures_tran_sellTrade).doubleValue();
             double lastHarvestAmount = Double.valueOf(harvestBean.getData().getUserInfo().getLastHarvestAmount()).doubleValue();
             double pbsFrozen = Double.valueOf(harvestBean.getData().getUserInfo().getPbsFrozen()).doubleValue();
             double pbsDrawLockedAmount = Double.valueOf(harvestBean.getData().getUserInfo().getPbsDrawLockedAmount()).doubleValue();
 
+            double pbsAmount = Double.valueOf(harvestBean.getData().getUserInfo().getPbsAmount()).doubleValue();
+
             textCrashCount.setText(BigDecimalUtil.addComma4(rebateCrystal));
-            String countPBS = BigDecimalUtil.addComma4(pbsAmount + lastHarvestAmount+pbsFrozen + pbsDrawLockedAmount);
-            textXunibiCount.setText(countPBS);
+
+            String countPBS = BigDecimalUtil.addComma4(pbssAmount + lastHarvestAmount+pbsFrozen + pbsDrawLockedAmount);
+
+            textXunibiCount.setText(String.format("%.4f",pbsAmount));
+
             double totalPBS = Double.valueOf(pbs_cny).doubleValue() * (Double.valueOf(countPBS.replace(",","")).doubleValue());
 
-            String allPrice = BigDecimalUtil.addComma4(rebateCrystal + totalPBS + crystalAmount);
-            tv_assets_valuation.setText(allPrice);
+            String allPrice = BigDecimalUtil.addComma4(rebateCrystal + pbsAmount + crystalAmount);
+
+            tv_assets_valuation.setText(String.format("%.4f",allPrice));
         }
     }
-
 
 
     /**
@@ -768,7 +780,7 @@ public class MyWalletActivity extends BaseActivity {
 
     @OnClick({R.id.linear_zhifubao, R.id.linear_bank_card, R.id.im_close, R.id.ll_pbs_exchange_crash, R.id.bt_wallet_exchange, R.id.tv_understand, R.id.im_help,
             R.id.ll_help_wallet, R.id.ll_crystal_recharge, R.id.bt_crystal_wallet, R.id.bt_pbs_wallet , R.id.ll_money_record,
-            R.id.ll_pbs_incubation2, R.id.ll_pbs_incubation, R.id.ll_invite_friends_wallet, R.id.linear_promotional_benefits,
+            R.id.ll_pbs_incubation2, R.id.ll_pbs_incubation, R.id.ll_invite_friends_wallet,
             R.id.ll_index_extraction, R.id.ll_deposit_funds, R.id.ll_pbs_current_price, R.id.ll_internal_revenue, R.id.ll_high_save,
             R.id.ll_hight_save2, R.id.ll_hight_save, R.id.ll_deposit_funds2, R.id.ll_pbs_exchange_crystal, R.id.ll_fixed_income_wallet,
             R.id.ll_network_income_wallet, R.id.ll_team_profit_wallet, R.id.ll_transfer_accounts, R.id.ll_senior_members,
@@ -957,7 +969,11 @@ public class MyWalletActivity extends BaseActivity {
             case R.id.ll_invite_friends_wallet://邀请好友
                 startActivity(InvitFriendActivity.class);
                 break;
-            case R.id.linear_promotional_benefits://推广收益
+
+
+
+
+           /* case R.id.linear_promotional_benefits://推广收益
 //                startActivity(PromotionalBenefitsActivity.class);
 //                StartActivityManager.startWebViewNewActivity(this,getString(R.string.promotional_benefits),BaseApi.baseUrlNoApi+"deposit/team");
                 if("pets".equals(userChannle) || "niyang".equals(userChannle)){
@@ -969,7 +985,11 @@ public class MyWalletActivity extends BaseActivity {
                 } else {
                     StartActivityManager.startWebViewNewActivity(this,getString(R.string.promotional_benefits), BaseApi.baseUrlNoApi+ Constant.DEPOSIT+ Constant.TEAM,true);
                 }
-                break;
+                break;*/
+
+
+
+
             case R.id.ll_index_extraction://提取资产
 //                StartActivityManager.startWithdrawalOfAssetsActivity(this,pbsAmount1);
 //                StartActivityManager.startResultsOfWithdrawalsActivity(this);

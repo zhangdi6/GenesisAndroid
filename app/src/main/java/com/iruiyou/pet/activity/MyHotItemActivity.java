@@ -50,6 +50,10 @@ public class MyHotItemActivity extends BaseActivity {
     @BindView(R.id.im_find_head)
     ImageView im_find_head;
 
+    @BindView(R.id.img_hui)
+    ImageView img_hui;
+
+
     @BindView(R.id.text_work)
     TextView tv_work;
 
@@ -138,7 +142,7 @@ public class MyHotItemActivity extends BaseActivity {
 
 
             long time1 = bean2.getTime();
-            String dateToString = DataUtils.getCurrentDate(time1);
+            String dateToString = DataUtils.getDateToStringByDatse(time1);
 
             if (basicInfo.getRealName() != null) {
                 tv_find_name.setText("" + basicInfo.getRealName());
@@ -161,6 +165,8 @@ public class MyHotItemActivity extends BaseActivity {
 
             }
             GlideUtils.displayRound(this, BaseApi.baseUrlNoApi + basicInfo.getHeadImg(), im_find_head);
+            GlideUtils.displayRound(this, BaseApi.baseUrlNoApi + basicInfo.getHeadImg(), img_hui);
+
         }
 
         if (images != null) {

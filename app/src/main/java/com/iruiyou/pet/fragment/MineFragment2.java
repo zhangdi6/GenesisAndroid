@@ -428,10 +428,14 @@ public class MineFragment2 extends TakePhotoFragment {
                         double lastHarvestAmount = Double.valueOf(harvestBean.getData().getUserInfo().getLastHarvestAmount()).doubleValue();
                         double pbsFrozen = Double.valueOf(harvestBean.getData().getUserInfo().getPbsFrozen()).doubleValue();
                         double pbsDrawLockedAmount = Double.valueOf(harvestBean.getData().getUserInfo().getPbsDrawLockedAmount()).doubleValue();
+
                         double pbsAmount = Double.valueOf(harvestBean.getData().getUserInfo().getPbsAmount()).doubleValue();
 
                         textCrashCount.setText(BigDecimalUtil.addComma4(rebateCrystal));
-                        textXunibiCount.setText(BigDecimalUtil.addComma4(pbssAmount + lastHarvestAmount + pbsFrozen + pbsDrawLockedAmount + pbsAmount));
+                      //  textXunibiCount.setText(BigDecimalUtil.addComma4(pbssAmount + lastHarvestAmount + pbsFrozen + pbsDrawLockedAmount + pbsAmount));
+
+                        textXunibiCount.setText(String.format("%.4f",pbsAmount));
+
                         double totalPBS = Double.valueOf(pbs_cny).doubleValue() * (pbssAmount + lastHarvestAmount);
 
                         Log.i("getSellTrade", "onNext: "+add_deposit_futures_tran_sellTrade);

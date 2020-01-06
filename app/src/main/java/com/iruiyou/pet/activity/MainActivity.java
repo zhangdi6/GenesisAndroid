@@ -503,7 +503,7 @@ public class MainActivity extends BaseActivity implements DragPointView.OnDragLi
         if (count == 0) {
             mUnreadNumView.setVisibility(View.GONE);
         } else if (count > 0 && count < 100) {
-            T.showShort(count+"");
+           // T.showShort(count+"");
             mUnreadNumView.setVisibility(View.VISIBLE);
             mUnreadNumView.setText(String.valueOf(count));
         } else {

@@ -600,7 +600,7 @@
                             android:layout_marginLeft="@dimen/dp_12"
                             android:layout_marginTop="17dp"
                             android:layout_weight="4"
-                            android:text="为你推荐"
+                            android:text="黑卡限定"
                             android:textColor="@color/color_03"
                             android:textSize="@dimen/sp_18" />
 
@@ -660,8 +660,24 @@
                             <ImageView
                                 android:layout_width="@dimen/dp_16"
                                 android:layout_height="@dimen/dp_16"
+                                android:visibility="gone"
                                 android:layout_marginLeft="@dimen/dp_24"
                                 android:src="@drawable/add2"/>
+
+                            <Button
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_16"
+                                android:layout_marginLeft="@dimen/dp_3"
+                                android:background="@drawable/bblack"
+                                android:text="￥28"
+                                android:textColor="#FFD9B4"
+                                android:textSize="@dimen/sp_9" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/biao_card" />
+
                         </LinearLayout>
 
                         </LinearLayout>
@@ -686,6 +702,7 @@
                                 android:textSize="@dimen/sp_14"/>
 
 
+
                             <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -701,10 +718,24 @@
                                     android:textSize="@dimen/sp_12"
                                     />
                                 <ImageView
+                                    android:visibility="gone"
                                     android:layout_width="@dimen/dp_16"
                                     android:layout_height="@dimen/dp_16"
                                     android:layout_marginLeft="@dimen/dp_24"
                                     android:src="@drawable/add2"/>
+
+                                <Button
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_16"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:background="@drawable/bblack"
+                                    android:text="￥32"
+                                    android:textColor="#FFD9B4"
+                                    android:textSize="@dimen/sp_9" />
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/biao_card"/>
                             </LinearLayout>
 
                         </LinearLayout>
@@ -744,10 +775,25 @@
                                     android:textSize="@dimen/sp_12"
                                     />
                                 <ImageView
+                                    android:visibility="gone"
                                     android:layout_width="@dimen/dp_16"
                                     android:layout_height="@dimen/dp_16"
                                     android:layout_marginLeft="@dimen/dp_24"
                                     android:src="@drawable/add2"/>
+
+
+                                <Button
+                                    android:layout_width="@dimen/dp_30"
+                                    android:layout_height="@dimen/dp_16"
+                                    android:layout_marginLeft="@dimen/dp_3"
+                                    android:background="@drawable/bblack"
+                                    android:text="￥20"
+                                    android:textColor="#FFD9B4"
+                                    android:textSize="@dimen/sp_9" />
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/biao_card"/>
                             </LinearLayout>
 
                         </LinearLayout>

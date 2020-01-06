@@ -275,7 +275,8 @@ public class GoodFriendsActivity extends BaseActivity {
         recyle_see_me.setAdapter(seeMeAdapter);
         seeMeAdapter.setOnItemClickListener(((adapter, view, position) -> {
             SeeMeLogBean.SeeLogInfo seeLogInfo = (SeeMeLogBean.SeeLogInfo) adapter.getData().get(position);
-            StartActivityManager.startUserDetailsActivity(this,seeLogInfo.getFromInfo().getUserId(),seeLogInfo.getFromInfo().getRealName());
+           // StartActivityManager.startUserDetailsActivity(this,seeLogInfo.getFromInfo().getUserId(),seeLogInfo.getFromInfo().getRealName());
+            StartActivityManager.startPersonalMsgActivity(this,seeLogInfo.getFromInfo().getUserId(),seeLogInfo.getFromInfo().getRealName());
         }));
         myContanctAdapter = new MyContanctAdapter();
         myContanctAdapter.setFromMessage(true);
@@ -285,9 +286,11 @@ public class GoodFriendsActivity extends BaseActivity {
         myContanctAdapter.setOnItemClickListener((adapter, view, position) -> {
             CheckFriendsBean.DataBean  dataBean= (CheckFriendsBean.DataBean) adapter.getData().get(position);
             if(dataBean.getBasicInfoA().getUserId() == Integer.valueOf(SharePreferenceUtils.getBaseSharePreference().readUserId()).intValue() ){
-                StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoB().getUserId(),dataBean.getBasicInfoB().getRealName());
+              // StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoB().getUserId(),dataBean.getBasicInfoB().getRealName());
+                StartActivityManager.startPersonalMsgActivity(this,dataBean.getBasicInfoB().getUserId(),dataBean.getBasicInfoB().getRealName());
             }else{
-                StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoA().getUserId(),dataBean.getBasicInfoA().getRealName());
+               // StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoA().getUserId(),dataBean.getBasicInfoA().getRealName());
+                StartActivityManager.startPersonalMsgActivity(this,dataBean.getBasicInfoA().getUserId(),dataBean.getBasicInfoA().getRealName());
             }
         });
 

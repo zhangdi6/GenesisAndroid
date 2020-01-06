@@ -588,7 +588,8 @@ public class PersonalMsgActivity extends BaseActivity {
                 if(friendStatus == 0){
                     if(roughBean!=null&&roughBean.getData()!=null&&roughBean.getData().getBasicInfo()!=null)
                     {
-                      //  payForAddFriend((float)roughBean.getData().getBasicInfo().getFriendPrice());
+                       // payForAddFriend((float)roughBean.getData().getBasicInfo().getFriendPrice());
+                        addFriends();
                     }
                 }else if(friendStatus == 1){
 
@@ -661,8 +662,7 @@ public class PersonalMsgActivity extends BaseActivity {
         }, PersonalMsgActivity.this).cancelApply(targetUserId);
     }
 
-    private void payForAddFriend(float payCount)
-    {
+    private void payForAddFriend(float payCount) {
         boolean isVisibleCancel = true;//true显示两个控件，否则1显示个
         String title=getString(R.string.prompt);
         String content=String.format(getString(R.string.pay_addfriend_str),payCount);

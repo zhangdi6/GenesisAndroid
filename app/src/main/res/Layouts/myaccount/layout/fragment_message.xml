@@ -256,6 +256,7 @@
             </LinearLayout>
 
             <RelativeLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
@@ -294,65 +295,6 @@
                 android:paddingRight="@dimen/dp_15"
                 android:src="@color/line_color" />
 
-            <LinearLayout
-                android:id="@+id/linear_notice"
-                android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:background="@color/white"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:visibility="visible">
-
-                <RelativeLayout
-                    android:layout_width="@dimen/dp_70"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="14dp"
-                        android:src="@drawable/icon_notice" />
-
-                    <com.iruiyou.pet.utils.DragPointView
-
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_alignParentRight="true"
-                        android:gravity="center"
-                        android:visibility="gone" />
-                </RelativeLayout>
-
-                <!--<View-->
-                <!--android:layout_width="3dp"-->
-                <!--android:layout_height="14dp"-->
-                <!--android:layout_marginLeft="15dp"-->
-                <!--android:background="@color/_26c68a"></View>-->
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="7dp"
-                    android:layout_weight="1"
-                    android:text="通知"
-                    android:textColor="@color/_333333"
-                    android:textSize="17sp" />
-
-                <LinearLayout
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:background="@drawable/find_in"
-                        android:textColor="@color/_999999"
-                        android:textSize="10dp"
-                        android:visibility="invisible" />
-                </LinearLayout>
-            </LinearLayout>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -422,6 +364,7 @@
             </LinearLayout>
 
             <ImageView
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_1"
                 android:background="@color/white"
@@ -490,6 +433,69 @@
                         android:visibility="invisible" />
                 </LinearLayout>
             </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linear_notice"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="14dp"
+                        android:src="@drawable/icon_notice" />
+
+                    <com.iruiyou.pet.utils.DragPointView
+
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <!--<View-->
+                <!--android:layout_width="3dp"-->
+                <!--android:layout_height="14dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:background="@color/_26c68a"></View>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="1"
+                    android:text="通知"
+                    android:textColor="@color/_333333"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/find_in"
+                        android:textColor="@color/_999999"
+                        android:textSize="10dp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
 
             <fragment
                 android:id="@+id/conversationlist"

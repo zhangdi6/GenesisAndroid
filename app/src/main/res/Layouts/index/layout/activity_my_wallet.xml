@@ -1342,6 +1342,7 @@
                                     android:textColor="@color/color_99"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
+<!--
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -1365,6 +1366,7 @@
                                     android:textColor="@color/color_99"
                                     android:textSize="@dimen/sp_12" />
                             </LinearLayout>
+-->
 
                             <LinearLayout
                                 android:visibility="invisible"

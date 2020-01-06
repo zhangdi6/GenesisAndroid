@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
@@ -208,7 +209,7 @@ public class LookMeActivity extends BaseActivity {
         fragment.setUri(uri);
         FragmentTransaction transaction = this.getSupportFragmentManager().beginTransaction();
         //rong_content 为你要加载的 id
-        transaction.add(R.id.conversationlist, fragment);
+        transaction.add(R.id.conversationlist, (Fragment) fragment);
         transaction.commit();
         /**
          * 设置会话列表界面操作的监听器。
@@ -287,7 +288,9 @@ public class LookMeActivity extends BaseActivity {
         recyle_see_me.setAdapter(seeMeAdapter);
         seeMeAdapter.setOnItemClickListener(((adapter, view, position) -> {
             SeeMeLogBean.SeeLogInfo seeLogInfo = (SeeMeLogBean.SeeLogInfo) adapter.getData().get(position);
-            StartActivityManager.startUserDetailsActivity(this,seeLogInfo.getFromInfo().getUserId(),seeLogInfo.getFromInfo().getRealName());
+            //StartActivityManager.startUserDetailsActivity(this,seeLogInfo.getFromInfo().getUserId(),seeLogInfo.getFromInfo().getRealName());
+            StartActivityManager.startPersonalMsgActivity(this,seeLogInfo.getFromInfo().getUserId(),seeLogInfo.getFromInfo().getRealName());
+
         }));
         myContanctAdapter = new MyContanctAdapter();
         myContanctAdapter.setFromMessage(true);
@@ -297,9 +300,13 @@ public class LookMeActivity extends BaseActivity {
         myContanctAdapter.setOnItemClickListener((adapter, view, position) -> {
             CheckFriendsBean.DataBean  dataBean= (CheckFriendsBean.DataBean) adapter.getData().get(position);
             if(dataBean.getBasicInfoA().getUserId() == Integer.valueOf(SharePreferenceUtils.getBaseSharePreference().readUserId()).intValue() ){
-                StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoB().getUserId(),dataBean.getBasicInfoB().getRealName());
+                //StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoB().getUserId(),dataBean.getBasicInfoB().getRealName());
+
+                StartActivityManager.startPersonalMsgActivity(this,dataBean.getBasicInfoB().getUserId(),dataBean.getBasicInfoB().getRealName());
+
             }else{
-                StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoA().getUserId(),dataBean.getBasicInfoA().getRealName());
+               // StartActivityManager.startUserDetailsActivity(this,dataBean.getBasicInfoA().getUserId(),dataBean.getBasicInfoA().getRealName());
+                StartActivityManager.startPersonalMsgActivity(this,dataBean.getBasicInfoA().getUserId(),dataBean.getBasicInfoA().getRealName());
             }
         });
 

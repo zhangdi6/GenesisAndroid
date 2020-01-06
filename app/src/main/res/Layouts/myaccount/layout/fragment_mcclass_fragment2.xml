@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".fragment.MCClassFragment2">
 
-    <RelativeLayout
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_45"
@@ -15,14 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="@dimen/dp_20"
-            android:gravity="center_vertical"
-            android:text="附近动态"
-            android:textSize="@dimen/sp_18"
-            android:textColor="@color/color_03" />
 
         <ImageView
             android:id="@+id/add"
@@ -30,11 +22,35 @@
             android:layout_height="@dimen/dp_16"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/dp_29"
-            android:src="@drawable/black_add" />
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/black_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nearby_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="附近的人"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_nearby_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="附近动态"
+            app:layout_constraintStart_toEndOf="@+id/tv_nearby_people"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>
 
     <View
         android:id="@+id/line"

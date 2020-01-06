@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="TextView"
         android:textSize="@dimen/sp_12"
         app:layout_constraintStart_toEndOf="@+id/home_kecheng_img"
@@ -51,4 +51,34 @@
         android:textColor="@color/_56D8B3"
         app:layout_constraintStart_toEndOf="@+id/home_kecheng_img"
         app:layout_constraintTop_toBottomOf="@+id/home_kecheng_name" />
+
+    <TextView
+        android:id="@+id/ke_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="不长久肯定是把是就不打克军百世快递加拿大是恐惧可接受的"
+        android:maxWidth="@dimen/dp_220"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/color_03"
+        app:layout_constraintStart_toEndOf="@+id/home_kecheng_img"
+        app:layout_constraintTop_toBottomOf="@+id/home_kecheng_name" />
+
+    <TextView
+        android:id="@+id/ke_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/color_03"
+        android:textSize="@dimen/sp_12"
+        android:text=" · 微博吸粉大法，引爆私域流量，实..."
+        android:maxWidth="@dimen/dp_220"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintStart_toEndOf="@+id/home_kecheng_img"
+        app:layout_constraintTop_toBottomOf="@+id/ke_one" />
 </android.support.constraint.ConstraintLayout>

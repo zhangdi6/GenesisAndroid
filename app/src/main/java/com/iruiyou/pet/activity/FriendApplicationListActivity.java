@@ -30,7 +30,9 @@ import butterknife.OnClick;
  */
 public class FriendApplicationListActivity extends BaseActivity {
 
-    private FriendApplicationListAdapter friendApplicationListAdapter,mineFriendApplicationListAdapter;
+    private FriendApplicationListAdapter friendApplicationListAdapter;
+
+    private FriendRefuseListAdapter mineFriendApplicationListAdapter;
 
     @BindView(R.id.mineFriendApplicationRecyclerView)
     RecyclerView mineFriendApplicationRecyclerView;
@@ -65,7 +67,7 @@ public class FriendApplicationListActivity extends BaseActivity {
     public void OnActCreate(Bundle savedInstanceState) {
         ButterKnife.bind(this);
         setTitle(getResources().getString(R.string.new_friend_application_request));
-        mineFriendApplicationListAdapter=new FriendApplicationListAdapter(true, FriendApplicationListActivity.this);
+        mineFriendApplicationListAdapter=new FriendRefuseListAdapter(true, FriendApplicationListActivity.this);
         friendApplicationListAdapter=new FriendApplicationListAdapter(false, FriendApplicationListActivity.this);
         friendApplicationRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mineFriendApplicationRecyclerView.setLayoutManager(new LinearLayoutManager(this));

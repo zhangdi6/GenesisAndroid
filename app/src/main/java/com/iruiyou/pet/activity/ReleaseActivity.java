@@ -97,7 +97,7 @@ public class ReleaseActivity extends BaseActivity {
         setRightText("发布");
         setRightBg(R.drawable.shape_329cd7);
 //        setRightImage();
-        setTitle("发布微博");
+        setTitle("发布动态");
         initDta();
         initGridView();
     }

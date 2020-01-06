@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_height="@dimen/dp_100">
+
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="@dimen/dp_53"
+        android:layout_height="@dimen/dp_53"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/about" />
+
+    <TextView
+        android:id="@+id/tv_nearby_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="名字"
+        android:textColor="@color/color_03"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nearby_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:text="职位"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nearby_name" />
+
+    <ImageView
+        android:id="@+id/tv_nearby_location"
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nearby_position"
+        app:srcCompat="@drawable/location" />
+
+    <TextView
+        android:id="@+id/tv_nearby_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="距离"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintStart_toEndOf="@+id/tv_nearby_location"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nearby_position" />
+
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_27"
+        android:layout_marginEnd="24dp"
+        android:background="#ff54d7b4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/dp_7"
+            android:layout_height="@dimen/dp_7"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:src="@drawable/add_fri"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:text="好友"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

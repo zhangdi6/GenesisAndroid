@@ -3,22 +3,16 @@ package com.iruiyou.pet.activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import com.iruiyou.common.http.task.UserTask;
-import com.iruiyou.common.utils.GsonUtils;
-import com.iruiyou.common.utils.T;
+import com.iruiyou.common.utils.SharePreferenceUtils;
 import com.iruiyou.http.retrofit_rx.exception.ApiException;
 import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.pet.R;
 import com.iruiyou.pet.adapter.GoodsBuyRecordsAdapter;
 import com.iruiyou.pet.base.BaseActivity;
-import com.iruiyou.pet.bean.GoodsBuyRecordsBean;
-import com.iruiyou.pet.utils.Constant;
 import com.iruiyou.pet.utils.DialogUtil;
-import com.iruiyou.pet.utils.StringUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,7 +43,7 @@ public class GoodsBuyRecordsActivity extends BaseActivity {
         goodsBuyRecordsAdapter = new GoodsBuyRecordsAdapter();
         recyclerView.setAdapter(goodsBuyRecordsAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(GoodsBuyRecordsActivity.this));
-        new UserTask(new HttpOnNextListener() {
+        /*new UserTask(new HttpOnNextListener() {
             @Override
             public void onNext(String resulte, String method) {
                 Log.e("test", "resulte is " + resulte);
@@ -84,6 +78,18 @@ public class GoodsBuyRecordsActivity extends BaseActivity {
                 recyclerView.setVisibility(View.GONE);
                 llWalletNodata.setVisibility(View.VISIBLE);
             }
-        }, GoodsBuyRecordsActivity.this).goodsBuyRecords();
+        }, GoodsBuyRecordsActivity.this).goodsBuyRecords();*/
+
+        new UserTask(new HttpOnNextListener() {
+            @Override
+            public void onNext(String resulte, String method) {
+
+            }
+
+            @Override
+            public void onError(ApiException e) {
+
+            }
+        },this).gethistory(SharePreferenceUtils.getBaseSharePreference().readUserId());
     }
 }

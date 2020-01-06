@@ -21,37 +21,47 @@
             android:layout_width="@dimen/dp_196"
             android:layout_height="@dimen/dp_26"
             android:layout_gravity="center"
-            android:orientation="horizontal"
             android:background="@drawable/shape_strkoe"
+            android:orientation="horizontal"
+            android:padding="1px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:padding="1px"
             app:layout_constraintTop_toTopOf="parent">
 
             <RadioButton
                 android:id="@+id/radio_wart"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:button="@null"
-                android:gravity="center"
-                android:checked="true"
+                android:layout_weight="1"
                 android:background="@drawable/button_selector"
-                android:textColor="@drawable/textcolor"
-                android:text="待处理请求" />
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="待处理请求"
+                android:textColor="@drawable/textcolor" />
 
             <RadioButton
                 android:id="@+id/radio_already"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="@drawable/button_selector"
                 android:button="@null"
                 android:gravity="center"
-                android:textColor="@drawable/textcolor"
-                android:text="已发出请求" />
+                android:text="已发出请求"
+                android:textColor="@drawable/textcolor" />
         </RadioGroup>
+
+        <ImageView
+            android:id="@+id/backess"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backess" />
 
     </android.support.constraint.ConstraintLayout>
 
@@ -60,7 +70,7 @@
         android:id="@+id/tvNotData"
         android:layout_width="@dimen/dp_110"
         android:layout_height="@dimen/dp_110"
-        android:background="@drawable/friend_bg"
+        android:background="@drawable/emage_bg"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,4 +96,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_layout" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无待处理请求，快去脉场拓展人脉吧"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotData" />
 </android.support.constraint.ConstraintLayout>

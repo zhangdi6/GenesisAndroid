@@ -6,9 +6,13 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -44,6 +48,7 @@ import com.iruiyou.http.retrofit_rx.exception.ApiException;
 import com.iruiyou.http.retrofit_rx.listener.HttpOnNextListener;
 import com.iruiyou.http.retrofit_rx.utils.EventBusUtils;
 import com.iruiyou.pet.R;
+import com.iruiyou.pet.activity.BlackCardActivity;
 import com.iruiyou.pet.activity.MainActivity;
 import com.iruiyou.pet.activity.ReleaseActivity;
 import com.iruiyou.pet.activity.TextActivity;
@@ -57,6 +62,7 @@ import com.iruiyou.pet.adapter.home_adapter.RenqiAdapter;
 import com.iruiyou.pet.base.BaseActivity;
 import com.iruiyou.pet.base.BaseFragment;
 import com.iruiyou.pet.bean.CommonBean;
+import com.iruiyou.pet.bean.CourseLessonBean;
 import com.iruiyou.pet.bean.EventBean;
 import com.iruiyou.pet.bean.GetCourseIntroBean;
 import com.iruiyou.pet.bean.GetEssaysBean;
@@ -81,6 +87,7 @@ import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import java.text.DecimalFormat;
 import java.util.List;
+import java.util.Timer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -98,6 +105,8 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
     private static final String TAG = "MCOpportunitiesFragment";
     private BannerScaleHelper bannerScaleHelper;
     private float mPading = 40 ;
+    private Timer timer =new Timer();
+
 
     /**
      * 单例模式
@@ -200,6 +209,70 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
     private float MAX_SCROLLVIEW_DISTENCE = 1000 ;
     private float WINDOW_WIDTH ;
 
+
+    private List<CourseLessonBean> dataSourse;
+    private GetCourseIntroBean.DataBean dataBean;
+
+
+    private long lastMarkTime = SharePreferenceUtils.getBaseSharePreference().readLastMarkTime();
+
+    Handler handler = new Handler();
+    private long leftTime = - 1;//一分钟---六小时
+
+
+    Runnable update_thread = new Runnable() {
+        @Override
+        public void run() {
+
+
+        }
+    };
+
+    final Handler handlerStop = new Handler() {
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 1:
+                    handler.removeCallbacks(update_thread);
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+
+    };
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        lastMarkTime = SharePreferenceUtils.getBaseSharePreference().readLastMarkTime();
+        getPBSData();//我的钱包
+        requestData();//资产总额
+
+        Log.e("rrrrr",SharePreferenceUtils.getBaseSharePreference().readLatitude());
+        Log.e("rrrrr",SharePreferenceUtils.getBaseSharePreference().readLongitude());
+        Log.e("rrrrr",SharePreferenceUtils.getBaseSharePreference().readCity());
+
+    }
+
+    public String formatLongToTimeStr(Long l) {
+        int hour = 0;
+        int minute = 0;
+        int second = 0;
+        second = l.intValue() ;
+        if (second > 60) {
+            minute = second / 60;   //取整
+            second = second % 60;   //取余
+        }
+        if (minute > 60) {
+            hour = minute / 60;
+            minute = minute % 60;
+        }
+        String strtime = hour+":"+minute+":"+second;
+        return strtime;
+    }
+
+
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -215,6 +288,9 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
         recy_shopping.setNestedScrollingEnabled(false);
 
         return view;
+
+
+
     }
 
 
@@ -232,8 +308,7 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
         /*   layoutParams.height = (int) getResources().getDimension(R.dimen.dp_70);*/
 
 
-        getPBSData();//我的钱包
-        requestData();//资产总额
+
         getData();//线下活动
         getkeClass(0,0,true);//线上课程
         initdata();//脉乐购
@@ -483,7 +558,13 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
                     }
                     if (homeRefreshBean.getData().getUserInfo() != null) {
 
-                        long lastMarkTime = homeRefreshBean.getData().getUserInfo().getLastMarkTime();
+                        lastMarkTime = homeRefreshBean.getData().getUserInfo().getLastMarkTime();
+                        Log.i("mn", "onNext: "+lastMarkTime);
+
+                       /* Log.i("qwertyuiop", "onNext: "+(System.currentTimeMillis()-lastMarkTime));
+                        Log.i("qwertyuiop", "onNext: "+ DataUtils.getDateTo(21600000-(System.currentTimeMillis()-lastMarkTime)));
+*/
+
                         boolean isShow = false;
                         if((System.currentTimeMillis()-lastMarkTime)>=21600000){
                             isShow = true;
@@ -572,14 +653,58 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
 
             if (!isEnable) {
                sign_in_money.setEnabled(false);
-               sign_in_money.setText("正在生成中...");
+             //  sign_in_money.setText("正在生成中...");
+                time2();
+
             } else {
                 sign_in_money.setEnabled(true);
                 sign_in_money.setText("签到得奖励");
+                sign_in_money.setTextColor(Color.parseColor("#F83333"));
 
         }
     }
 
+    private void time2() {
+
+        leftTime = 21600000- (System.currentTimeMillis() - lastMarkTime ) ;
+        CountDownTimer timer = new CountDownTimer(leftTime, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                sign_in_money.setEnabled(false);
+                if (millisUntilFinished > 0) {
+                    //倒计时效果展示
+                    /*leftTime =  leftTime -1000 ;*/
+                    /*String dateTo = DataUtils.getDateTo(millisUntilFinished);*/
+                    String formatLongToTimeStr = formatLongToTimeStr(millisUntilFinished/1000);
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            sign_in_money.setText(formatLongToTimeStr);
+                            sign_in_money.setTextColor(Color.parseColor("#666666"));
+
+                        }
+                    });
+
+                } else {//倒计时结束
+                    //处理业务流程
+                    //发送消息，结束倒计时
+                    Message message = new Message();
+                    message.what = 1;
+                    handlerStop.sendMessage(message);
+                }
+
+            }
+
+            @Override
+            public void onFinish() {
+                sign_in_money.setEnabled(true);
+                sign_in_money.setText("签到得奖励");
+                sign_in_money.setTextColor(Color.parseColor("#F83333"));
+
+            }
+        }.start();
+
+    }
 
 
 
@@ -640,6 +765,9 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
                 if (SharePreferenceUtils.getBaseSharePreference().readlogin()){
 
                     StartActivityManager.startWebViewActivity((Activity) getContext(), "脉乐购", "https://shop40984708.youzan.com/v2/feature/ajNgY4peUG?redirect_count=1&sf=wx_sm&is_share=1&from_uuid=1a0fd804-2518-7f00-6662-989d1892a45f&from=groupmessage", false, true);
+
+                   // Intent intent1 = new Intent(getContext(), ShoppingActivity.class);
+                  //  startActivity(intent1);
                 }else{
                     Intent intent5 = new Intent(getContext(), QuickLoginActivity.class);
                     getContext().startActivity(intent5);
@@ -704,7 +832,9 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
                 }
                 break;
             case R.id.constraint_friendpatry://脉友会
-                StartActivityManager.startWebViewActivity(getActivity(), "", "http://mp.weixin.qq.com/s?__biz=Mzg5MTA1NTYzOQ==&mid=100000833&idx=1&sn=50db1e33efe31a9ed39e653987772136&chksm=4fd27f3978a5f62fe074d8e722dcc9c2dcb37f3822476c5153439ca3c5ea0e39ac24c9104afe#rd", false, true);
+               // StartActivityManager.startWebViewActivity(getActivity(), "", "http://mp.weixin.qq.com/s?__biz=Mzg5MTA1NTYzOQ==&mid=100000833&idx=1&sn=50db1e33efe31a9ed39e653987772136&chksm=4fd27f3978a5f62fe074d8e722dcc9c2dcb37f3822476c5153439ca3c5ea0e39ac24c9104afe#rd", false, true);
+                Intent intent1 = new Intent(getContext(), BlackCardActivity.class);
+                startActivity(intent1);
 
                 break;
 
@@ -713,13 +843,16 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
               //  StartActivityManager.startWebViewActivity(getActivity(), "", "http://mp.weixin.qq.com/s?__biz=Mzg5MTA1NTYzOQ==&mid=100000833&idx=1&sn=50db1e33efe31a9ed39e653987772136&chksm=4fd27f3978a5f62fe074d8e722dcc9c2dcb37f3822476c5153439ca3c5ea0e39ac24c9104afe#rd", false, true);
                 if (SharePreferenceUtils.getBaseSharePreference().readlogin()){
 
-                    String appid = "wxf580fa050af6696b";//AppId
+                   /* String appid = "wxf580fa050af6696b";//AppId
                     IWXAPI wxapi = WXAPIFactory.createWXAPI(getActivity(), appid);
                     WXLaunchMiniProgram.Req req = new WXLaunchMiniProgram.Req();
                     req.userName = "gh_a67efc0c0a97";//小程序id
                     req.miniprogramType = WXLaunchMiniProgram.Req.MINIPTOGRAM_TYPE_RELEASE ;
                     wxapi.sendReq(req);
+*/
 
+                    Intent intent2 = new Intent(getContext(), BlackCardActivity.class);
+                    startActivity(intent2);
                 }else{
                     Intent intent3 = new Intent(getContext(), QuickLoginActivity.class);
                     startActivity(intent3);
@@ -774,6 +907,8 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
         }
     }
 
+
+
     /**
      * 收取能量
      */
@@ -785,6 +920,9 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
                 CommonBean commonBean = GsonUtils.parseJson(resulte, CommonBean.class);
                 if (!TextUtils.isEmpty(commonBean.getMessage())) {
                     T.showShort(commonBean.getMessage());
+
+                    Log.i("qiandao", "签到: "+commonBean.getMessage());
+
                 }
                 SharePreferenceUtils.getBaseSharePreference().saveCurrencyType(commonBean.getStatusCode());
                 if (commonBean.getStatusCode() == Constant.SUCCESS) {
@@ -812,8 +950,10 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
                     Log.e("test", "amount is " + amount);
                     sign_in_money.setEnabled(false);
                  //   gemstone.setAlpha(0.5f);
-                    sign_in_money.setText("正在生成中...");
+                   // sign_in_money.setText("正在生成中...");
+                    handler.postDelayed(update_thread, 1000);
                     SharePreferenceUtils.getBaseSharePreference().saveLastMarkTime(System.currentTimeMillis());
+
                 }
             }
 
@@ -892,6 +1032,7 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
             categoryId = num + 4;
         }
 
+
         new UserTask(new HttpOnNextListener() {
             @Override
             public void onNext(String resulte, String method) {
@@ -900,17 +1041,22 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
                 kclist = beans.getData();
 
                 LinearLayoutManager ridLayoutManager = new LinearLayoutManager(getContext());
+
                 recy_class.setLayoutManager(ridLayoutManager);
+
                 KeChengAdapter kechengAdapter = new KeChengAdapter(kclist);
+
                 recy_class.setAdapter(kechengAdapter);
                 kechengAdapter.notifyDataSetChanged();
+
+             /* //  getLessons();*/
+
                 kechengAdapter.setOnItemClickListener(new KeChengAdapter.OnItemClickListener() {
                     @Override
                     public void getclicklistener(int position) {
                        // if (App.isLogin){
                         if (SharePreferenceUtils.getBaseSharePreference().readlogin()){
                             GetCourseIntroBean.DataBean bean = kclist.get(position);
-
                             StartActivityManager.startCourseContent2Activity(getContext(), bean, position);
 
                         }else{
@@ -935,6 +1081,7 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
 
 
     }
+
 
     private  void  initdata(){
 
@@ -1093,6 +1240,10 @@ public class MCOpportunitiesFragment3 extends BaseFragment {
         });
     }
 
-
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+            leftTime = 0;
+            handler.removeCallbacks(update_thread);
+    }
 }

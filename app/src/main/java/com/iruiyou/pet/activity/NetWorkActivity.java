@@ -85,7 +85,8 @@ public class NetWorkActivity extends BaseActivity {
         recyclerView_search.setLayoutManager(searchLinearManager);
         relationShipSearchAdapter.setOnItemClickListener((adapter,view,position) ->{
             RecommendInterpersonalBean.ItemBasicsInfo itemBasicsInfo = (RecommendInterpersonalBean.ItemBasicsInfo) adapter.getData().get(position);
-            StartActivityManager.startUserDetailsActivity(NetWorkActivity.this,Integer.valueOf(itemBasicsInfo.getUserId()+"").intValue(),itemBasicsInfo.getRealName());
+           // StartActivityManager.startUserDetailsActivity(NetWorkActivity.this,Integer.valueOf(itemBasicsInfo.getUserId()+"").intValue(),itemBasicsInfo.getRealName());
+            StartActivityManager.startPersonalMsgActivity(NetWorkActivity.this,Integer.valueOf(itemBasicsInfo.getUserId()+"").intValue(),itemBasicsInfo.getRealName());
         });
         recyclerView_search.addItemDecoration(new RecycleViewDivider(NetWorkActivity.this, LinearLayoutManager.HORIZONTAL,
                 Utils.dip2px(NetWorkActivity.this, 5), getResources().getColor(R.color.bg_tab)));
